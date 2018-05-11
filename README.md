@@ -4,44 +4,30 @@ Avoin kuntaliitto on Drupal 8 -pohjainen alusta verkkopalvelun pohjaksi.
 
 ## Getting Started
 
-This project is based on BLT, an open-source project template and tool that enables building, testing, and deploying Drupal installations following Acquia Professional Services best practices.
-
-For local development we are using docker4drupal - https://github.com/wodby/docker4drupal/ but you can use vagrant-vm if you like. 
-
-Basic configuration files:
-.env
-blt/blt.yml
-sites/default/settings/local.settings.php
-
-## Make commands
+This project is based on [BLT](https://blt.readthedocs.io/en/latest/), an open-source project template and tool that enables building, testing, and deploying Drupal installations. We use [Docker4drupal](https://github.com/wodby/docker4drupal/) environment for development
+```
+git clone git@github.com:Kuntaliitto/kuntaliitto.fi.git
+cd kuntaliitto.fi
+```
+## Start the docker environment
 
 * make up
 * make shell
 
-# Composer inside docker
+## Composer inside docker
 
 * make shell
+* run: composer install
 * run: composer run-script blt-alias
 * run: source /home/wodby/.bashrc
-
 * run: blt blt:init:settings 
-This will generate docroot/sites/default/settings/local.settings.php and docroot/sites/default/local.drushrc.php. Update these with your local database credentials and your local site URL.
 
-* run: blt setup
-This will build the drupal based on the composer.json and running site-install for you based on the configuration provided in config/default folder.
-
-# Set local settings
+## Set local settings
 
 file: sites/default/settings/local.settings.php
 
-```php
-// Set active config_split environments: local, prod
-$config['config_split.config_split.local']['status'] = TRUE;
-$config['config_split.config_split.prod']['status'] = FALSE;
-```
 
-Check the credentials are the same as in .env
-
+Modify the **host**:
 ```php
 /**
  * Database configuration.
@@ -64,24 +50,19 @@ $databases = array(
 );
 ```
 
-file: .env
+* run: blt setup
+This will build the drupal based on the composer.json and running site-install for you based on the configuration provided in config/default folder.
 
-```
-PROJECT_NAME=avoin_kl
-PROJECT_BASE_URL=avoin.kuntaliitto.fi
+* run: drush uli -l http://avoin.kuntaliitto.fi:8000 and open the browser
 
-DB_NAME=drupal
-DB_USER=drupal
-DB_PASSWORD=drupal
-DB_ROOT_PASSWORD=password
-DB_HOST=mariadb
-DB_DRIVER=mysql
-```
 
-# /etc/hosts
+## /etc/hosts
 
 You may need to edit you local /etc/hosts file (or /private/etc/hosts)
 
 ```
 127.0.0.1 avoin.kuntaliitto.fi portainer.avoin.kuntaliitto.fi  adminer.avoin.kuntaliitto.fi
 ```
+
+## With browser
+Access your site: http://avoin.kuntaliitto.fi:8000
