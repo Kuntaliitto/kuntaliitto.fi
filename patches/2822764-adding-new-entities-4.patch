@@ -1,0 +1,27 @@
+diff --git a/src/Plugin/Field/FieldWidget/InlineEntityFormComplex.php b/src/Plugin/Field/FieldWidget/InlineEntityFormComplex.php
+index 0859058..8ecdc63 100644
+--- a/src/Plugin/Field/FieldWidget/InlineEntityFormComplex.php
++++ b/src/Plugin/Field/FieldWidget/InlineEntityFormComplex.php
+@@ -352,22 +352,11 @@ class InlineEntityFormComplex extends InlineEntityFormBase implements ContainerF
+             '#submit' => ['inline_entity_form_open_row_form'],
+             '#ief_row_delta' => $key,
+             '#ief_row_form' => 'remove',
+-            '#access' => !$element['#translating'],
+           ];
+         }
+       }
+     }
+ 
+-    // When in translation, the widget only supports editing (translating)
+-    // already added entities, so there's no need to show the rest.
+-    if ($element['#translating']) {
+-      if (empty($entities)) {
+-        // There are no entities available for translation, hide the widget.
+-        $element['#access'] = FALSE;
+-      }
+-      return $element;
+-    }
+-
+     $entities_count = count($entities);
+     $cardinality = $this->fieldDefinition->getFieldStorageDefinition()->getCardinality();
+     if ($cardinality > 1) {

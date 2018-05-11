@@ -1,0 +1,30 @@
+diff --git a/src/SchedulerManager.php b/src/SchedulerManager.php
+index de17b18..60b8629 100644
+--- a/src/SchedulerManager.php
++++ b/src/SchedulerManager.php
+@@ -140,6 +140,25 @@ class SchedulerManager {
+           continue;
+         }
+ 
++        // If moderation state is enabled, set to published & validate.
++        if ($this->moduleHandler->moduleExists('content_moderation') && $node->moderation_state->value) {
++          $node->set('moderation_state', 'published');
++
++          if (count($node->validate()) != 0) {
++            // If invalid, log it & skip it.
++            $logger_variables = [
++              '@type' => node_get_type_label($node),
++              '@ID' => $node->id(),
++              'link' => $node->link(t('View node')),
++            ];
++            $this->logger->warning(
++              'The @type entity NID: @ID scheduled for publishing is not in a valid moderation state for that transition.',
++              $logger_variables
++            );
++
++          }
++        }
++
+         // $node->set('changed', $publish_on) will fail badly if an API call has
+         // removed the date. Trap this as an exception here and give a
+         // meaningful message.

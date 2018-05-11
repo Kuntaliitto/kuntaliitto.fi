@@ -3,7 +3,7 @@ project:
   prefix: AvoinKL
   human_name: 'Avoin kuntaliitto'
   profile:
-    name: standard
+    name: minimal
   local:
     protocol: http
     hostname: '${project.machine_name}.kuntaliitto.fi'
