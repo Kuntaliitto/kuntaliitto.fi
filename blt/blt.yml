@@ -1,15 +1,24 @@
 project:
-  machine_name: kuntaliitto.fi
-  prefix: BLT
-  human_name: 'BLTed 8'
+  machine_name: avoin
+  prefix: AvoinKL
+  human_name: 'Avoin kuntaliitto'
   profile:
-    name: lightning
+    name: standard
   local:
     protocol: http
-    hostname: 'local.${project.machine_name}.com'
+    hostname: '${project.machine_name}.kuntaliitto.fi'
+disable-targets:
+  validate:
+    phpcs: true
+  git:
+    commit-msg: true
+    pre-commit: true
 git:
+  pre-commit: false
+  commit-msg: false
   default_branch: master
-  remotes: {  }
+  remotes: 
+    cloud: 'git@github.com:kuntaliitto/kuntaliitto-build.git'
 drush:
   aliases:
     remote: '${project.machine_name}.test'
@@ -19,16 +28,20 @@ drush:
 modules:
   local:
     enable: [dblog, devel, seckit, views_ui]
-    uninstall: [acquia_connector, shield]
+    uninstall: [shield]
   ci:
     enable: {  }
-    uninstall: [acquia_connector, shield]
+    uninstall: [shield]
   dev:
-    enable: [acquia_connector, shield]
+    enable: [shield]
     uninstall: {  }
   test:
-    enable: [acquia_connector, shield]
+    enable: [shield]
     uninstall: [devel, views_ui]
   prod:
-    enable: [acquia_connector, shield]
-    uninstall: [devel, views_ui]
+    enable: {  }
+    uninstall: [shield, dblog, devel, views_ui]
+drupal:
+  account.mail: noreply@kuntaliitto.fi
+  locale: en
+
