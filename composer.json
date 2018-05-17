@@ -1,6 +1,6 @@
 {
     "name": "acquia/blt-project",
-    "description": "Project template for Drupal 8 sites built with BLT.",
+    "description": "Kuntafi template for Drupal 8 sites managed with BLT.",
     "type": "project",
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -77,7 +77,8 @@
         "drupal/swiftmailer": "^1.0@beta",
         "drupal/extlink": "^1.0",
         "drupal/eu_cookie_compliance": "^1.0@beta",
-        "wunderio/drupal-ping": "^1.0"
+        "wunderio/drupal-ping": "^1.0",
+        "drupal/config_installer": "^1.8"
     },
     "require-dev": {},
     "extra": {
