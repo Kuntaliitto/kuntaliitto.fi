@@ -1,0 +1,28 @@
+uuid: 5a1868e9-46e0-4210-b067-afd3d534e197
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.concern_webpages
+    - field.storage.block_content.field_link_3
+  module:
+    - link
+id: block_content.concern_webpages.field_link_3
+field_name: field_link_3
+entity_type: block_content
+bundle: concern_webpages
+label: Link
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/'
+    title: moro
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

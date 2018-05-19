@@ -1,0 +1,23 @@
+uuid: 01ad22b9-81b5-439a-b34a-09cf688794cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_do_not_update_from_ad
+    - taxonomy.vocabulary.municipalities
+id: taxonomy_term.municipalities.field_do_not_update_from_ad
+field_name: field_do_not_update_from_ad
+entity_type: taxonomy_term
+bundle: municipalities
+label: 'Do not update from AD'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

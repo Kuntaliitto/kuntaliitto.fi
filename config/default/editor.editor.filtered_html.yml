@@ -1,0 +1,78 @@
+uuid: f94b747e-2a07-479d-8668-127b4c3a7e35
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+  module:
+    - ckeditor
+format: filtered_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Muotoilu
+          items:
+            - Styles
+            - Bold
+            - Italic
+        -
+          name: Listat
+          items:
+            - BulletedList
+            - NumberedList
+            - Outdent
+            - Indent
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+            - embed_media
+            - url
+            - embed_podcast
+        -
+          name: Työkalut
+          items:
+            - Source
+            - Table
+        -
+          name: 'Text cut/paste'
+          items:
+            - Cut
+            - Copy
+            - PasteText
+            - PasteFromWord
+        -
+          name: 'Anchored links'
+          items:
+            - Link
+            - Unlink
+            - Anchor
+        -
+          name: 'Editor settings'
+          items:
+            - Maximize
+            - ShowBlocks
+        -
+          name: Align
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: "p|Body text\r\nh2|H2\r\nh3|H3"
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: 100MB
+  max_dimensions:
+    width: null
+    height: null

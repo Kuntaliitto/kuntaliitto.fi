@@ -1,0 +1,32 @@
+uuid: 3f054e33-52eb-44f2-8912-8d6773018df3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_source
+    - node.type.external_article
+    - taxonomy.vocabulary.content_types
+  content:
+    - 'taxonomy_term:content_types:14e25cc1-caa5-408f-86a5-482f5f8a10ac'
+id: node.external_article.field_content_source
+field_name: field_content_source
+entity_type: node
+bundle: external_article
+label: 'Content source'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: 14e25cc1-caa5-408f-86a5-482f5f8a10ac
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_types: content_types
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

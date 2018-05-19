@@ -1,0 +1,94 @@
+uuid: ac5c45fd-6d83-415c-b3c9-21096daa19ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_liftup
+    - node.type.contact_information
+    - paragraphs.paragraphs_type.contact_form
+    - paragraphs.paragraphs_type.double_liftup
+    - paragraphs.paragraphs_type.free_text
+    - paragraphs.paragraphs_type.highchart
+    - paragraphs.paragraphs_type.organs
+    - paragraphs.paragraphs_type.publication
+    - paragraphs.paragraphs_type.quadruple_liftup
+    - paragraphs.paragraphs_type.uplift_centalised
+    - paragraphs.paragraphs_type.uplift_decentalised
+    - paragraphs.paragraphs_type.uplift_thematic_content
+  module:
+    - entity_reference_revisions
+id: node.contact_information.field_liftup
+field_name: field_liftup
+entity_type: node
+bundle: contact_information
+label: Liftup
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      contact_form: contact_form
+      double_liftup: double_liftup
+      free_text: free_text
+      highchart: highchart
+      organs: organs
+      quadruple_liftup: quadruple_liftup
+      publication: publication
+      uplift_centalised: uplift_centalised
+      uplift_decentalised: uplift_decentalised
+      uplift_thematic_content: uplift_thematic_content
+    target_bundles_drag_drop:
+      contact_form:
+        enabled: true
+        weight: 17
+      contact_information:
+        weight: 18
+        enabled: false
+      content_teaser:
+        weight: 19
+        enabled: false
+      double_liftup:
+        enabled: true
+        weight: 20
+      free_text:
+        enabled: true
+        weight: 21
+      highchart:
+        enabled: true
+        weight: 22
+      manual_centralized_minimal:
+        weight: 23
+        enabled: false
+      manual_decentralized_minimal:
+        weight: 24
+        enabled: false
+      organs:
+        enabled: true
+        weight: 25
+      quadruple_liftup:
+        enabled: true
+        weight: 26
+      publication:
+        enabled: true
+        weight: 26
+      some:
+        weight: 28
+        enabled: false
+      uplift_centalised:
+        enabled: true
+        weight: 29
+      uplift_content:
+        weight: 30
+        enabled: false
+      uplift_decentalised:
+        enabled: true
+        weight: 31
+      uplift_thematic_content:
+        enabled: true
+        weight: 32
+field_type: entity_reference_revisions

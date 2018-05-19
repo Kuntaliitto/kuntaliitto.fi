@@ -1,0 +1,19 @@
+uuid: 12b262da-c68c-40de-b2d5-e729d86f5d95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.export_content_book_page
+id: node.export_content_book_page.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: export_content_book_page
+label: 'Top title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

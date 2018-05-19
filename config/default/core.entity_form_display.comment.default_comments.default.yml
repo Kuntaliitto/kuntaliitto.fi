@@ -1,0 +1,44 @@
+uuid: de149f96-44f8-4110-acd3-f8c891d8246c
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.default_comments
+    - field.field.comment.default_comments.comment_body
+    - field.field.comment.default_comments.field_email
+  module:
+    - text
+id: comment.default_comments.default
+targetEntityType: comment
+bundle: default_comments
+mode: default
+content:
+  author:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_body:
+    type: text_textarea
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_email:
+    type: email_default
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  subject: true

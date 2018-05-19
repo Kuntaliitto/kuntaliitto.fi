@@ -1,0 +1,10 @@
+uuid: 0395a863-64aa-4b0e-98a3-612a23e3b973
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.narrow_content_width
+label: 'Narrow content width (790)'
+targetEntityType: media
+cache: true

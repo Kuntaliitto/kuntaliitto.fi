@@ -1,0 +1,23 @@
+uuid: 0f56542a-e34e-4a7c-a37d-fa0453765d13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_embed_frame_height
+    - node.type.embedds
+id: node.embedds.field_embed_frame_height
+field_name: field_embed_frame_height
+entity_type: node
+bundle: embedds
+label: 'Embed frame height'
+description: 'Frame height in pixels'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 100
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

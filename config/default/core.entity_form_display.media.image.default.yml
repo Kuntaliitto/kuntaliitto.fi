@@ -1,0 +1,56 @@
+uuid: 8a61f839-0015-4c71-a629-49575e6b6f48
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_browser_image_bank_upload_new_
+    - field.field.media.image.field_height
+    - field.field.media.image.field_image_file
+    - field.field.media.image.field_width
+    - media_entity.bundle.image
+  module:
+    - content_moderation
+    - entity_browser
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content:
+  field_image_file:
+    type: entity_browser_file
+    weight: 0
+    settings:
+      entity_browser: image_browser_image_bank_upload_new_
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      view_mode: image_only
+      field_widget_edit: false
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 3
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_height: true
+  field_width: true
+  name: true
+  path: true
+  uid: true

@@ -1,0 +1,21 @@
+uuid: 43f18049-f406-4986-9497-748cf2669420
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_visiting_address
+    - taxonomy.vocabulary.municipalities
+  module:
+    - text
+id: taxonomy_term.municipalities.field_visiting_address
+field_name: field_visiting_address
+entity_type: taxonomy_term
+bundle: municipalities
+label: 'Visiting address'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,34 @@
+uuid: bb9a03ef-1d8a-4fb2-89ab-115a461508bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: liftup_cent_decent_sv
+label: 'Liftup cent/decent SV'
+type: 'canonical_entities:node'
+pattern: '/lift/[node:title]'
+selection_criteria:
+  74f33a81-2009-425c-bbf0-0f37aecfa0c0:
+    id: node_type
+    bundles:
+      manual_centralized_liftup: manual_centralized_liftup
+      manual_decentralize_liftup: manual_decentralize_liftup
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 74f33a81-2009-425c-bbf0-0f37aecfa0c0
+  16c45499-24d8-4790-a2a4-83e7729b18fc:
+    id: language
+    langcodes:
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 16c45499-24d8-4790-a2a4-83e7729b18fc
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

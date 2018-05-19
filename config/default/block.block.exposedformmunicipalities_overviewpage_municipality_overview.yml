@@ -1,0 +1,23 @@
+uuid: f0bcfb30-46f4-4914-a855-74d6db9b2e95
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.municipalities_overview
+  module:
+    - views
+  theme:
+    - kuntaliitto
+id: exposedformmunicipalities_overviewpage_municipality_overview
+theme: kuntaliitto
+region: header
+weight: -15
+provider: null
+plugin: 'views_exposed_filter_block:municipalities_overview-page_municipality_overview'
+settings:
+  id: 'views_exposed_filter_block:municipalities_overview-page_municipality_overview'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

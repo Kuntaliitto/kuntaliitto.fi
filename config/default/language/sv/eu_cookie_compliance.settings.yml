@@ -1,0 +1,10 @@
+exclude_paths: "/admin\r\n/admin/*"
+popup_agreed:
+  value: "<h2>Thank you for accepting cookies</h2>\r\n\r\n<p>You can now hide this message or find out more about cookies.</p>\r\n"
+popup_agree_button_message: Godkänn
+popup_disagree_button_message: 'Läs mer'
+popup_find_more_button_message: 'Läs mer'
+popup_hide_button_message: Dölj
+popup_info:
+  value: "<h2>På dessa webbsidor används webbkakor</h2>\r\n\r\n<p>På Kommunförbundets webbsidor används webbkakor (cookies) för att förbättra användarupplevelsen och för individualisering. Sidorna kan också innehålla webbkakor från tredje parter. Genom att använda denna webbtjänst godkänner du användningen av kakor.</p>"
+popup_link: 'https://kommunforbundet.fi/kommunforbundet/webbkakor-och-dataskydd'

@@ -1,0 +1,9 @@
+uuid: d5450162-75cc-4eb3-a3c6-fbd1d59c737a
+langcode: en
+status: true
+dependencies: {  }
+id: double_liftup
+label: 'Double liftup'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

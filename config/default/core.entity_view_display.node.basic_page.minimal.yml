@@ -1,0 +1,50 @@
+uuid: dee51d9d-89ac-4557-ad02-327e1c049cc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.minimal
+    - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_content_source
+    - field.field.node.basic_page.field_liftup
+    - field.field.node.basic_page.field_search_exclude
+    - node.type.basic_page
+  module:
+    - kuntaliitto_common
+    - smart_trim
+    - user
+id: node.basic_page.minimal
+targetEntityType: node
+bundle: basic_page
+mode: minimal
+content:
+  body:
+    label: hidden
+    type: smart_trim
+    weight: 1
+    settings:
+      trim_length: 200
+      trim_type: chars
+      trim_suffix: ''
+      more_link: false
+      more_text: More
+      summary_handler: full
+      trim_options:
+        text: true
+      more_class: more-link
+    third_party_settings: {  }
+    region: content
+  field_content_source:
+    type: kuntaliitto_term_label
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  field_liftup: true
+  field_search_exclude: true
+  langcode: true
+  links: true

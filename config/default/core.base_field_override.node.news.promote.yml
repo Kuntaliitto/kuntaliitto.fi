@@ -1,0 +1,22 @@
+uuid: 2af2b1fc-4534-40b1-8392-1fa3f4e509c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.news
+id: node.news.promote
+field_name: promote
+entity_type: node
+bundle: news
+label: 'Näytetään etusivulla'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Käytössä
+  off_label: 'Pois päältä'
+field_type: boolean

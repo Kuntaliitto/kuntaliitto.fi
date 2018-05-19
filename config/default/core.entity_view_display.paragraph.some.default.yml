@@ -1,0 +1,46 @@
+uuid: 45ec5551-04cf-481c-b8af-6943e5f92fdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.some.field_facebook
+    - field.field.paragraph.some.field_instagram
+    - field.field.paragraph.some.field_nof
+    - field.field.paragraph.some.field_twitter
+    - paragraphs.paragraphs_type.some
+id: paragraph.some.default
+targetEntityType: paragraph
+bundle: some
+mode: default
+content:
+  field_facebook:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_instagram:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_nof:
+    weight: 3
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_twitter:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

@@ -1,0 +1,29 @@
+uuid: 807da67e-818c-4da2-8572-18ae8ca68eda
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.solr_search
+  module:
+    - system
+    - views
+  theme:
+    - kuntaliitto
+id: exposedformsolr_searchpage_solr_search
+theme: kuntaliitto
+region: content
+weight: -15
+provider: null
+plugin: 'views_exposed_filter_block:solr_search-page_solr_search'
+settings:
+  id: 'views_exposed_filter_block:solr_search-page_solr_search'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: 'Search results'
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }

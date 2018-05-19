@@ -1,0 +1,48 @@
+uuid: ad49518e-35e0-473b-8428-365afe4ee95a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.uplift_thematic_content.field_content_type
+    - field.field.paragraph.uplift_thematic_content.field_items_to_display
+    - field.field.paragraph.uplift_thematic_content.field_liftup_links
+    - field.field.paragraph.uplift_thematic_content.field_sort_by
+    - field.field.paragraph.uplift_thematic_content.field_sort_direction
+    - field.field.paragraph.uplift_thematic_content.field_taxonomy_term
+    - field.field.paragraph.uplift_thematic_content.field_title
+    - paragraphs.paragraphs_type.uplift_thematic_content
+  module:
+    - link
+id: paragraph.uplift_thematic_content.default
+targetEntityType: paragraph
+bundle: uplift_thematic_content
+mode: default
+content:
+  field_liftup_links:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_title:
+    type: string
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_content_type: true
+  field_items_to_display: true
+  field_sort_by: true
+  field_sort_direction: true
+  field_taxonomy_term: true
+  uid: true

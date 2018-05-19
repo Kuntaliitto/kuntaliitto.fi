@@ -1,0 +1,33 @@
+uuid: b263f3ad-a80f-437c-9107-a40b499b6acb
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: expers_statements_alias_sv
+label: 'Experts statements alias SV'
+type: 'canonical_entities:node'
+pattern: 'utlatanden/[node:created:html_year]/[node:title]'
+selection_criteria:
+  15ec2f07-5c3a-4424-9747-b9cb8a8a453c:
+    id: node_type
+    bundles:
+      expert_statement: expert_statement
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 15ec2f07-5c3a-4424-9747-b9cb8a8a453c
+  0b0fc31d-447a-4865-ac8e-7a3aa19327a5:
+    id: language
+    langcodes:
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 0b0fc31d-447a-4865-ac8e-7a3aa19327a5
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -1,0 +1,24 @@
+uuid: 0a7d4cc8-0260-4089-aa43-8f2e146227e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quadruple_liftup.field_lifted_blocks_four
+    - paragraphs.paragraphs_type.quadruple_liftup
+  module:
+    - entity_reference_revisions
+id: paragraph.quadruple_liftup.default
+targetEntityType: paragraph
+bundle: quadruple_liftup
+mode: default
+content:
+  field_lifted_blocks_four:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

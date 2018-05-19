@@ -1,0 +1,14 @@
+uuid: 47a6ca2b-6395-4ab8-93cf-725faf442085
+langcode: fi
+status: true
+dependencies:
+  config:
+    - user.role.webcastin_katsoja
+  module:
+    - user
+id: user_remove_role_action.webcastin_katsoja
+label: 'Remove the Webcastin katsoja role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: webcastin_katsoja

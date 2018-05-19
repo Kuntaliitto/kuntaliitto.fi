@@ -1,0 +1,33 @@
+uuid: d39bd070-b3e7-4a1e-b8d4-5d5816d0bcce
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: expert_content_alias_en
+label: 'Expert content alias EN'
+type: 'canonical_entities:node'
+pattern: 'expert-services/[node:field_topics:0:entity]/[node:title]'
+selection_criteria:
+  6d582192-c008-4095-9016-a37cbd076243:
+    id: node_type
+    bundles:
+      expert_content: expert_content
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 6d582192-c008-4095-9016-a37cbd076243
+  82c45bed-23a0-420c-af58-6e8a86c43e97:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 82c45bed-23a0-420c-af58-6e8a86c43e97
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

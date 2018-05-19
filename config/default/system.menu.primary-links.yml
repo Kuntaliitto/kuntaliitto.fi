@@ -1,0 +1,8 @@
+uuid: 40a0d671-4e98-444c-99b5-2943a07b781d
+langcode: en
+status: true
+dependencies: {  }
+id: primary-links
+label: 'Primary links'
+description: 'Primary links on top of the site'
+locked: false

@@ -1,0 +1,22 @@
+uuid: a8c030bf-e5fd-4f79-857d-049c40a80369
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.manual_centralized_liftup
+  module:
+    - text
+id: node.manual_centralized_liftup.body
+field_name: body
+entity_type: node
+bundle: manual_centralized_liftup
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

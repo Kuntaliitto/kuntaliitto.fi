@@ -1,0 +1,60 @@
+uuid: 520bdcbf-f6a5-4605-ba89-f988df361d59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_information
+    - node.type.export_content_book_page
+    - paragraphs.paragraphs_type.contact_information
+  module:
+    - entity_reference_revisions
+id: node.export_content_book_page.field_contact_information
+field_name: field_contact_information
+entity_type: node
+bundle: export_content_book_page
+label: 'Contact information'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      contact_information: contact_information
+    target_bundles_drag_drop:
+      contact_information:
+        enabled: true
+        weight: 13
+      content_teaser:
+        weight: 14
+        enabled: false
+      double_liftup:
+        weight: 15
+        enabled: false
+      manual_centralized_minimal:
+        weight: 16
+        enabled: false
+      manual_decentralized_minimal:
+        weight: 17
+        enabled: false
+      quadruple_liftup:
+        weight: 18
+        enabled: false
+      some:
+        weight: 20
+        enabled: false
+      uplift_centalised:
+        weight: 21
+        enabled: false
+      uplift_content:
+        weight: 22
+        enabled: false
+      uplift_decentalised:
+        weight: 23
+        enabled: false
+      uplift_thematic_content:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

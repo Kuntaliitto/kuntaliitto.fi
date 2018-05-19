@@ -1,0 +1,28 @@
+uuid: d7136121-cc6e-41af-975e-d627273411dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attachments
+    - media_entity.bundle.file
+    - node.type.circular
+id: node.circular.field_attachments
+field_name: field_attachments
+entity_type: node
+bundle: circular
+label: Attachments
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: external_video
+field_type: entity_reference

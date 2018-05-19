@@ -1,0 +1,22 @@
+uuid: d8c8219c-267c-4057-9236-5481da236068
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.manual_decentralized_minimal.field_lifted_content
+    - paragraphs.paragraphs_type.manual_decentralized_minimal
+id: paragraph.manual_decentralized_minimal.default
+targetEntityType: paragraph
+bundle: manual_decentralized_minimal
+mode: default
+content:
+  field_lifted_content:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: minimal
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

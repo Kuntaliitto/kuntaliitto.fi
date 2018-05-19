@@ -1,0 +1,26 @@
+uuid: 7f3724d1-2e74-4f34-87ad-0f934dd1f0dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.podcasts.field_lifted_content
+    - paragraphs.paragraphs_type.podcasts
+id: paragraph.podcasts.default
+targetEntityType: paragraph
+bundle: podcasts
+mode: default
+content:
+  field_lifted_content:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  status: true
+  uid: true

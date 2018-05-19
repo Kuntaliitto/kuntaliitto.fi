@@ -1,0 +1,21 @@
+uuid: b48ed6a1-aba2-49a6-a39b-df2e1f533af8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.contact_information
+id: node.contact_information.field_weight
+field_name: field_weight
+entity_type: node
+bundle: contact_information
+label: Weight
+description: 'Used in listings'
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: string

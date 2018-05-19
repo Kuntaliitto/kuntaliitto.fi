@@ -1,0 +1,19 @@
+uuid: d356ea37-b6cc-454b-ad6c-3f5836f66e06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_information_title
+    - node.type.media_release
+id: node.media_release.field_contact_information_title
+field_name: field_contact_information_title
+entity_type: node
+bundle: media_release
+label: 'Contact information title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

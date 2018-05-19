@@ -1,0 +1,121 @@
+display:
+  events_past_tab:
+    display_options:
+      menu:
+        title: Tidigare
+      title: Tidigare
+    display_title: Tidigare
+  events_upcoming_tab:
+    display_options:
+      menu:
+        title: Kommande
+      filters:
+        field_start_date_value:
+          expose:
+            label: Startdatum
+        event_location:
+          expose:
+            label: Plats
+        field_event_type_value:
+          expose:
+            label: Evenemangstyp
+        field_target_group_target_id:
+          expose:
+            label: Målgrupp
+        field_start_date_value_1:
+          expose:
+            label: Från
+        field_start_date_value_2:
+          expose:
+            label: Till
+        field_has_attachment_value:
+          expose:
+            label: 'Händelse har fäst'
+          group_info:
+            group_items:
+              1:
+                title: 'Händelse har fäst'
+      title: Evenemang
+      sorts:
+        field_start_date_value:
+          expose:
+            label: Startdatum
+    display_title: Kommande
+  page_events_main:
+    display_options:
+      menu:
+        title: Evenemang
+      filters:
+        event_location:
+          expose:
+            label: Plats
+        field_event_type_value:
+          expose:
+            label: Evenemangstyp
+        field_target_group_target_id:
+          expose:
+            label: Målgrupp
+        field_start_date_value_1:
+          expose:
+            label: Från
+        field_start_date_value_2:
+          expose:
+            label: Till
+        field_has_attachment_value:
+          expose:
+            label: 'Händelse har fäst'
+          group_info:
+            group_items:
+              1:
+                title: 'Händelse har fäst'
+      arguments:
+        field_start_date_value_year:
+          exception:
+            title: Alla
+      sorts:
+        field_start_date_value:
+          expose:
+            label: Startdatum
+      title: Evenemang
+    display_title: Evenemang
+  default:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alla -'
+      fields:
+        field_event_organiser:
+          label: Arrangör
+      filters:
+        field_start_date_value:
+          expose:
+            label: Startdatum
+        event_location:
+          expose:
+            label: Plats
+        field_event_type_value:
+          expose:
+            label: Evenemangstyp
+        field_target_group_target_id:
+          expose:
+            label: Målgrupp
+        field_start_date_value_1:
+          expose:
+            label: Från
+        field_start_date_value_2:
+          expose:
+            label: Till
+        field_has_attachment_value:
+          expose:
+            label: 'Evenemanget har bilagor'
+          group_info:
+            group_items:
+              1:
+                title: 'Händelse har fäst'
+      sorts:
+        field_start_date_value:
+          expose:
+            label: Startdatum
+      title: Evenemang
+label: Evenemang

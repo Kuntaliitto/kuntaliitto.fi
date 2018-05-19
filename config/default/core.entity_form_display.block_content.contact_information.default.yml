@@ -1,0 +1,88 @@
+uuid: 16b0f918-5232-4211-b937-7fd403e7f56c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_information
+    - field.field.block_content.contact_information.body
+    - field.field.block_content.contact_information.field_address
+    - field.field.block_content.contact_information.field_contact_info_link
+  module:
+    - content_moderation
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_address:
+      children:
+        - field_address
+      parent_name: ''
+      weight: 2
+      label: Address
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_links:
+      children:
+        - field_contact_info_link
+      parent_name: ''
+      weight: 3
+      label: Links
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+id: block_content.contact_information.default
+targetEntityType: block_content
+bundle: contact_information
+mode: default
+content:
+  field_address:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_contact_info_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true

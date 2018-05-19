@@ -1,0 +1,26 @@
+uuid: 66559b5e-8ce2-495a-a834-c4fbabd6d944
+langcode: en
+status: true
+dependencies:
+  module:
+    - kuntaliitto_views_breadcrumb
+    - system
+  theme:
+    - kuntaliitto
+id: custombreadcrumbblock
+theme: kuntaliitto
+region: content
+weight: -19
+provider: null
+plugin: custom_breadcrumb_block
+settings:
+  id: custom_breadcrumb_block
+  label: 'Custom Breadcrumb Block'
+  provider: kuntaliitto_views_breadcrumb
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/kunnat\r\n/kunnat/*\r\n/municipalities\r\n/municipalities/*\r\n/kommuner\r\n/kommuner/*"
+    negate: false
+    context_mapping: {  }

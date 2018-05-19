@@ -1,0 +1,283 @@
+uuid: 658b9a58-81fc-4ae3-a001-ada027bcae55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.municipalities.field_area
+    - field.field.taxonomy_term.municipalities.field_contact_directory
+    - field.field.taxonomy_term.municipalities.field_content
+    - field.field.taxonomy_term.municipalities.field_designer
+    - field.field.taxonomy_term.municipalities.field_do_not_update_from_ad
+    - field.field.taxonomy_term.municipalities.field_e_mail_address
+    - field.field.taxonomy_term.municipalities.field_internet_address
+    - field.field.taxonomy_term.municipalities.field_language_of_municipality
+    - field.field.taxonomy_term.municipalities.field_logo
+    - field.field.taxonomy_term.municipalities.field_logo_description
+    - field.field.taxonomy_term.municipalities.field_mailing_address
+    - field.field.taxonomy_term.municipalities.field_municipality_number
+    - field.field.taxonomy_term.municipalities.field_municipality_type
+    - field.field.taxonomy_term.municipalities.field_neighboring_municipalities
+    - field.field.taxonomy_term.municipalities.field_paragraph_a
+    - field.field.taxonomy_term.municipalities.field_paragraph_b
+    - field.field.taxonomy_term.municipalities.field_paragraph_c
+    - field.field.taxonomy_term.municipalities.field_phone
+    - field.field.taxonomy_term.municipalities.field_province
+    - field.field.taxonomy_term.municipalities.field_search_result_info
+    - field.field.taxonomy_term.municipalities.field_visiting_address
+    - taxonomy.vocabulary.municipalities
+  module:
+    - entity_reference_revisions
+    - field_group
+    - link
+    - options
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_coat_of_arms:
+      children:
+        - field_logo
+        - field_province
+        - field_designer
+        - field_logo_description
+      parent_name: ''
+      weight: 3
+      label: 'Coat of arms'
+      format_type: html_element
+      format_settings:
+        label: 'Coat of arms'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'municipality__logo municipality__box'
+    group_local_information:
+      children:
+        - field_municipality_type
+        - field_municipality_number
+        - field_language_of_municipality
+        - field_area
+      parent_name: ''
+      weight: 2
+      label: 'Local information'
+      format_type: html_element
+      format_settings:
+        label: 'Local information'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'municipality__local-information municipality__box'
+    group_contacts:
+      children:
+        - field_visiting_address
+        - field_mailing_address
+        - field_phone
+        - field_internet_address
+        - field_e_mail_address
+        - field_contact_directory
+      parent_name: ''
+      weight: 1
+      label: Contacts
+      format_type: html_element
+      format_settings:
+        label: Contacts
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'municipality__contacts municipality__box'
+    group_neighbors:
+      children:
+        - field_neighboring_municipalities
+      parent_name: ''
+      weight: 4
+      label: 'Neighboring municipalities'
+      format_type: html_element
+      format_settings:
+        label: 'Neighboring municipalities'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'municipality__neighbours municipality__box'
+id: taxonomy_term.municipalities.default
+targetEntityType: taxonomy_term
+bundle: municipalities
+mode: default
+content:
+  field_area:
+    weight: 22
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_contact_directory:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_content:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_designer:
+    weight: 16
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_e_mail_address:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_internet_address:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_language_of_municipality:
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_logo:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: narrow
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_logo_description:
+    weight: 17
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_mailing_address:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_municipality_number:
+    weight: 20
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_municipality_type:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_neighboring_municipalities:
+    weight: 15
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_paragraph_a:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_paragraph_b:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_paragraph_c:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_phone:
+    weight: 3
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_province:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_visiting_address:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  description: true
+  field_do_not_update_from_ad: true
+  field_search_result_info: true
+  langcode: true

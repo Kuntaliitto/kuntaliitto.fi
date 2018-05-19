@@ -1,0 +1,34 @@
+uuid: 67f48ac9-a4e1-4371-be8a-e96f12808052
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.expert_page
+    - image.style.larger
+  theme:
+    - kuntaliitto
+id: liftup_image_on_side
+label: 'Liftup - image on side'
+image_style_mappings:
+  -
+    breakpoint_id: kuntaliitto.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: expert_page
+  -
+    breakpoint_id: kuntaliitto.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: expert_page
+  -
+    breakpoint_id: kuntaliitto.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: larger
+  -
+    breakpoint_id: kuntaliitto.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: expert_page
+breakpoint_group: kuntaliitto
+fallback_image_style: expert_page

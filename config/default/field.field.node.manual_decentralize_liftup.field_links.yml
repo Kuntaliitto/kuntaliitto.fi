@@ -1,0 +1,23 @@
+uuid: 4c7e8f5f-9381-4083-a54d-db735232d191
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links
+    - node.type.manual_decentralize_liftup
+  module:
+    - link
+id: node.manual_decentralize_liftup.field_links
+field_name: field_links
+entity_type: node
+bundle: manual_decentralize_liftup
+label: Links
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

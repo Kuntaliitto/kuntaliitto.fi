@@ -1,0 +1,4 @@
+label: 'Älä näytä henkilöstöhakemistossa'
+settings:
+  on_label: kyllä
+  off_label: ei

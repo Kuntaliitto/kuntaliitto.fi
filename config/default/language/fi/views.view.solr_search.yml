@@ -1,0 +1,24 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Hae
+          reset_button_label: Tyhjennä
+          exposed_sorts_label: Rajaa
+      title: Haku
+      filters:
+        created:
+          expose:
+            label: Alkaen
+        created_1:
+          expose:
+            label: Loppuen
+      pager:
+        options:
+          tags:
+            first: '« Ensimmäiseen tulossivuun'
+            last: 'Viimeiseen tulossivuun »'
+      empty:
+        area_text_custom:
+          content: 'Valitettavasti hakutermilläsi ei löytynyt tuloksia.'

@@ -1,0 +1,144 @@
+uuid: 9f652c98-9133-41fa-802a-24d982ab0f65
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.circular.body
+    - field.field.node.circular.field_attachments
+    - field.field.node.circular.field_contact_information
+    - field.field.node.circular.field_contact_information_title
+    - field.field.node.circular.field_content_source
+    - field.field.node.circular.field_image
+    - field.field.node.circular.field_keywords
+    - field.field.node.circular.field_kuntaliitto_terms
+    - field.field.node.circular.field_liftup
+    - field.field.node.circular.field_liftup_title
+    - field.field.node.circular.field_links
+    - field.field.node.circular.field_municipalities
+    - field.field.node.circular.field_subtitle
+    - field.field.node.circular.field_topics
+    - node.type.circular
+  module:
+    - ds
+    - kuntaliitto_common
+    - smart_trim
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: listing_item
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          meta: div
+          title: div
+          main: div
+          keywords: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      meta:
+        - field_content_source
+        - node_post_date
+      title:
+        - node_title
+      main:
+        - body
+      keywords:
+        - field_topics
+        - field_keywords
+        - field_municipalities
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 1
+        label: hidden
+        formatter: ds_post_date_kuntaliitto_default
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: ''
+          class: ''
+id: node.circular.teaser
+targetEntityType: node
+bundle: circular
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: smart_trim
+    weight: 3
+    settings:
+      trim_length: 300
+      trim_type: chars
+      trim_suffix: ''
+      more_link: false
+      more_text: More
+      summary_handler: full
+      trim_options:
+        text: true
+      more_class: more-link
+    third_party_settings: {  }
+    region: main
+  field_content_source:
+    type: kuntaliitto_term_label
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: meta
+  field_keywords:
+    type: kuntaliitto_term_label
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: keywords
+  field_municipalities:
+    type: kuntaliitto_term_label
+    weight: 6
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: keywords
+  field_topics:
+    type: kuntaliitto_term_label
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: keywords
+hidden:
+  content_moderation_control: true
+  field_attachments: true
+  field_contact_information: true
+  field_contact_information_title: true
+  field_image: true
+  field_kuntaliitto_terms: true
+  field_liftup: true
+  field_liftup_title: true
+  field_links: true
+  field_subtitle: true
+  langcode: true
+  links: true

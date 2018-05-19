@@ -1,0 +1,80 @@
+uuid: 838d4f2d-0ea1-4ac7-9b79-304b28331d47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.manual_centralized_liftup.body
+    - field.field.node.manual_centralized_liftup.field_links
+    - field.field.node.manual_centralized_liftup.field_main_media
+    - node.type.manual_centralized_liftup
+  module:
+    - ds
+    - link
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_main_media
+        - node_title
+        - body
+        - field_links
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+id: node.manual_centralized_liftup.default
+targetEntityType: node
+bundle: manual_centralized_liftup
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 300
+    third_party_settings: {  }
+    region: ds_content
+  field_links:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: ds_content
+  field_main_media:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: liftup_image_on_side
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+hidden:
+  langcode: true
+  links: true

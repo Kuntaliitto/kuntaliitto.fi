@@ -1,0 +1,4 @@
+label: 'Visa inte bild'
+settings:
+  on_label: På
+  off_label: Av

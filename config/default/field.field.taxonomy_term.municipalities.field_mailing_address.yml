@@ -1,0 +1,21 @@
+uuid: da4da886-02fb-4db4-88d0-42f201738a0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_mailing_address
+    - taxonomy.vocabulary.municipalities
+  module:
+    - text
+id: taxonomy_term.municipalities.field_mailing_address
+field_name: field_mailing_address
+entity_type: taxonomy_term
+bundle: municipalities
+label: 'Mailing address'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

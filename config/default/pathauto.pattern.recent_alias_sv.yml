@@ -1,0 +1,33 @@
+uuid: 188a38cf-c52d-4689-bd31-6bb7b3469481
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: recent_alias_sv
+label: 'Recent alias SV'
+type: 'canonical_entities:node'
+pattern: 'aktuellt/[node:created:html_year]/[node:title]'
+selection_criteria:
+  4f14446c-b895-4c97-a915-d880c68bce61:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 4f14446c-b895-4c97-a915-d880c68bce61
+  d868eb00-73dd-44ab-9aa4-40ca1c567bc8:
+    id: language
+    langcodes:
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: d868eb00-73dd-44ab-9aa4-40ca1c567bc8
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

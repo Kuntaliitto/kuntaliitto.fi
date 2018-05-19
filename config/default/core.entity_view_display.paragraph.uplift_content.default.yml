@@ -1,0 +1,43 @@
+uuid: 65cbc9e5-6f06-4ad2-a7ca-7a039344b52c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.uplift_content.field_lifted_content
+    - field.field.paragraph.uplift_content.field_liftup_style
+    - field.field.paragraph.uplift_content.field_title
+    - paragraphs.paragraphs_type.uplift_content
+  module:
+    - options
+id: paragraph.uplift_content.default
+targetEntityType: paragraph
+bundle: uplift_content
+mode: default
+content:
+  field_lifted_content:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: centralized
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_liftup_style:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title:
+    type: string
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  uid: true

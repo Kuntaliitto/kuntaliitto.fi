@@ -1,0 +1,20 @@
+uuid: 753a4872-600b-4cd9-9482-232e64c053ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - responsive_share_buttons
+  theme:
+    - kuntaliitto
+id: responsivesharingbuttonsblock
+theme: kuntaliitto
+region: footer
+weight: -16
+provider: null
+plugin: responsive_sharing_buttons
+settings:
+  id: responsive_sharing_buttons
+  label: 'Responsive Sharing buttons block'
+  provider: responsive_share_buttons
+  label_display: '0'
+visibility: {  }

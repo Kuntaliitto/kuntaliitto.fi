@@ -1,0 +1,112 @@
+uuid: 2551fa2a-c9a3-4bd9-847e-efff664e1128
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.search
+    - field.field.node.contact_information.field_ad_group
+    - field.field.node.contact_information.field_additional_information
+    - field.field.node.contact_information.field_contact_email
+    - field.field.node.contact_information.field_content_source
+    - field.field.node.contact_information.field_department
+    - field.field.node.contact_information.field_division
+    - field.field.node.contact_information.field_do_not_show_mobile
+    - field.field.node.contact_information.field_do_not_show_picture
+    - field.field.node.contact_information.field_do_not_show_responsibiliti
+    - field.field.node.contact_information.field_don_t_show_in_contact_dire
+    - field.field.node.contact_information.field_dont_update_from_ad
+    - field.field.node.contact_information.field_first_name
+    - field.field.node.contact_information.field_image
+    - field.field.node.contact_information.field_last_name
+    - field.field.node.contact_information.field_mobile
+    - field.field.node.contact_information.field_organization
+    - field.field.node.contact_information.field_person_title
+    - field.field.node.contact_information.field_phone_number
+    - field.field.node.contact_information.field_responsibilities
+    - field.field.node.contact_information.field_service_description
+    - field.field.node.contact_information.field_service_in_swedish
+    - field.field.node.contact_information.field_service_title
+    - field.field.node.contact_information.field_twitter_account
+    - field.field.node.contact_information.field_update_ip_ad
+    - field.field.node.contact_information.field_update_time_ad
+    - field.field.node.contact_information.field_updated_from_ad
+    - field.field.node.contact_information.field_user_reference
+    - field.field.node.contact_information.field_weight
+    - node.type.contact_information
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: listing_item
+      path: themes/custom/kuntaliitto
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      meta:
+        - field_content_source
+        - node_post_date
+      title:
+        - node_title
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 1
+        label: hidden
+        formatter: ds_post_date_kuntaliitto_default
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: ''
+          class: ''
+id: node.contact_information.search
+targetEntityType: node
+bundle: contact_information
+mode: search
+content:
+  field_content_source:
+    type: entity_reference_label
+    weight: 0
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: meta
+hidden:
+  field_ad_group: true
+  field_additional_information: true
+  field_contact_email: true
+  field_department: true
+  field_division: true
+  field_do_not_show_mobile: true
+  field_do_not_show_picture: true
+  field_do_not_show_responsibiliti: true
+  field_don_t_show_in_contact_dire: true
+  field_dont_update_from_ad: true
+  field_first_name: true
+  field_image: true
+  field_last_name: true
+  field_liftup: true
+  field_mobile: true
+  field_organization: true
+  field_person_title: true
+  field_phone_number: true
+  field_responsibilities: true
+  field_service_description: true
+  field_service_in_swedish: true
+  field_service_title: true
+  field_twitter_account: true
+  field_update_ip_ad: true
+  field_update_time_ad: true
+  field_updated_from_ad: true
+  field_user_reference: true
+  field_weight: true
+  langcode: true
+  links: true

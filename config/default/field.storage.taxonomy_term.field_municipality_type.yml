@@ -1,0 +1,24 @@
+uuid: 026ec811-7cf9-48a2-80e3-b0d10d1ebf99
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_municipality_type
+field_name: field_municipality_type
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: city
+      label: City
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

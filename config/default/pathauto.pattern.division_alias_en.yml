@@ -1,0 +1,34 @@
+uuid: 40979636-1110-48ae-a760-5e743550a6b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: division_alias_en
+label: 'Division alias EN'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'divisions/[term:name]'
+selection_criteria:
+  f171f9fa-2197-4973-ba1b-da172060916c:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      division: division
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: f171f9fa-2197-4973-ba1b-da172060916c
+  82a5273f-9f91-4987-8efb-de18af6ae793:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: 82a5273f-9f91-4987-8efb-de18af6ae793
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

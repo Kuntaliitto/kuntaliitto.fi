@@ -1,0 +1,16 @@
+uuid: 9d55b136-43d6-4535-a068-6aeb7698e538
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image_bank
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: media.image_bank
+target_entity_type_id: media
+target_bundle: image_bank
+default_langcode: zxx
+language_alterable: false

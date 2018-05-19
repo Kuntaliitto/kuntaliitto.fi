@@ -1,0 +1,14 @@
+uuid: 12199bba-d829-4dcf-a4e2-49321364f136
+langcode: fi
+status: true
+dependencies:
+  config:
+    - user.role.yleiskirjeet_ja_lausunnot
+  module:
+    - user
+id: user_remove_role_action.yleiskirjeet_ja_lausunnot
+label: 'Remove the Yleiskirjeet ja lausunnot role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: yleiskirjeet_ja_lausunnot

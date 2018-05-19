@@ -1,0 +1,9 @@
+uuid: c6010a72-5b87-486f-94d9-338c735d21c0
+langcode: en
+status: true
+dependencies: {  }
+id: uplift_centalised
+label: 'Manual centralized liftup'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

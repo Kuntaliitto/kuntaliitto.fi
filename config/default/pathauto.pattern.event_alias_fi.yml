@@ -1,0 +1,33 @@
+uuid: f48279cc-0053-446b-b3c2-fe953eaf7128
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: event_alias_fi
+label: 'Event alias FI'
+type: 'canonical_entities:node'
+pattern: 'tapahtumat/[node:field_start_date:date:html_year]/[node:field_event_id:value]-[node:title]'
+selection_criteria:
+  3b94c03c-31db-4f88-ac30-5830fabffcc0:
+    id: node_type
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3b94c03c-31db-4f88-ac30-5830fabffcc0
+  6825be41-ba70-4f87-a004-3a307de5ff80:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 6825be41-ba70-4f87-a004-3a307de5ff80
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

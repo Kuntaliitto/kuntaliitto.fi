@@ -1,0 +1,33 @@
+uuid: 2dc32de4-33b1-4303-b804-29fc4108faf0
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: circular_alias_en
+label: 'Circular alias EN'
+type: 'canonical_entities:node'
+pattern: 'circular/[node:created:html_year]/[node:title]'
+selection_criteria:
+  17d0cc56-4c83-44c4-92d3-fc0100bbfcb3:
+    id: node_type
+    bundles:
+      circular: circular
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 17d0cc56-4c83-44c4-92d3-fc0100bbfcb3
+  efb25d95-b603-4cec-9f6e-7300be19eddc:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: efb25d95-b603-4cec-9f6e-7300be19eddc
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

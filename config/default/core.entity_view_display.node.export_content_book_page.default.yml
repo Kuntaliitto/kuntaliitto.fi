@@ -1,0 +1,173 @@
+uuid: 8fb0a504-afa1-416a-92cd-0cf4b9cdcea5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.export_content_book_page.body
+    - field.field.node.export_content_book_page.field_attachments
+    - field.field.node.export_content_book_page.field_comments
+    - field.field.node.export_content_book_page.field_contact_information
+    - field.field.node.export_content_book_page.field_contact_information_title
+    - field.field.node.export_content_book_page.field_content_source
+    - field.field.node.export_content_book_page.field_image
+    - field.field.node.export_content_book_page.field_keywords
+    - field.field.node.export_content_book_page.field_kuntaliitto_terms
+    - field.field.node.export_content_book_page.field_liftup
+    - field.field.node.export_content_book_page.field_liftup_title
+    - field.field.node.export_content_book_page.field_links
+    - field.field.node.export_content_book_page.field_main_media
+    - field.field.node.export_content_book_page.field_municipalities
+    - field.field.node.export_content_book_page.field_page_container
+    - field.field.node.export_content_book_page.field_subtitle
+    - field.field.node.export_content_book_page.field_topics
+    - node.type.export_content_book_page
+  module:
+    - ds
+    - entity_reference_revisions
+    - kuntaliitto_common
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: book_page
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: div
+          main: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - node_title
+        - field_subtitle
+      main:
+        - field_main_media
+        - body
+        - field_topics
+        - field_keywords
+        - field_municipalities
+        - field_kuntaliitto_terms
+      footer:
+        - field_liftup
+        - field_attachments
+        - field_contact_information
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+id: node.export_content_book_page.default
+targetEntityType: node
+bundle: export_content_book_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: main
+  field_attachments:
+    type: entity_reference_entity_view
+    weight: 9
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: footer
+  field_contact_information:
+    type: entity_reference_revisions_entity_view
+    weight: 10
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: footer
+  field_keywords:
+    type: kuntaliitto_term_label
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: main
+  field_kuntaliitto_terms:
+    type: kuntaliitto_term_label
+    weight: 7
+    region: main
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_liftup:
+    type: entity_reference_revisions_entity_view
+    weight: 8
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: footer
+  field_main_media:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: full_width_790
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: main
+  field_municipalities:
+    type: kuntaliitto_term_label
+    weight: 6
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: main
+  field_subtitle:
+    type: string
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: header
+  field_topics:
+    type: kuntaliitto_term_label
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: main
+hidden:
+  content_moderation_control: true
+  field_comments: true
+  field_contact_information_title: true
+  field_content_source: true
+  field_image: true
+  field_liftup_title: true
+  field_links: true
+  field_page_container: true
+  langcode: true
+  links: true

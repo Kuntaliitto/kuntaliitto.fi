@@ -1,0 +1,70 @@
+display:
+  default:
+    display_options:
+      filters:
+        status:
+          group_info:
+            group_items:
+              1:
+                value: '1'
+                title: Julkaistu
+              2:
+                title: Julkaisematon
+            label: 'Julkaisun tila'
+          expose:
+            label: Tosi
+        bundle:
+          expose:
+            label: Sisältölähde
+        langcode:
+          expose:
+            label: Kieli
+      exposed_form:
+        options:
+          submit_button: Käytä
+          reset_button_label: 'Palauta oletusarvoihin'
+          exposed_sorts_label: Lajittele
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Merkintöjä sivua kohti'
+            items_per_page_options_all_label: '- Kaikki -'
+            offset_label: Offset
+          tags:
+            previous: '‹ Edellinen'
+            next: 'Seuraava ›'
+            first: '« Ensimmäinen'
+            last: 'Viimeinen »'
+      fields:
+        thumbnail__target_id:
+          label: Thumbnail
+          separator: ', '
+        name:
+          separator: ', '
+        uid:
+          label: Kirjoittaja
+          separator: ', '
+        status:
+          label: Tila
+          settings:
+            format_custom_true: Julkaistu
+            format_custom_false: Julkaisematon
+          separator: ', '
+        changed:
+          label: Päivitetty
+          separator: ', '
+        operations:
+          label: Toimenpiteet
+      title: Media
+      empty:
+        area_text_custom:
+          content: 'Ei sisältöä.'
+    display_title: Isäntä
+  media_page_list:
+    display_title: Media
+    display_options:
+      menu:
+        title: Media
+label: Media

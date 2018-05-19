@@ -1,0 +1,33 @@
+uuid: 2f7c3e04-7915-4978-ae99-21467f677f13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.free_text.field_text
+    - paragraphs.paragraphs_type.free_text
+  module:
+    - content_moderation
+    - text
+id: paragraph.free_text.default
+targetEntityType: paragraph
+bundle: free_text
+mode: default
+content:
+  field_text:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

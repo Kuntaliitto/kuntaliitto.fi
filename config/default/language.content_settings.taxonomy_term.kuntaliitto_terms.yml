@@ -1,0 +1,16 @@
+uuid: 2d4190a5-f285-4277-83af-923dc7d6b872
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.kuntaliitto_terms
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.kuntaliitto_terms
+target_entity_type_id: taxonomy_term
+target_bundle: kuntaliitto_terms
+default_langcode: current_interface
+language_alterable: true

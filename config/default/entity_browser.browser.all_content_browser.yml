@@ -1,0 +1,29 @@
+uuid: ce18c604-ad91-48e2-a89f-7b7780a6452e
+langcode: en
+status: true
+dependencies:
+  module:
+    - views
+name: all_content_browser
+label: 'All content browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: Select
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  14f78171-b65b-4bfd-9e15-f8006202cca6:
+    settings:
+      view: all_content_browser
+      view_display: node_browser
+      submit_text: Select
+      auto_select: false
+    uuid: 14f78171-b65b-4bfd-9e15-f8006202cca6
+    weight: 1
+    label: Content
+    id: view

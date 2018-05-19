@@ -1,0 +1,34 @@
+uuid: 9da27fda-728d-47ec-bde9-dbe0425fd4d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: organization_alias_fi
+label: 'Organization alias FI'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'organisaatio/[term:name]'
+selection_criteria:
+  7755eced-d1d4-4ab7-80b4-0635d5b118cf:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      organization: organization
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 7755eced-d1d4-4ab7-80b4-0635d5b118cf
+  a8c52f94-8653-47be-b7fb-720a11309b2d:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: a8c52f94-8653-47be-b7fb-720a11309b2d
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

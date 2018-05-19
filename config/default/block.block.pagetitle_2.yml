@@ -1,0 +1,25 @@
+uuid: 49a945b7-9074-4eb9-b9b0-bc4bcfe09287
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kuntaliitto
+id: pagetitle_2
+theme: kuntaliitto
+region: content
+weight: -17
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/media/*\r\n/contact-us"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,34 @@
+uuid: fca4c959-92ba-4705-b481-5a809347a71b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.video.field_video_file
+    - media_entity.bundle.video
+  module:
+    - file_entity
+id: media.video.default
+targetEntityType: media
+bundle: video
+mode: default
+content:
+  field_video_file:
+    weight: 2
+    label: hidden
+    settings:
+      controls: true
+      width: 720
+      height: 450
+      multiple_file_behavior: tags
+      autoplay: false
+      loop: false
+      muted: false
+    third_party_settings: {  }
+    type: file_video
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

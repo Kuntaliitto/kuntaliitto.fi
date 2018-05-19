@@ -1,0 +1,10 @@
+uuid: 5a82fe39-0754-4330-9db0-b2562eec20e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.iframe_mode
+label: 'Iframe mode'
+targetEntityType: media
+cache: true

@@ -1,0 +1,36 @@
+uuid: 938c31f4-9630-49d6-84d5-db5366328cd2
+langcode: en
+status: true
+dependencies: {  }
+id: book_editor
+label: Kirja-oikeudet
+weight: -4
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access files overview'
+  - 'access printer-friendly version'
+  - 'add content to books'
+  - 'administer book outlines'
+  - 'bypass honeypot protection'
+  - 'create book content'
+  - 'create export_content_book_page content'
+  - 'create files'
+  - 'create new books'
+  - 'delete any book content'
+  - 'delete any export_content_book_page content'
+  - 'delete book revisions'
+  - 'delete export_content_book_page revisions'
+  - 'delete own book content'
+  - 'delete own export_content_book_page content'
+  - 'edit any book content'
+  - 'edit any export_content_book_page content'
+  - 'edit own book content'
+  - 'edit own export_content_book_page content'
+  - 'revert book revisions'
+  - 'revert export_content_book_page revisions'
+  - 'translate book node'
+  - 'translate export_content_book_page node'
+  - 'use text format filtered_html'
+  - 'view book revisions'
+  - 'view export_content_book_page revisions'

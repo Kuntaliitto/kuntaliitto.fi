@@ -1,0 +1,22 @@
+uuid: 0255d2cc-4cf3-4672-819b-90d8a7e0a080
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.expert_content
+id: node.expert_content.promote
+field_name: promote
+entity_type: node
+bundle: expert_content
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

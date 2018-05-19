@@ -1,0 +1,23 @@
+uuid: 746bde61-46d7-488b-aff0-2a111967f8bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url
+    - node.type.publication
+  module:
+    - link
+id: node.publication.field_url
+field_name: field_url
+entity_type: node
+bundle: publication
+label: Url
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

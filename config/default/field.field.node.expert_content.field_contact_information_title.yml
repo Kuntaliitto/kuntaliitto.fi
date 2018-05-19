@@ -1,0 +1,19 @@
+uuid: 41b16eeb-d0fc-4153-b861-c2243e3b3054
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_information_title
+    - node.type.expert_content
+id: node.expert_content.field_contact_information_title
+field_name: field_contact_information_title
+entity_type: node
+bundle: expert_content
+label: 'Contact information title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

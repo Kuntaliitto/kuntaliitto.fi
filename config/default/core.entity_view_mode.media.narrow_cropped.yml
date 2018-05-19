@@ -1,0 +1,10 @@
+uuid: 373ebbab-9c2b-4749-bfb5-d27693313134
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.narrow_cropped
+label: 'Narrow cropped'
+targetEntityType: media
+cache: true

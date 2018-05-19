@@ -1,0 +1,116 @@
+uuid: 702ddd90-0548-42b7-8306-c7cc3e2d6765
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.minimal
+    - field.field.node.event.field_attachments
+    - field.field.node.event.field_content_source
+    - field.field.node.event.field_description
+    - field.field.node.event.field_end_date
+    - field.field.node.event.field_event_city
+    - field.field.node.event.field_event_id
+    - field.field.node.event.field_event_organiser
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_event_url
+    - field.field.node.event.field_expert_service
+    - field.field.node.event.field_has_attachment
+    - field.field.node.event.field_keywords
+    - field.field.node.event.field_kuntaliitto_terms
+    - field.field.node.event.field_link
+    - field.field.node.event.field_main_media
+    - field.field.node.event.field_person_responsible
+    - field.field.node.event.field_price_excluding_vat
+    - field.field.node.event.field_related_events
+    - field.field.node.event.field_signup_date
+    - field.field.node.event.field_start_date
+    - field.field.node.event.field_subtitle
+    - field.field.node.event.field_target_group
+    - field.field.node.event.field_topics
+    - field.field.node.event.field_vat_percentage
+    - field.field.node.event.field_venue_address
+    - field.field.node.event.field_venue_name
+    - node.type.event
+  module:
+    - ds
+    - kuntaliitto_common
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_content_source
+        - node_title
+        - field_subtitle
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h1
+          class: ''
+id: node.event.minimal
+targetEntityType: node
+bundle: event
+mode: minimal
+content:
+  field_content_source:
+    type: kuntaliitto_term_label
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: ds_content
+  field_subtitle:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+hidden:
+  field_attachments: true
+  field_description: true
+  field_end_date: true
+  field_event_city: true
+  field_event_id: true
+  field_event_organiser: true
+  field_event_type: true
+  field_event_url: true
+  field_expert_service: true
+  field_has_attachment: true
+  field_keywords: true
+  field_kuntaliitto_terms: true
+  field_link: true
+  field_main_media: true
+  field_person_responsible: true
+  field_price_excluding_vat: true
+  field_related_events: true
+  field_signup_date: true
+  field_start_date: true
+  field_target_group: true
+  field_topics: true
+  field_vat_percentage: true
+  field_venue_address: true
+  field_venue_name: true
+  langcode: true
+  links: true

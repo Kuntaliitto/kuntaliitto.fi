@@ -1,0 +1,16 @@
+uuid: 5fa24cd1-4957-444d-a6e2-efc9d8630e2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.product_groups
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.product_groups
+target_entity_type_id: taxonomy_term
+target_bundle: product_groups
+default_langcode: current_interface
+language_alterable: true

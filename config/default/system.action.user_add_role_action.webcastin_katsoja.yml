@@ -1,0 +1,14 @@
+uuid: aad12cf9-15f1-4aa8-9049-11c666bc5d88
+langcode: fi
+status: true
+dependencies:
+  config:
+    - user.role.webcastin_katsoja
+  module:
+    - user
+id: user_add_role_action.webcastin_katsoja
+label: 'Add the Webcastin katsoja role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: webcastin_katsoja

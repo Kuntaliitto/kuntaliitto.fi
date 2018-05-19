@@ -1,0 +1,22 @@
+uuid: 4436c5ac-6b91-4634-8d09-bded5761bade
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.expert_statement
+id: node.expert_statement.promote
+field_name: promote
+entity_type: node
+bundle: expert_statement
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

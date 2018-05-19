@@ -1,0 +1,151 @@
+uuid: ddf7bb45-7975-4464-8563-efc908a8d9bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search
+    - field.field.node.event.field_attachments
+    - field.field.node.event.field_content_source
+    - field.field.node.event.field_description
+    - field.field.node.event.field_end_date
+    - field.field.node.event.field_event_city
+    - field.field.node.event.field_event_id
+    - field.field.node.event.field_event_organiser
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_event_url
+    - field.field.node.event.field_expert_service
+    - field.field.node.event.field_has_attachment
+    - field.field.node.event.field_keywords
+    - field.field.node.event.field_kuntaliitto_terms
+    - field.field.node.event.field_link
+    - field.field.node.event.field_main_media
+    - field.field.node.event.field_person_responsible
+    - field.field.node.event.field_price_excluding_vat
+    - field.field.node.event.field_related_events
+    - field.field.node.event.field_signup_date
+    - field.field.node.event.field_start_date
+    - field.field.node.event.field_subtitle
+    - field.field.node.event.field_target_group
+    - field.field.node.event.field_topics
+    - field.field.node.event.field_vat_percentage
+    - field.field.node.event.field_venue_address
+    - field.field.node.event.field_venue_name
+    - node.type.event
+  module:
+    - datetime
+    - ds
+    - field_group
+    - kuntaliitto_common
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: listing_item
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          meta: div
+          title: div
+          main: div
+          keywords: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      meta:
+        - field_content_source
+        - field_start_date
+      title:
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: ''
+          class: ''
+  field_group:
+    group_event_information:
+      children: {  }
+      parent_name: ''
+      weight: 37
+      label: 'Event information'
+      format_type: html_element
+      format_settings:
+        label: 'Event information'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: fieldgroup--event-information
+    group_tags:
+      children: {  }
+      parent_name: ''
+      weight: 38
+      format_type: fieldset
+      format_settings:
+        label: Tags
+        description: ''
+        id: ''
+        classes: 'fieldgroup--tags wrap--narrow'
+      label: Tags
+id: node.event.search
+targetEntityType: node
+bundle: event
+mode: search
+content:
+  field_content_source:
+    type: kuntaliitto_term_label
+    weight: 0
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: meta
+  field_start_date:
+    type: datetime_default
+    weight: 1
+    region: meta
+    label: visually_hidden
+    settings:
+      timezone_override: ''
+      format_type: kuntaliitto_default
+    third_party_settings: {  }
+hidden:
+  field_attachments: true
+  field_description: true
+  field_end_date: true
+  field_event_city: true
+  field_event_id: true
+  field_event_organiser: true
+  field_event_type: true
+  field_event_url: true
+  field_expert_service: true
+  field_has_attachment: true
+  field_keywords: true
+  field_kuntaliitto_terms: true
+  field_link: true
+  field_main_media: true
+  field_person_responsible: true
+  field_price_excluding_vat: true
+  field_related_events: true
+  field_signup_date: true
+  field_subtitle: true
+  field_target_group: true
+  field_topics: true
+  field_vat_percentage: true
+  field_venue_address: true
+  field_venue_name: true
+  langcode: true
+  links: true

@@ -1,0 +1,21 @@
+uuid: 5597a11e-b137-459a-9778-29e0e984b8af
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_information
+    - field.storage.block_content.field_address
+  module:
+    - text
+id: block_content.contact_information.field_address
+field_name: field_address
+entity_type: block_content
+bundle: contact_information
+label: Address
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

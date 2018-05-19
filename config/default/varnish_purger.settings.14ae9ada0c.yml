@@ -1,0 +1,25 @@
+uuid: 34b52a26-2879-4f1e-969c-60c17229d779
+langcode: en
+status: true
+dependencies: {  }
+id: 14ae9ada0c
+name: 'Varnish new'
+invalidationtype: tag
+hostname: 10.38.34.12
+port: 8081
+path: /
+request_method: BAN
+scheme: http
+verify: '1'
+headers:
+  -
+    field: Cache-Tags
+    value: '[invalidation:expression]'
+body: null
+body_content_type: null
+runtime_measurement: true
+timeout: !!float 1
+connect_timeout: !!float 1
+cooldown_time: !!float 0
+max_requests: 100
+http_errors: true

@@ -1,0 +1,19 @@
+uuid: 54d799b4-14d0-4d48-a350-403bfd9f1c54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_twitter
+    - paragraphs.paragraphs_type.some
+id: paragraph.some.field_twitter
+field_name: field_twitter
+entity_type: paragraph
+bundle: some
+label: Twitter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

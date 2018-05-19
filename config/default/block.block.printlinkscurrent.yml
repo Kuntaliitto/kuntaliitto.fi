@@ -1,0 +1,26 @@
+uuid: 59f4590c-a53b-4d02-a4b7-865e84df7914
+langcode: en
+status: true
+dependencies:
+  module:
+    - kuntaliitto_common
+    - system
+  theme:
+    - kuntaliitto
+id: printlinkscurrent
+theme: kuntaliitto
+region: content
+weight: -14
+provider: null
+plugin: print_link_block
+settings:
+  id: print_link_block
+  label: 'Printlinks Current'
+  provider: kuntaliitto_common
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

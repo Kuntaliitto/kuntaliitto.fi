@@ -1,0 +1,23 @@
+uuid: 4b088b0c-5b16-409e-b42a-7951178e30ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_don_t_show_in_contact_dire
+    - node.type.contact_information
+id: node.contact_information.field_don_t_show_in_contact_dire
+field_name: field_don_t_show_in_contact_dire
+entity_type: node
+bundle: contact_information
+label: 'Do not show in contact directory'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

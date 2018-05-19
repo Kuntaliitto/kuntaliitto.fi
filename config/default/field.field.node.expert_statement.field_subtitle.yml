@@ -1,0 +1,19 @@
+uuid: 1d692ca3-b585-4a0c-a4fb-4b8400ac263b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.expert_statement
+id: node.expert_statement.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: expert_statement
+label: 'Top title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

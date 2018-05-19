@@ -1,0 +1,46 @@
+uuid: ca8b9b19-6eff-4d96-af38-8cd2de1177a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_browser_entity_form
+    - views
+name: all_media_browser_iframe
+label: 'All media browser (iframe)'
+display: iframe
+display_configuration:
+  width: 100%
+  height: '450'
+  link_text: 'Select media'
+  auto_open: true
+  path: ''
+selection_display: no_display
+selection_display_configuration:
+  entity_type: media
+  display: label
+  display_settings: {  }
+  select_text: 'Use selected'
+  selection_hidden: false
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  94c62525-15df-46e8-8a7b-bdd11c314ea5:
+    settings:
+      view: media_selection
+      view_display: image_browser
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: 94c62525-15df-46e8-8a7b-bdd11c314ea5
+    weight: 3
+    label: Image
+    id: view
+  6f4983b1-99e3-4ffe-96a6-91b4e2bb1f6a:
+    settings:
+      entity_type: media
+      bundle: image
+      form_mode: iframe_mode
+      submit_text: 'Save image'
+    uuid: 6f4983b1-99e3-4ffe-96a6-91b4e2bb1f6a
+    weight: 2
+    label: 'Image media'
+    id: entity_form

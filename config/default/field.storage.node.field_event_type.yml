@@ -1,0 +1,30 @@
+uuid: 3a05fe9a-0c6b-4cdb-af5c-49292f237166
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_event_type
+field_name: field_event_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: course
+      label: Course
+    -
+      value: training_programme
+      label: 'Training programme'
+    -
+      value: online_training
+      label: 'On-line training'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

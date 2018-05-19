@@ -1,0 +1,347 @@
+uuid: d5319753-950a-4b92-a9d4-f30aa349af69
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_file_browser
+    - field.field.node.expert_content.body
+    - field.field.node.expert_content.field_attachments
+    - field.field.node.expert_content.field_comments
+    - field.field.node.expert_content.field_contact_information
+    - field.field.node.expert_content.field_contact_information_title
+    - field.field.node.expert_content.field_content_source
+    - field.field.node.expert_content.field_image
+    - field.field.node.expert_content.field_image_files
+    - field.field.node.expert_content.field_keywords
+    - field.field.node.expert_content.field_kuntaliitto_terms
+    - field.field.node.expert_content.field_liftup
+    - field.field.node.expert_content.field_liftup_title
+    - field.field.node.expert_content.field_links
+    - field.field.node.expert_content.field_main_media
+    - field.field.node.expert_content.field_municipalities
+    - field.field.node.expert_content.field_subtitle
+    - field.field.node.expert_content.field_topics
+    - node.type.expert_content
+  module:
+    - comment
+    - content_moderation
+    - entity_browser
+    - entity_browser_entity_form
+    - field_group
+    - inline_entity_form
+    - paragraphs
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_contact_infos:
+      children:
+        - field_contact_information
+      parent_name: ''
+      weight: 10
+      label: 'Contact Informations'
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_liftups:
+      children:
+        - field_liftup_title
+        - field_liftup
+      parent_name: ''
+      weight: 11
+      label: Liftups
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_node_settings:
+      children:
+        - uid
+        - created
+        - promote
+        - path
+        - publish_on
+        - unpublish_on
+        - sticky
+        - field_comments
+      parent_name: ''
+      weight: 12
+      label: 'Node settings'
+      format_type: tabs
+      format_settings:
+        label: 'Node settings'
+        direction: horizontal
+        id: ''
+        classes: ''
+    group_tags:
+      children:
+        - field_topics
+        - field_keywords
+        - field_municipalities
+        - field_kuntaliitto_terms
+      parent_name: ''
+      weight: 9
+      label: Tags
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_attachments:
+      children:
+        - field_attachments
+        - field_image_files
+      parent_name: ''
+      weight: 7
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Attachments
+id: node.expert_content.default
+targetEntityType: node
+bundle: expert_content
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 5
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_attachments:
+    type: inline_entity_form_complex
+    weight: 6
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: attachment
+      label_plural: attachments
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: media_file_browser
+    region: content
+  field_comments:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_contact_information:
+    type: entity_reference_paragraphs
+    weight: 108
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: contact_information
+    third_party_settings: {  }
+    region: content
+  field_content_source:
+    type: entity_reference_autocomplete
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_image_files:
+    weight: 7
+    settings:
+      entity_browser: image_file_browser
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: default
+      open: false
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: entity_browser_file
+    region: content
+  field_keywords:
+    weight: 16
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_kuntaliitto_terms:
+    weight: 19
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_liftup:
+    type: entity_reference_paragraphs
+    weight: 110
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_liftup_title:
+    weight: 109
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_main_media:
+    weight: 4
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
+      override_labels: false
+      allow_existing: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: all_media_browser_modal
+    type: inline_entity_form_complex
+    region: content
+  field_municipalities:
+    weight: 17
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_topics:
+    weight: 15
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 14
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    third_party_settings: {  }
+    region: content
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  scheduler_settings:
+    weight: 20
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 11
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  url_redirects:
+    weight: 50
+    region: content
+hidden:
+  field_contact_information_title: true
+  field_image: true
+  field_links: true

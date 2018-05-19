@@ -1,0 +1,24 @@
+uuid: 3eb1d203-3ea4-415d-b2c6-7d8ae5bd85f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.publication.field_lifted_content
+    - field.field.paragraph.publication.field_liftup_style
+    - paragraphs.paragraphs_type.publication
+id: paragraph.publication.default
+targetEntityType: paragraph
+bundle: publication
+mode: default
+content:
+  field_lifted_content:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: lateral_image_left
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  field_liftup_style: true

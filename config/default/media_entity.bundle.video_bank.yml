@@ -1,0 +1,15 @@
+uuid: 063dc030-fd18-48e3-a8d6-c5c43e23e074
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_video
+id: video_bank
+label: 'Video bank'
+description: 'Reusable video bank for site editor use'
+type: video
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_video
+field_map: {  }

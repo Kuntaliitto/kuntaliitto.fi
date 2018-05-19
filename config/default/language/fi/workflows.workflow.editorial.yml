@@ -1,0 +1,14 @@
+label: 'Editorial workflow'
+type_settings:
+  states:
+    archived:
+      label: 'Vedä julkaisusta (sen jälkeen sivu ei näy enää ulospäin)'
+    draft:
+      label: Luonnos
+    published:
+      label: Julkaistu
+  transitions:
+    create_new_draft:
+      label: 'Luo uusi luonnos'
+    publish:
+      label: Publish

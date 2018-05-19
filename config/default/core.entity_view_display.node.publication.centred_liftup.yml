@@ -1,0 +1,97 @@
+uuid: 8cec1cbb-917c-4cca-bb0d-3393b2956f7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.centred_liftup
+    - field.field.node.publication.field_content_source
+    - field.field.node.publication.field_description_short
+    - field.field.node.publication.field_file
+    - field.field.node.publication.field_price
+    - field.field.node.publication.field_product_description
+    - field.field.node.publication.field_product_group
+    - field.field.node.publication.field_product_image_large
+    - field.field.node.publication.field_product_image_small
+    - field.field.node.publication.field_publication_year
+    - field.field.node.publication.field_url
+    - node.type.publication
+  module:
+    - ds
+    - file_entity
+    - text
+    - url_embed
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_description_short
+        - field_publication_year
+        - field_price
+        - field_file
+        - field_url
+id: node.publication.centred_liftup
+targetEntityType: node
+bundle: publication
+mode: centred_liftup
+content:
+  field_description_short:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_file:
+    weight: 3
+    label: hidden
+    settings:
+      access_message: 'You don''t have access to download this file.'
+      text: Download
+    third_party_settings: {  }
+    type: file_download_link
+    region: ds_content
+  field_price:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: number_unformatted
+    region: ds_content
+  field_publication_year:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_url:
+    type: url_embed
+    weight: 4
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_content_source: true
+  field_product_description: true
+  field_product_group: true
+  field_product_image_large: true
+  field_product_image_small: true
+  langcode: true
+  links: true

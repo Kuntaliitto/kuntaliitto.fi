@@ -1,0 +1,97 @@
+label: Tapahtumat
+display:
+  default:
+    display_options:
+      title: Tapahtumat
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Kaikki -'
+      filters:
+        event_location:
+          expose:
+            label: Paikka
+        field_event_type_value:
+          expose:
+            label: Tapahtumatyyppi
+        field_target_group_target_id:
+          expose:
+            label: Kohderyhmä
+        field_start_date_value_1:
+          expose:
+            label: Alkaa
+        field_start_date_value_2:
+          expose:
+            label: Loppu
+        field_has_attachment_value:
+          expose:
+            label: 'Tapahtumalla on liite'
+          group_info:
+            group_items:
+              1:
+                title: 'Tapahtumalla on liite'
+  events_upcoming_tab:
+    display_options:
+      menu:
+        title: Tulevat
+      filters:
+        event_location:
+          expose:
+            label: Paikka
+        field_event_type_value:
+          expose:
+            label: Tapahtumatyyppi
+        field_target_group_target_id:
+          expose:
+            label: Kohderyhmä
+        field_start_date_value_1:
+          expose:
+            label: Alkaa
+        field_start_date_value_2:
+          expose:
+            label: Loppu
+        field_has_attachment_value:
+          expose:
+            label: 'Tapahtumalla on liite'
+          group_info:
+            group_items:
+              1:
+                title: 'Tapahtumalla on liite'
+  events_past_tab:
+    display_options:
+      menu:
+        title: Menneet
+      title: Menneet
+    display_title: Menneet
+  page_events_main:
+    display_title: Tapahtumat
+    display_options:
+      menu:
+        title: Tapahtumat
+      filters:
+        event_location:
+          expose:
+            label: Paikka
+        field_event_type_value:
+          expose:
+            label: Tapahtumatyyppi
+        field_target_group_target_id:
+          expose:
+            label: Kohderyhmä
+        field_start_date_value_1:
+          expose:
+            label: Alkaa
+        field_start_date_value_2:
+          expose:
+            label: Loppu
+        field_has_attachment_value:
+          expose:
+            label: 'Tapahtumalla on liite'
+          group_info:
+            group_items:
+              1:
+                title: 'Tapahtumalla on liite'
+      arguments:
+        field_start_date_value_year:
+          exception:
+            title: Kaikki

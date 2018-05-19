@@ -1,0 +1,33 @@
+uuid: a81c8a63-8c2e-4db7-b7e7-296936d5e041
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: basic_page_alias_fi
+label: 'Basic page alias FI'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  fb19301f-fd5d-4d32-bad6-0a130a88ce22:
+    id: node_type
+    bundles:
+      basic_page: basic_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: fb19301f-fd5d-4d32-bad6-0a130a88ce22
+  ea248c71-a9a2-43c6-955c-f79a66cb81dc:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: ea248c71-a9a2-43c6-955c-f79a66cb81dc
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

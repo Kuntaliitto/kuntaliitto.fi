@@ -1,0 +1,28 @@
+uuid: 2fcafb59-283c-4d4d-aaa2-bfed6c497b41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_type
+    - paragraphs.paragraphs_type.uplift_thematic_content
+    - taxonomy.vocabulary.content_types
+id: paragraph.uplift_thematic_content.field_content_type
+field_name: field_content_type
+entity_type: paragraph
+bundle: uplift_thematic_content
+label: 'Content type'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_types: content_types
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

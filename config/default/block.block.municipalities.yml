@@ -1,0 +1,22 @@
+uuid: cb3c356c-df51-4188-949e-049712c0ec22
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.municipalities
+  module:
+    - facets
+  theme:
+    - kuntaliitto
+id: municipalities
+theme: kuntaliitto
+region: column_left
+weight: -18
+provider: null
+plugin: 'facet_block:municipalities'
+settings:
+  id: 'facet_block:municipalities'
+  label: Municipalities
+  provider: facets
+  label_display: visible
+visibility: {  }

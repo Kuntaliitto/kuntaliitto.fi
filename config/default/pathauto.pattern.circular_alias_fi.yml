@@ -1,0 +1,33 @@
+uuid: d428e526-1c47-4a91-8b41-88a58477409a
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: circular_alias_fi
+label: 'Circular alias FI'
+type: 'canonical_entities:node'
+pattern: 'yleiskirjeet/[node:created:html_year]/[node:title]'
+selection_criteria:
+  ff5dc6fe-dcc7-405b-a175-7f888919a106:
+    id: node_type
+    bundles:
+      circular: circular
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ff5dc6fe-dcc7-405b-a175-7f888919a106
+  30d59728-adf3-4186-baac-6c2bfbf11ff4:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 30d59728-adf3-4186-baac-6c2bfbf11ff4
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

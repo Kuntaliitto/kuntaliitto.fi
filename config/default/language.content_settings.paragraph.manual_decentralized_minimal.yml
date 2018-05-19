@@ -1,0 +1,16 @@
+uuid: 934b507e-07cb-4550-8838-3ee6adb6bb25
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.manual_decentralized_minimal
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.manual_decentralized_minimal
+target_entity_type_id: paragraph
+target_bundle: manual_decentralized_minimal
+default_langcode: current_interface
+language_alterable: true

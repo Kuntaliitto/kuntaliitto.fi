@@ -1,0 +1,42 @@
+uuid: 8890c8d1-e129-4d00-8217-f4474afbf785
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.contact_information
+    - field.field.paragraph.contact_information.field_contacts
+    - paragraphs.paragraphs_type.contact_information
+  module:
+    - content_moderation
+    - entity_browser
+id: paragraph.contact_information.default
+targetEntityType: paragraph
+bundle: contact_information
+mode: default
+content:
+  field_contacts:
+    type: entity_browser_entity_reference
+    weight: 0
+    settings:
+      entity_browser: contact_information
+      field_widget_display: label
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_edit: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

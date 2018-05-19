@@ -1,0 +1,34 @@
+uuid: 387062db-99fb-4e95-b2ad-15066911b75e
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: content_types_alias_en
+label: 'Content types alias EN'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'content-types/[term:name]'
+selection_criteria:
+  da446e31-6355-4d41-8803-da769de46d2b:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      content_types: content_types
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: da446e31-6355-4d41-8803-da769de46d2b
+  61a438cc-2a68-484c-8237-b1e1f5fe1a0e:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: 61a438cc-2a68-484c-8237-b1e1f5fe1a0e
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

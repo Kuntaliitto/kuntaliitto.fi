@@ -1,0 +1,30 @@
+uuid: 31bf8b87-8ec6-48af-ae86-e61e0612d20f
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large
+    - image.style.medium
+    - image.style.responsive_large_780_424
+  theme:
+    - bartik
+id: extra_large_790px_
+label: 'Extra large'
+image_style_mappings:
+  -
+    breakpoint_id: bartik.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: responsive_large_780_424
+  -
+    breakpoint_id: bartik.narrow
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: large
+  -
+    breakpoint_id: bartik.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: medium
+breakpoint_group: bartik
+fallback_image_style: responsive_large_780_424

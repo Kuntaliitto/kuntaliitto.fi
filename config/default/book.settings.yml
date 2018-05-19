@@ -1,0 +1,9 @@
+allowed_types:
+  - book
+  - export_content_book_page
+block:
+  navigation:
+    mode: 'all pages'
+child_type: export_content_book_page
+_core:
+  default_config_hash: i-_2TVi6FUEAqBgNRJkt6aaYmiw1k_LTrXzJS6wlZ4U

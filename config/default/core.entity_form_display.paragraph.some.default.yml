@@ -1,0 +1,58 @@
+uuid: e3e8a0cd-e3ac-4c2c-becf-a5979e64ba90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.some.field_facebook
+    - field.field.paragraph.some.field_instagram
+    - field.field.paragraph.some.field_nof
+    - field.field.paragraph.some.field_twitter
+    - paragraphs.paragraphs_type.some
+  module:
+    - content_moderation
+id: paragraph.some.default
+targetEntityType: paragraph
+bundle: some
+mode: default
+content:
+  field_facebook:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_instagram:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_nof:
+    weight: 9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_twitter:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

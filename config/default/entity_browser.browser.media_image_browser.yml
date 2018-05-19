@@ -1,0 +1,29 @@
+uuid: 71f3016e-4f67-4baa-a4d4-b889b230d027
+langcode: en
+status: true
+dependencies:
+  module:
+    - views
+name: media_image_browser
+label: 'Media image browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select image media'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  03f6ad0c-d932-40c2-a7f7-2ba8de0ff159:
+    settings:
+      view: media_selection
+      view_display: image_browser
+      submit_text: 'Select image media'
+      auto_select: false
+    uuid: 03f6ad0c-d932-40c2-a7f7-2ba8de0ff159
+    weight: 1
+    label: Image
+    id: view

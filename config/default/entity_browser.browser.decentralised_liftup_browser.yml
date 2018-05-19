@@ -1,0 +1,29 @@
+uuid: 52a57e40-4771-4ace-95af-3919b8ce103f
+langcode: en
+status: true
+dependencies:
+  module:
+    - views
+name: decentralised_liftup_browser
+label: 'Decentralised liftup browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select decentralised liftups'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  bcf9ba83-c69e-4449-88dc-3ba0d06a39b1:
+    settings:
+      view: all_content_browser
+      view_display: decentralised_liftup_browser
+      submit_text: 'Select decentralised liftup'
+      auto_select: false
+    uuid: bcf9ba83-c69e-4449-88dc-3ba0d06a39b1
+    weight: 1
+    label: 'Decentralised liftups'
+    id: view

@@ -1,0 +1,29 @@
+uuid: 2826a778-5d5f-4742-a4c2-fae7dbfb7179
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: fieldset
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: true
+    unpublish_revision: false
+name: Now-liftup
+type: active_content
+description: 'Provides NOW element that is displayed on site indicating activity on site based on time.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

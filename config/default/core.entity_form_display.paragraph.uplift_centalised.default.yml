@@ -1,0 +1,49 @@
+uuid: 8fcb0eac-fc8b-4b8e-9a84-d2bccefdd416
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.centralised_liftup_browser
+    - field.field.paragraph.uplift_centalised.field_lifted_content
+    - field.field.paragraph.uplift_centalised.field_liftup_style
+    - paragraphs.paragraphs_type.uplift_centalised
+  module:
+    - content_moderation
+    - entity_browser
+id: paragraph.uplift_centalised.default
+targetEntityType: paragraph
+bundle: uplift_centalised
+mode: default
+content:
+  field_lifted_content:
+    weight: 1
+    settings:
+      entity_browser: centralised_liftup_browser
+      field_widget_display: label
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_edit: false
+      open: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_liftup_style:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

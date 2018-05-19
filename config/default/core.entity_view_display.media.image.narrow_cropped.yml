@@ -1,0 +1,35 @@
+uuid: 61d95757-5360-46a6-ae29-209ffc3f0a24
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.narrow_cropped
+    - field.field.media.image.field_height
+    - field.field.media.image.field_image_file
+    - field.field.media.image.field_width
+    - media_entity.bundle.image
+    - responsive_image.styles.double_liftup
+  module:
+    - responsive_image
+id: media.image.narrow_cropped
+targetEntityType: media
+bundle: image
+mode: narrow_cropped
+content:
+  field_image_file:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: double_liftup
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+hidden:
+  created: true
+  field_height: true
+  field_width: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

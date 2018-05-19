@@ -1,0 +1,23 @@
+uuid: 3e81594f-166d-4de1-a36f-360186de032b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kuntaliitto
+id: sivustonbrandays
+theme: kuntaliitto
+region: header
+weight: -17
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Sivuston brändäys'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

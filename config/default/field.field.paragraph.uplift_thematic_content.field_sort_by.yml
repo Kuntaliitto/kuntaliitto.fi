@@ -1,0 +1,21 @@
+uuid: 05686d28-9a28-43d2-8dfb-c343c26f6e44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sort_by
+    - paragraphs.paragraphs_type.uplift_thematic_content
+  module:
+    - options
+id: paragraph.uplift_thematic_content.field_sort_by
+field_name: field_sort_by
+entity_type: paragraph
+bundle: uplift_thematic_content
+label: 'Sort by'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

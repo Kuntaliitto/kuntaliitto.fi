@@ -1,0 +1,16 @@
+uuid: 35d8927e-b74a-477a-82e2-e39e951bae84
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.uplift_decentalised
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.uplift_decentalised
+target_entity_type_id: paragraph
+target_bundle: uplift_decentalised
+default_langcode: current_interface
+language_alterable: true

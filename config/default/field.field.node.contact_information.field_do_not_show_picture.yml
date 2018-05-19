@@ -1,0 +1,23 @@
+uuid: da7a0a92-ba87-4ae1-ba08-771a6adabf1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_do_not_show_picture
+    - node.type.contact_information
+id: node.contact_information.field_do_not_show_picture
+field_name: field_do_not_show_picture
+entity_type: node
+bundle: contact_information
+label: 'Do not show picture'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

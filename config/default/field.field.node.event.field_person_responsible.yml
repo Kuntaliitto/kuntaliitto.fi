@@ -1,0 +1,28 @@
+uuid: 5663b6d3-95a6-4eca-8853-690839c79709
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_responsible
+    - node.type.event
+id: node.event.field_person_responsible
+field_name: field_person_responsible
+entity_type: node
+bundle: event
+label: 'Person responsible'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

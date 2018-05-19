@@ -1,0 +1,32 @@
+uuid: bdf2c416-e9f8-47fa-ba15-59b3b6a81518
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_source
+    - node.type.embedds
+    - taxonomy.vocabulary.content_types
+  content:
+    - 'taxonomy_term:content_types:d7432d87-2686-4ca9-b89c-8cfb31cff2e9'
+id: node.embedds.field_content_source
+field_name: field_content_source
+entity_type: node
+bundle: embedds
+label: 'Content source'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: d7432d87-2686-4ca9-b89c-8cfb31cff2e9
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_types: content_types
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

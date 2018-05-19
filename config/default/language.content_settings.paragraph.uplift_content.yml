@@ -1,0 +1,16 @@
+uuid: aa1449ea-1265-4d3e-8d55-fc9adb2622e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.uplift_content
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.uplift_content
+target_entity_type_id: paragraph
+target_bundle: uplift_content
+default_langcode: current_interface
+language_alterable: true

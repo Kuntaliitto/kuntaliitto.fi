@@ -1,0 +1,15 @@
+uuid: 860568e8-f4d4-46f4-a5e2-079b44311544
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_document
+id: file
+label: File
+description: ''
+type: document
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: ''
+field_map: {  }

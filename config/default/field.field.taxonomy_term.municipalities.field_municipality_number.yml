@@ -1,0 +1,19 @@
+uuid: 1cc12faf-97ad-491d-8fcf-a0e10792650f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_municipality_number
+    - taxonomy.vocabulary.municipalities
+id: taxonomy_term.municipalities.field_municipality_number
+field_name: field_municipality_number
+entity_type: taxonomy_term
+bundle: municipalities
+label: 'Municipality number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,25 @@
+uuid: 72974946-59d5-44d2-b2e0-68ed971227e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nof
+    - paragraphs.paragraphs_type.some
+id: paragraph.some.field_nof
+field_name: field_nof
+entity_type: paragraph
+bundle: some
+label: Nof
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 10
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

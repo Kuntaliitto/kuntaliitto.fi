@@ -1,0 +1,33 @@
+uuid: 30568bd0-144f-4192-aff3-7806df4cf8db
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: contact_information_alias_en
+label: 'Contact information alias EN'
+type: 'canonical_entities:node'
+pattern: 'contacts/[node:title]'
+selection_criteria:
+  5062fff2-271f-4770-9b11-f27493c06011:
+    id: node_type
+    bundles:
+      contact_information: contact_information
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 5062fff2-271f-4770-9b11-f27493c06011
+  655cc222-b382-459a-832c-4aefe49a39e1:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 655cc222-b382-459a-832c-4aefe49a39e1
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

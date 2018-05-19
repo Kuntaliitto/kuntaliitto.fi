@@ -1,0 +1,77 @@
+label: Kontaktuppgifter
+display:
+  default:
+    display_options:
+      title: 'Service e-post'
+      exposed_form:
+        options:
+          submit_button: Sök
+      filters:
+        field_division_target_id:
+          expose:
+            label: Enhet
+        combine:
+          expose:
+            label: Sök
+        field_service_in_swedish_value:
+          expose:
+            label: 'Service på svenska'
+          group_info:
+            group_items:
+              1:
+                title: 'Service på svenska'
+      fields:
+        field_department:
+          label: Enhet
+  contact_directory_tab:
+    display_options:
+      menu:
+        title: 'Service e-post'
+      title: Personer
+      fields:
+        field_department:
+          label: Enhet
+    display_title: 'Service e-post'
+  page_contact_directory:
+    display_title: Kontaktuppgifter
+    display_options:
+      menu:
+        title: Personer
+      fields:
+        field_department:
+          label: Enhet
+        field_division:
+          label: Team
+        field_mobile:
+          label: Mobiltelefon
+  people_tab:
+    display_title: Personer
+    display_options:
+      menu:
+        title: Personer
+      title: Personer
+      filters:
+        field_don_t_show_in_contact_dire_value:
+          admin_label: 'Visa inte i kontaktregistret'
+        field_division_target_id:
+          expose:
+            label: Enhet
+        field_service_in_swedish_value:
+          expose:
+            label: 'Service på svenska'
+          group_info:
+            group_items:
+              1:
+                title: 'Service på svenska'
+        combine:
+          expose:
+            label: Sök
+      fields:
+        field_organization:
+          label: Företag
+        field_department:
+          label: Enhet
+        field_division:
+          label: Team
+        field_responsibilities:
+          label: Ansvarsområden

@@ -1,0 +1,82 @@
+display:
+  default:
+    display_options:
+      filters:
+        status:
+          group_info:
+            group_items:
+              1:
+                value: '1'
+                title: Published
+              2:
+                title: 'Ej publicerad'
+            label: 'Status för publicering'
+          expose:
+            label: Status
+        type:
+          expose:
+            label: Typ
+        title:
+          expose:
+            label: Titel
+        langcode:
+          expose:
+            label: Språk
+        publish_on:
+          expose:
+            label: 'Publicera den'
+          group_info:
+            label: 'Publicera den'
+        unpublish_on:
+          expose:
+            label: 'Avpublicera den'
+      exposed_form:
+        options:
+          submit_button: Filtrera
+          reset_button_label: Återställ
+          exposed_sorts_label: 'Sortera efter'
+          sort_asc_label: Stigande
+          sort_desc_label: Fallande
+      pager:
+        options:
+          tags:
+            previous: '‹ föregående'
+            next: 'nästa ›'
+            first: '« första'
+            last: 'sista »'
+      fields:
+        title:
+          label: Titel
+        type:
+          label: Innehållstyp
+          separator: ', '
+        name:
+          label: Författare
+        status:
+          label: Status
+          settings:
+            format_custom_true: Published
+            format_custom_false: 'Ej publicerad'
+        publish_on:
+          label: 'Publicera den'
+        unpublish_on:
+          label: 'Avpublicera den'
+        operations:
+          label: Funktioner
+    display_title: Huvud
+  overview:
+    display_options:
+      menu:
+        title: Schemalagd
+      tab_options:
+        title: Innehåll
+  user_page:
+    display_options:
+      menu:
+        title: Schemalagd
+      tab_options:
+        title: Innehåll
+      arguments:
+        uid:
+          exception:
+            title: Alla

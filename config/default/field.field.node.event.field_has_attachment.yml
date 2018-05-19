@@ -1,0 +1,23 @@
+uuid: 1fac55f9-9e07-4115-8d7a-9f8acb090632
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_attachment
+    - node.type.event
+id: node.event.field_has_attachment
+field_name: field_has_attachment
+entity_type: node
+bundle: event
+label: 'Has attachment'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

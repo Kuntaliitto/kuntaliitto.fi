@@ -1,0 +1,21 @@
+uuid: 21cdcbb5-8a4b-4f83-bae1-cd9c15cc2ca8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_liftup_style
+    - paragraphs.paragraphs_type.uplift_decentalised
+  module:
+    - options
+id: paragraph.uplift_decentalised.field_liftup_style
+field_name: field_liftup_style
+entity_type: paragraph
+bundle: uplift_decentalised
+label: 'Liftup style'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

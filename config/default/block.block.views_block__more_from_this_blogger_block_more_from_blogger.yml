@@ -1,0 +1,24 @@
+uuid: 6156e025-7020-434f-8a26-e83b9adef7af
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.more_from_this_blogger
+  module:
+    - views
+  theme:
+    - kuntaliitto
+id: views_block__more_from_this_blogger_block_more_from_blogger
+theme: kuntaliitto
+region: content
+weight: -10
+provider: null
+plugin: 'views_block:more_from_this_blogger-block_more_from_blogger'
+settings:
+  id: 'views_block:more_from_this_blogger-block_more_from_blogger'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,224 @@
+uuid: 9830354c-4de8-4b16-a62f-4b1faa52d853
+langcode: fi
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 25
+template: false
+id: palautelomake
+title: Palautelomake
+description: 'Kuntaliiton yleinen palautelomake.'
+category: Yleislomake
+elements: "palaute_otsikko:\n  '#type': webform_markup\n  '#markup': '<h2>J&auml;t&auml; asiakaspalautetta&nbsp;</h2>'\npyyntosi_aihe:\n  '#type': textfield\n  '#title': 'Asiani koskee'\n  '#required': true\npyyntoni:\n  '#type': textarea\n  '#title': 'Asiasta tarkemmin'\n  '#default_value': 'Kuvaa asiasi tähän.'\n  '#required': true\nvastaus:\n  '#type': radios\n  '#title': Vastaus\n  '#default_value': 'Haluan vastauksen sähköpostitse'\n  '#title_display': before\n  '#options':\n    'Haluan vastauksen sähköpostitse': 'Haluan vastauksen sähköpostitse'\n    'Haluan vastauksen puhelimitse': 'Haluan vastauksen puhelimitse'\n    'En halua vastausta': 'En halua vastausta'\n  '#required': true\nyhteystiedot_1:\n  '#type': fieldset\n  '#title': Yhteystiedot\n  '#title_display': before\n  etunimi:\n    '#type': textfield\n    '#title': Nimi\n    '#required': true\n  edustamani_organisaatio:\n    '#type': textfield\n    '#title': 'Edustamani organisaatio'\n  puhelinnumero:\n    '#type': textfield\n    '#title': Puhelinnumero\n    '#states':\n      required:\n        ':input[name=\"vastaus\"]':\n          value: 'Haluan vastauksen puhelimitse'\n  sahkoposstiosoite:\n    '#type': email\n    '#title': Sähköpostiosoite\n    '#states':\n      required:\n        ':input[name=\"vastaus\"]':\n          value: 'Haluan vastauksen sähköpostitse'\ntiedostot:\n  '#type': managed_file\n  '#title': Tiedostot\n  '#help': 'Voit liitt&auml;&auml; mukaan maksimissaan viisi tiedostoa.'\n  '#multiple': 5\n  '#max_filesize': '20'\n  '#file_extensions': 'gif jpg png bmp tif txt rtf html odf pdf doc docx ppt pptx xls xlsx'\ntietosuoja:\n  '#type': webform_markup\n  '#markup': \"Kiitos ett&auml; autat parantamaan palveluamme antamalla palautetta. Siten voimme v&auml;litt&auml;&auml; my&ouml;s kiitokset oikeaan paikkaan.<br />\\n<br />\\nK&auml;sittelemme palautteesi mahdollisimman pian. &nbsp;Pyrimme vastaamaan palautteeseesi noin viiden arkip&auml;iv&auml;n kuluessa mik&auml;li olet pyyt&auml;nyt vastausta.<br />\\n<br />\\nAsiakaspalvelun laadun varmistamiseksi Kuntaliitto voi tallentaa asiakasrekisteriins&auml; t&auml;ll&auml; lomakkeella tai muilla tavoilla sille toimitetut palautteet vastauksineen. Henkil&ouml;tietolain (523/99) 10&sect;:n mukainen tietosuoja- ja rekisteriseloste Kuntaliiton asiakasrekisterist&auml; l&ouml;ytyy t&auml;&auml;lt&auml;.\"\nactions:\n  '#type': webform_actions\n  '#title': 'Lähetä lomake'\n  '#submit__label': 'Lähetä palaute'\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: false
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: inline
+  confirmation_title: ''
+  confirmation_message: "<h2>Kiitos viestist&auml;si!</h2>\r\nTiedot on vastaanotettu. Otamme asiasi k&auml;sittelyyn mahdollisimman pian. Saat s&auml;hk&ouml;postilla vahvistusviestin jossa on asiasi k&auml;sittelytunnus.&nbsp;"
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: false
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  sahkopostiosoite:
+    id: email
+    label: No_email
+    handler_id: sahkopostiosoite
+    status: true
+    conditions:
+      enabled:
+        ':input[name="vastaus"]':
+          '!value': 'En halua vastausta'
+        ':input[name="sahkoposstiosoite"]':
+          empty: true
+    weight: -49
+    settings:
+      states:
+        - completed
+      to_mail: asiakaspalvelu@kuntaliitto.fi
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      subject: '[webform_submission:values:pyyntosi_aihe:raw]'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: true
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      twig: false
+  en_halua_vastausta_sahkopostiosoite:
+    id: email
+    label: Sähköpostiosoite
+    handler_id: en_halua_vastausta_sahkopostiosoite
+    status: true
+    conditions:
+      enabled:
+        ':input[name="vastaus"]':
+          value: 'En halua vastausta'
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: asiakaspalvelu@kuntaliitto.fi
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      subject: 'Palautelomake / Responsblankett'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: true
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      twig: false
+  sahkopostiosoite_loytyy:
+    id: email
+    label: 'Sähköpostiosoite löytyy'
+    handler_id: sahkopostiosoite_loytyy
+    status: true
+    conditions:
+      enabled:
+        ':input[name="sahkoposstiosoite"]':
+          filled: true
+        ':input[name="vastaus"]':
+          '!value': 'En halua vastausta'
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: asiakaspalvelu@kuntaliitto.fi
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:sahkoposstiosoite:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:etunimi:raw]'
+      subject: '[webform_submission:values:pyyntosi_aihe:raw]'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: true
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      twig: false

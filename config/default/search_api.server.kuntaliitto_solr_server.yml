@@ -1,0 +1,32 @@
+uuid: a28dfe3b-4773-4892-af5f-5417b6d3d294
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_solr
+id: kuntaliitto_solr_server
+name: 'Kuntaliitto SOLR server'
+description: ''
+backend: search_api_solr
+backend_config:
+  connector: standard
+  connector_config:
+    scheme: http
+    host: 127.0.0.1
+    port: '8983'
+    path: /solr
+    core: collection1
+    timeout: 5
+    index_timeout: 5
+    optimize_timeout: 10
+    commit_within: 1000
+    solr_version: ''
+    http_method: AUTO
+  retrieve_data: false
+  highlight_data: false
+  excerpt: false
+  skip_schema_check: false
+  site_hash: true
+  suggest_suffix: true
+  suggest_corrections: true
+  suggest_words: false

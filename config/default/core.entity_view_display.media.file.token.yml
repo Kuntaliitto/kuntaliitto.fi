@@ -1,0 +1,35 @@
+uuid: 4bf561c4-ca37-4632-b3c7-baabba5b6ac3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.token
+    - field.field.media.file.field_file
+    - media_entity.bundle.file
+  module:
+    - file
+id: media.file.token
+targetEntityType: media
+bundle: file
+mode: token
+content:
+  field_file:
+    type: file_default
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  langcode: true
+  thumbnail: true
+  uid: true

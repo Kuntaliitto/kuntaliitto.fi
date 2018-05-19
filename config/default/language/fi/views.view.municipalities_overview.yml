@@ -1,0 +1,16 @@
+display:
+  page_municipality_overview:
+    display_options:
+      menu:
+        title: 'Kunnat ja kuntayhtymät'
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Hae
+      filters:
+        name:
+          expose:
+            label: 'Hae nimella'
+      title: Kuntalistaus
+label: Kuntalistaus

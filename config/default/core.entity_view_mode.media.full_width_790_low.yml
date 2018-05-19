@@ -1,0 +1,10 @@
+uuid: c53818d0-2061-4614-bd25-48da59570a06
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.full_width_790_low
+label: 'Full width 790 low'
+targetEntityType: media
+cache: true

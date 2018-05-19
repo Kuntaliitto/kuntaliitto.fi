@@ -1,0 +1,23 @@
+uuid: 7e26f042-d947-41e0-85ca-cfced562249e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.podcasts
+  content:
+    - 'file:image:39797629-d72a-4436-a64b-78d9cb8259f7'
+  module:
+    - entity_embed
+    - node
+label: 'Embed Podcast'
+id: embed_podcast
+type_id: entity
+type_settings:
+  entity_type: node
+  bundles:
+    - podcasts
+  display_plugins: {  }
+  entity_browser: ''
+  entity_browser_settings:
+    display_review: false
+icon_uuid: 39797629-d72a-4436-a64b-78d9cb8259f7

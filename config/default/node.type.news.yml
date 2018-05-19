@@ -1,0 +1,31 @@
+uuid: e9db0043-80fc-4b55-9a1e-e56a09103cf6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+      - main-navigation-en-
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: Recent
+type: news
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

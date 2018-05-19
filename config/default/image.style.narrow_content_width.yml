@@ -1,0 +1,15 @@
+uuid: ad09593e-faf1-4ef1-8302-c5ce76d91587
+langcode: en
+status: true
+dependencies: {  }
+name: narrow_content_width
+label: 'Narrow content width (790)'
+effects:
+  2e7ac15d-69de-4cce-bb74-55d5fc120595:
+    uuid: 2e7ac15d-69de-4cce-bb74-55d5fc120595
+    id: image_scale
+    weight: 1
+    data:
+      width: 790
+      height: null
+      upscale: true

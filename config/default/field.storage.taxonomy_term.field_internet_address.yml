@@ -1,0 +1,19 @@
+uuid: 2ae9648e-9f54-4431-8954-52ea6d04f4a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+id: taxonomy_term.field_internet_address
+field_name: field_internet_address
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

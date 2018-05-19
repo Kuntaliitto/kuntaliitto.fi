@@ -1,0 +1,23 @@
+uuid: 6955c928-2918-406e-8230-a1c202f7087f
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_podcast_file
+field_name: field_podcast_file
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

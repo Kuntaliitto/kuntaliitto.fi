@@ -1,0 +1,23 @@
+uuid: 388b520b-ddd6-450d-ae80-470ce9f527b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vat_percentage
+    - node.type.event
+id: node.event.field_vat_percentage
+field_name: field_vat_percentage
+entity_type: node
+bundle: event
+label: VAT-percentage
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: '%'
+field_type: integer

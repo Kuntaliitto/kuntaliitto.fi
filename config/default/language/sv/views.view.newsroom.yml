@@ -1,0 +1,225 @@
+display:
+  default:
+    display_options:
+      empty:
+        area:
+          admin_label: ''
+          content:
+            value: "<p class=\"text-align-center\">Hittade inget med dina sökriterier.</p>\r\n"
+            format: filtered_html
+      title: Pressrum
+      pager:
+        options:
+          tags:
+            first: '« Första'
+            last: 'Sista »'
+          expose:
+            items_per_page_options_all_label: '- Alla -'
+      filters:
+        news_topics:
+          expose:
+            label: Ämnen
+        news_municipality:
+          expose:
+            label: Kommuner
+        news_keywords:
+          expose:
+            label: Sökord
+        created:
+          expose:
+            label: Från
+        created_1:
+          expose:
+            label: Till
+  newsroom_blog_page:
+    display_options:
+      display_extenders: null
+      title: Bloggar
+      menu:
+        title: Bloggar
+      filters:
+        created:
+          admin_label: Från
+          expose:
+            label: Från
+        created_1:
+          admin_label: Till
+          expose:
+            label: Till
+    display_title: 'Pressrum blogg'
+  newsroom_press_release_page:
+    display_title: Pressmeddelanden
+    display_options:
+      display_extenders: null
+      menu:
+        title: Pressmeddelanden
+      title: Pressmeddelanden
+      filters:
+        created:
+          expose:
+            label: Från
+        created_1:
+          expose:
+            label: Till
+        news_topics:
+          expose:
+            label: Ämnen
+        news_municipality:
+          expose:
+            label: Kommuner
+        news_keywords:
+          expose:
+            label: Sökord
+  newsroom_recent_page:
+    display_title: Aktuellt
+    display_options:
+      display_extenders: null
+      menu:
+        title: Aktuellt
+      title: Aktuellt
+      filters:
+        created:
+          expose:
+            label: Från
+        created_1:
+          expose:
+            label: Till
+        news_topics:
+          expose:
+            label: Ämnen
+        news_municipality:
+          expose:
+            label: Kommuner
+        news_keywords:
+          expose:
+            label: Sökord
+  newsroom_main_page:
+    display_title: 'Pressrum, default'
+    display_options:
+      display_extenders: null
+      menu:
+        title: Alla
+      filters:
+        created:
+          expose:
+            label: Från
+        created_1:
+          expose:
+            label: Till
+        news_topics:
+          expose:
+            label: Ämnen
+        news_municipality:
+          expose:
+            label: Kommuner
+        news_keywords:
+          expose:
+            label: Sökord
+  newsroom_circular_experts_statements_main:
+    display_options:
+      display_extenders: null
+      menu:
+        title: Alla
+      title: 'Cirkulär och utlåtanden'
+  newsroom_circular_page:
+    display_options:
+      display_extenders: null
+      menu:
+        title: Cirkulär
+      title: Cirkulär
+      filters:
+        news_topics:
+          expose:
+            label: Ämnen
+        news_municipality:
+          expose:
+            label: Kommuner
+        news_keywords:
+          expose:
+            label: Sökord
+        created:
+          expose:
+            label: Från
+        created_1:
+          expose:
+            label: Till
+  newsroom_experts_statements_page:
+    display_options:
+      display_extenders: null
+      menu:
+        title: Utlåtanden
+      filters:
+        news_topics:
+          expose:
+            label: Ämnen
+        news_municipality:
+          expose:
+            label: Kommuner
+        news_keywords:
+          expose:
+            label: Sökord
+        created:
+          expose:
+            label: Från
+        created_1:
+          expose:
+            label: Till
+      title: Utlåtanden
+  experts_contents_overview:
+    display_options:
+      display_extenders: null
+      filters:
+        created:
+          expose:
+            label: Från
+        created_1:
+          expose:
+            label: Till
+        news_topics:
+          expose:
+            label: Ämnen
+        news_municipality:
+          expose:
+            label: Kommuner
+        news_keywords:
+          expose:
+            label: Sökord
+  newsroom_kuntalehti_page:
+    display_options:
+      display_extenders: null
+      filters:
+        created:
+          expose:
+            label: Från
+        created_1:
+          expose:
+            label: Till
+        news_topics:
+          expose:
+            label: Ämnen
+        news_municipality:
+          expose:
+            label: Kommuner
+        news_keywords:
+          expose:
+            label: Sökord
+  newsroom_kuntatekniikka_page:
+    display_options:
+      display_extenders: null
+      filters:
+        created:
+          expose:
+            label: Från
+        created_1:
+          expose:
+            label: Till
+        news_topics:
+          expose:
+            label: Ämnen
+        news_municipality:
+          expose:
+            label: Kommuner
+        news_keywords:
+          expose:
+            label: Sökord
+label: Pressrum

@@ -1,0 +1,50 @@
+display:
+  default:
+    display_options:
+      filters:
+        field_division_target_id:
+          expose:
+            label: Yksikkö
+        field_service_in_swedish_value:
+          expose:
+            label: 'Palvele ruotsiksi'
+          group_info:
+            group_items:
+              1:
+                title: 'Palvele ruotsiksi'
+        combine:
+          expose:
+            label: Hae
+      title: Palvelusähköpostit
+      exposed_form:
+        options:
+          submit_button: Hae
+  contact_directory_tab:
+    display_options:
+      menu:
+        title: Palvelusähköpostit
+  people_tab:
+    display_options:
+      filters:
+        field_division_target_id:
+          expose:
+            label: Yksikkö
+        field_service_in_swedish_value:
+          expose:
+            label: 'Palvele ruotsiksi'
+          group_info:
+            group_items:
+              1:
+                title: 'Palvele ruotsiksi'
+        combine:
+          expose:
+            label: Hae
+      title: Henkilöt
+      menu:
+        title: Henkilöt
+    display_title: Henkilöt
+  page_contact_directory:
+    display_options:
+      menu:
+        title: Henkilöt
+label: Henkilöstöhakemisto

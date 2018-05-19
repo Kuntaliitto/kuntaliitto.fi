@@ -1,0 +1,19 @@
+uuid: 915b3a2d-757d-49fe-b24d-2bc37b30c9d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+id: taxonomy_term.field_contact_directory
+field_name: field_contact_directory
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

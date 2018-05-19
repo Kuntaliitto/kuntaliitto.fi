@@ -1,0 +1,8 @@
+uuid: 0dcfb2f7-be3b-4878-9898-5b4193bffd63
+langcode: und
+status: true
+dependencies: {  }
+id: kuntaliitto_default
+label: 'Kuntaliitto default'
+locked: false
+pattern: j.n.Y

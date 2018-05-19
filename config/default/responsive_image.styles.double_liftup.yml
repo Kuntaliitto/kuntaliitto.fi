@@ -1,0 +1,34 @@
+uuid: 79597d92-df02-416e-9794-84954a89e1ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.expert_page
+    - image.style.narrow_320_x_600_cropped_
+  theme:
+    - kuntaliitto
+id: double_liftup
+label: 'Double liftup'
+image_style_mappings:
+  -
+    breakpoint_id: kuntaliitto.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: narrow_320_x_600_cropped_
+  -
+    breakpoint_id: kuntaliitto.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: expert_page
+  -
+    breakpoint_id: kuntaliitto.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: expert_page
+  -
+    breakpoint_id: kuntaliitto.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: expert_page
+breakpoint_group: kuntaliitto
+fallback_image_style: narrow_320_x_600_cropped_

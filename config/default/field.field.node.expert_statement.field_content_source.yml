@@ -1,0 +1,32 @@
+uuid: 67f5f9ba-740f-4c47-a4d2-9de0c838467a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_source
+    - node.type.expert_statement
+    - taxonomy.vocabulary.content_types
+  content:
+    - 'taxonomy_term:content_types:6259845d-f198-4c53-98fa-2cd430e371a2'
+id: node.expert_statement.field_content_source
+field_name: field_content_source
+entity_type: node
+bundle: expert_statement
+label: 'Content source'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: 6259845d-f198-4c53-98fa-2cd430e371a2
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_types: content_types
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

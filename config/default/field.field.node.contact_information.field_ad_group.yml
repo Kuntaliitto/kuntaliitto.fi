@@ -1,0 +1,19 @@
+uuid: 56973e6b-2e3c-432b-89c3-62743be5a795
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_group
+    - node.type.contact_information
+id: node.contact_information.field_ad_group
+field_name: field_ad_group
+entity_type: node
+bundle: contact_information
+label: 'AD group'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

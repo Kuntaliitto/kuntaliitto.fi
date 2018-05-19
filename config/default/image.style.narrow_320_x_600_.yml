@@ -1,0 +1,15 @@
+uuid: fc188851-fcbd-4637-afc5-e77226569ac8
+langcode: en
+status: true
+dependencies: {  }
+name: narrow_320_x_600_
+label: 'Narrow (320 x 600)'
+effects:
+  fc6559ec-271d-4a65-b0a8-c94f99a4d2cd:
+    uuid: fc6559ec-271d-4a65-b0a8-c94f99a4d2cd
+    id: image_scale
+    weight: 2
+    data:
+      width: 320
+      height: 600
+      upscale: false

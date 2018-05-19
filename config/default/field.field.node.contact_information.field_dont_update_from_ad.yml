@@ -1,0 +1,23 @@
+uuid: d6bdbda6-c559-4652-b14e-b53ec0f09181
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dont_update_from_ad
+    - node.type.contact_information
+id: node.contact_information.field_dont_update_from_ad
+field_name: field_dont_update_from_ad
+entity_type: node
+bundle: contact_information
+label: 'Do not update from AD'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

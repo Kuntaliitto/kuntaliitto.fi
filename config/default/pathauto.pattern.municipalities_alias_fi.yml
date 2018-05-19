@@ -1,0 +1,34 @@
+uuid: def45c49-f5bc-4d8e-9661-896c52964481
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: municipalities_alias_fi
+label: 'Municipalities alias FI'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'kunnat/[term:name]'
+selection_criteria:
+  056d4424-357d-477c-806c-9286a19b5596:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      municipalities: municipalities
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 056d4424-357d-477c-806c-9286a19b5596
+  360dc430-3184-4549-9754-a554ec31d9d6:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: 360dc430-3184-4549-9754-a554ec31d9d6
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

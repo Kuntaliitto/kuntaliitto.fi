@@ -1,0 +1,42 @@
+uuid: 07898240-c737-428f-a448-8ac859879dba
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_color
+field_name: field_color
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: cyan
+      label: Cyan
+    -
+      value: green-dark
+      label: 'Green dark'
+    -
+      value: yellow
+      label: Yellow
+    -
+      value: brown-light
+      label: 'Brown light'
+    -
+      value: blue-1
+      label: 'Blue 1'
+    -
+      value: blue-2
+      label: 'Blue 2'
+    -
+      value: blue-light
+      label: 'Blue light'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

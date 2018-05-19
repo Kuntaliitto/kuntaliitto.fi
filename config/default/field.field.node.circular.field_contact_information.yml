@@ -1,0 +1,45 @@
+uuid: cefa0c61-05ee-453f-9a45-67ef304b02f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_information
+    - node.type.circular
+    - paragraphs.paragraphs_type.contact_information
+  module:
+    - entity_reference_revisions
+id: node.circular.field_contact_information
+field_name: field_contact_information
+entity_type: node
+bundle: circular
+label: 'Contact information'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      contact_information: contact_information
+    target_bundles_drag_drop:
+      contact_information:
+        enabled: true
+        weight: 7
+      double_liftup:
+        weight: 8
+        enabled: false
+      uplift_centalised:
+        weight: 9
+        enabled: false
+      uplift_content:
+        weight: 10
+        enabled: false
+      uplift_decentalised:
+        weight: 11
+        enabled: false
+      uplift_thematic_content:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

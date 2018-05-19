@@ -1,0 +1,40 @@
+uuid: f10d0de7-da94-4348-a9a9-451f141e339e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.primary-menu-en-
+  module:
+    - language
+    - menu_block
+    - menu_multilingual
+  theme:
+    - kuntaliitto
+third_party_settings:
+  menu_multilingual:
+    only_translated_labels: 1
+    only_translated_content: 0
+id: primarymenuen_2
+theme: kuntaliitto
+region: header_afterfix
+weight: -15
+provider: null
+plugin: 'menu_block:primary-menu-en-'
+settings:
+  id: 'menu_block:primary-menu-en-'
+  label: 'Primary menu (EN)'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'primary-menu-en-:'
+  suggestion: primary_menu_en_
+visibility:
+  language:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

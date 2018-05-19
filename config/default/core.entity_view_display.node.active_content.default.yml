@@ -1,0 +1,38 @@
+uuid: 331ab60a-ba14-430d-bff4-8be5ba99d5f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.active_content.field_activities_link
+    - field.field.node.active_content.field_text
+    - node.type.active_content
+  module:
+    - link
+    - user
+id: node.active_content.default
+targetEntityType: node
+bundle: active_content
+mode: default
+content:
+  field_activities_link:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_text:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  langcode: true
+  links: true

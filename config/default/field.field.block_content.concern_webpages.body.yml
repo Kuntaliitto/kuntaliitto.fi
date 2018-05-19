@@ -1,0 +1,22 @@
+uuid: 3bcc23d0-1293-451c-a1c0-c97962d90d13
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.concern_webpages
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.concern_webpages.body
+field_name: body
+entity_type: block_content
+bundle: concern_webpages
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

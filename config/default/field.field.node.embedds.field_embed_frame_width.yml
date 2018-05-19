@@ -1,0 +1,23 @@
+uuid: b25bd631-f2e6-4d8e-b1a4-a2d2e6647dad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_embed_frame_width
+    - node.type.embedds
+id: node.embedds.field_embed_frame_width
+field_name: field_embed_frame_width
+entity_type: node
+bundle: embedds
+label: 'Embed frame width'
+description: 'Frame width in pixels'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 100
+  max: 1200
+  prefix: ''
+  suffix: ''
+field_type: integer

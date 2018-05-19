@@ -1,0 +1,19 @@
+uuid: 84d8e665-9240-4438-bdf1-3d9a3f87ba49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_external_url
+    - node.type.embedds
+id: node.embedds.field_external_url
+field_name: field_external_url
+entity_type: node
+bundle: embedds
+label: 'External URL'
+description: 'url to external content'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: fd3e897d-b519-4268-9f56-572b40e965dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.content_source
+  module:
+    - facets
+  theme:
+    - kuntaliitto
+id: contentsource
+theme: kuntaliitto
+region: column_left
+weight: -20
+provider: null
+plugin: 'facet_block:content_source'
+settings:
+  id: 'facet_block:content_source'
+  label: 'Content source'
+  provider: facets
+  label_display: visible
+visibility: {  }

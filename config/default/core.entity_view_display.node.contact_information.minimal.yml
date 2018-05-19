@@ -1,0 +1,133 @@
+uuid: fdf5a0ad-bc48-40b6-aa36-ff774abbb78b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.minimal
+    - field.field.node.contact_information.field_ad_group
+    - field.field.node.contact_information.field_additional_information
+    - field.field.node.contact_information.field_contact_email
+    - field.field.node.contact_information.field_content_source
+    - field.field.node.contact_information.field_department
+    - field.field.node.contact_information.field_division
+    - field.field.node.contact_information.field_do_not_show_mobile
+    - field.field.node.contact_information.field_do_not_show_picture
+    - field.field.node.contact_information.field_do_not_show_responsibiliti
+    - field.field.node.contact_information.field_don_t_show_in_contact_dire
+    - field.field.node.contact_information.field_dont_update_from_ad
+    - field.field.node.contact_information.field_first_name
+    - field.field.node.contact_information.field_image
+    - field.field.node.contact_information.field_last_name
+    - field.field.node.contact_information.field_mobile
+    - field.field.node.contact_information.field_organization
+    - field.field.node.contact_information.field_person_title
+    - field.field.node.contact_information.field_phone_number
+    - field.field.node.contact_information.field_responsibilities
+    - field.field.node.contact_information.field_service_description
+    - field.field.node.contact_information.field_service_in_swedish
+    - field.field.node.contact_information.field_service_title
+    - field.field.node.contact_information.field_twitter_account
+    - field.field.node.contact_information.field_update_ip_ad
+    - field.field.node.contact_information.field_update_time_ad
+    - field.field.node.contact_information.field_updated_from_ad
+    - field.field.node.contact_information.field_user_reference
+    - field.field.node.contact_information.field_weight
+    - node.type.contact_information
+  module:
+    - smart_trim
+    - user
+id: node.contact_information.minimal
+targetEntityType: node
+bundle: contact_information
+mode: minimal
+content:
+  field_additional_information:
+    type: smart_trim
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 200
+      trim_type: chars
+      trim_suffix: ''
+      more_link: false
+      more_text: More
+      trim_options:
+        text: true
+      more_class: more-link
+      summary_handler: full
+    third_party_settings: {  }
+    region: content
+  field_first_name:
+    type: string
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_last_name:
+    type: string
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_person_title:
+    type: string
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_service_description:
+    type: smart_trim
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 200
+      trim_type: chars
+      trim_suffix: ''
+      more_link: false
+      more_text: More
+      trim_options:
+        text: true
+      more_class: more-link
+      summary_handler: full
+    third_party_settings: {  }
+    region: content
+  field_service_title:
+    type: string
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ad_group: true
+  field_contact_email: true
+  field_content_source: true
+  field_department: true
+  field_division: true
+  field_do_not_show_mobile: true
+  field_do_not_show_picture: true
+  field_do_not_show_responsibiliti: true
+  field_don_t_show_in_contact_dire: true
+  field_dont_update_from_ad: true
+  field_image: true
+  field_liftup: true
+  field_mobile: true
+  field_organization: true
+  field_phone_number: true
+  field_responsibilities: true
+  field_service_in_swedish: true
+  field_twitter_account: true
+  field_update_ip_ad: true
+  field_update_time_ad: true
+  field_updated_from_ad: true
+  field_user_reference: true
+  field_weight: true
+  langcode: true
+  links: true

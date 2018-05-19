@@ -1,0 +1,23 @@
+uuid: 015018b3-4930-41b5-b0a6-8f09ca7ca1c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.concern_webpages
+    - field.storage.block_content.field_link_1
+  module:
+    - link
+id: block_content.concern_webpages.field_link_1
+field_name: field_link_1
+entity_type: block_content
+bundle: concern_webpages
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

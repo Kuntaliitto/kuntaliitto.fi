@@ -1,0 +1,120 @@
+uuid: 3ccc57b3-f7d2-4d90-9691-087d1d144b49
+langcode: en
+status: true
+dependencies:
+  module:
+    - editor
+    - entity_embed
+    - inline_responsive_images
+    - url_embed
+name: 'Filtered HTML'
+format: filtered_html
+weight: 0
+filters:
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: -48
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -50
+    settings:
+      allowed_html: '<p class="text-align-left text-align-center text-align-right text-align-justify"> <a href hreflang name !href accesskey id rel target title> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption data-responsive-image-style data-image-style> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button> <drupal-url data-embed-url data-url-provider>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: -43
+    settings:
+      filter_url_length: 72
+  entity_embed:
+    id: entity_embed
+    provider: entity_embed
+    status: true
+    weight: -47
+    settings: {  }
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: -49
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: -45
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: -44
+    settings: {  }
+  filter_imagestyle:
+    id: filter_imagestyle
+    provider: inline_responsive_images
+    status: false
+    weight: -46
+    settings:
+      image_style_body_image: '1'
+      image_style_expert_page: '0'
+      image_style_large: '0'
+      image_style_larger: '0'
+      image_style_linkit_result_thumbnail: '0'
+      image_style_media_browser_image_style_160x160_: '0'
+      image_style_medium: '0'
+      image_style_medium_cropped: '0'
+      image_style_narrow_320_x_600_: '0'
+      image_style_narrow_320_x_600_cropped_: '0'
+      image_style_narrow_content_width: '0'
+      image_style_responsive_large_780_424: '0'
+      image_style_thumbnail: '0'
+      image_style_wide_and_low: '0'
+  filter_responsive_image_style:
+    id: filter_responsive_image_style
+    provider: inline_responsive_images
+    status: true
+    weight: -40
+    settings:
+      responsive_style_double_liftup: '0'
+      responsive_style_extra_large_790px_: '0'
+      responsive_style_inline_image: '1'
+      responsive_style_liftup_image_on_side: '0'
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: false
+    weight: -37
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -39
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -38
+    settings: {  }
+  url_embed_convert_links:
+    id: url_embed_convert_links
+    provider: url_embed
+    status: true
+    weight: -41
+    settings:
+      url_prefix: ''
+  url_embed:
+    id: url_embed
+    provider: url_embed
+    status: true
+    weight: -42
+    settings: {  }

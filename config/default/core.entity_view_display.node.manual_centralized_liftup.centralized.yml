@@ -1,0 +1,89 @@
+uuid: 2b6af6f4-feab-4f8c-8525-f28cddd23473
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.centralized
+    - field.field.node.manual_centralized_liftup.body
+    - field.field.node.manual_centralized_liftup.field_links
+    - field.field.node.manual_centralized_liftup.field_main_media
+    - node.type.manual_centralized_liftup
+  module:
+    - ds
+    - link
+    - smart_trim
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - body
+        - field_main_media
+        - field_links
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.manual_centralized_liftup.centralized
+targetEntityType: node
+bundle: manual_centralized_liftup
+mode: centralized
+content:
+  body:
+    label: hidden
+    type: smart_trim
+    weight: 1
+    settings:
+      trim_length: 300
+      trim_type: chars
+      trim_suffix: ''
+      more_link: false
+      more_text: More
+      summary_handler: full
+      trim_options:
+        text: true
+      more_class: more-link
+    third_party_settings: {  }
+    region: ds_content
+  field_links:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: ds_content
+  field_main_media:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: full_width_790
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+hidden:
+  langcode: true
+  links: true

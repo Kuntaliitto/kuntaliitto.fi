@@ -1,0 +1,19 @@
+uuid: 6e6951ef-c92d-4c20-bed3-7979fa0db4cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_neighboring_municipalities
+field_name: field_neighboring_municipalities
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

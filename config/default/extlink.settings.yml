@@ -1,0 +1,11 @@
+extlink_include: ''
+extlink_exclude: ''
+extlink_alert_text: ''
+extlink_alert: false
+extlink_target: true
+extlink_subdomains: true
+extlink_mailto_class: '0'
+extlink_img_class: false
+extlink_class: ext
+extlink_css_exclude: '#block-printlinkscurrent, .view-newsroom .view-content, .view-thematic-lift-up .view-content, #timeline_wall1, #block-languageswitcher-2'
+extlink_css_explicit: ''

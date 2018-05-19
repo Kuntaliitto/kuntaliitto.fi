@@ -1,0 +1,16 @@
+uuid: 7a7b7371-7b58-4b8a-9a62-725c52e86709
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.event
+target_entity_type_id: node
+target_bundle: event
+default_langcode: current_interface
+language_alterable: true

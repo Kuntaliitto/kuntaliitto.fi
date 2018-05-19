@@ -1,0 +1,21 @@
+uuid: 34b5994c-5ace-4670-98ff-8cb433c678a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_municipality_type
+    - taxonomy.vocabulary.municipalities
+  module:
+    - options
+id: taxonomy_term.municipalities.field_municipality_type
+field_name: field_municipality_type
+entity_type: taxonomy_term
+bundle: municipalities
+label: 'Municipality type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

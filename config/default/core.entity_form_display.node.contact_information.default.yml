@@ -1,0 +1,428 @@
+uuid: 9713600c-fc32-47b8-a263-ccfcfbd9b4a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contact_information.field_ad_group
+    - field.field.node.contact_information.field_additional_information
+    - field.field.node.contact_information.field_contact_email
+    - field.field.node.contact_information.field_content_source
+    - field.field.node.contact_information.field_department
+    - field.field.node.contact_information.field_division
+    - field.field.node.contact_information.field_do_not_show_mobile
+    - field.field.node.contact_information.field_do_not_show_picture
+    - field.field.node.contact_information.field_do_not_show_responsibiliti
+    - field.field.node.contact_information.field_don_t_show_in_contact_dire
+    - field.field.node.contact_information.field_dont_update_from_ad
+    - field.field.node.contact_information.field_first_name
+    - field.field.node.contact_information.field_image
+    - field.field.node.contact_information.field_last_name
+    - field.field.node.contact_information.field_liftup
+    - field.field.node.contact_information.field_mobile
+    - field.field.node.contact_information.field_organization
+    - field.field.node.contact_information.field_person_title
+    - field.field.node.contact_information.field_phone_number
+    - field.field.node.contact_information.field_responsibilities
+    - field.field.node.contact_information.field_service_description
+    - field.field.node.contact_information.field_service_in_swedish
+    - field.field.node.contact_information.field_service_title
+    - field.field.node.contact_information.field_twitter_account
+    - field.field.node.contact_information.field_update_ip_ad
+    - field.field.node.contact_information.field_update_time_ad
+    - field.field.node.contact_information.field_updated_from_ad
+    - field.field.node.contact_information.field_user_reference
+    - field.field.node.contact_information.field_weight
+    - node.type.contact_information
+  module:
+    - content_moderation
+    - datetime
+    - entity_browser_entity_form
+    - field_group
+    - inline_entity_form
+    - paragraphs
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_picture:
+      children:
+        - field_do_not_show_picture
+        - field_image
+      parent_name: ''
+      weight: 5
+      label: Picture
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_communication:
+      children:
+        - field_phone_number
+        - field_do_not_show_mobile
+        - field_mobile
+        - field_contact_email
+        - field_twitter_account
+      parent_name: ''
+      weight: 6
+      label: Communication
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_position_details:
+      children:
+        - field_department
+        - field_division
+        - field_organization
+        - field_ad_group
+        - field_do_not_show_responsibiliti
+        - field_weight
+        - field_service_in_swedish
+        - field_responsibilities
+      parent_name: ''
+      weight: 7
+      label: 'Position details'
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_service_information:
+      children:
+        - field_service_title
+        - field_service_description
+      parent_name: ''
+      weight: 8
+      label: 'Service information'
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+id: node.contact_information.default
+targetEntityType: node
+bundle: contact_information
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ad_group:
+    weight: 35
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_additional_information:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_contact_email:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_content_source:
+    type: entity_reference_autocomplete
+    weight: 19
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_department:
+    weight: 32
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_division:
+    weight: 33
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_do_not_show_mobile:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_do_not_show_picture:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_do_not_show_responsibiliti:
+    weight: 36
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_don_t_show_in_contact_dire:
+    weight: 20
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_dont_update_from_ad:
+    weight: 21
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_first_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image:
+    weight: 6
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: image
+      label_plural: images
+      allow_new: true
+      match_operator: CONTAINS
+      allow_existing: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: image_browser_image_bank_upload_new_
+    type: inline_entity_form_complex
+    region: content
+  field_last_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_liftup:
+    weight: 9
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_mobile:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_organization:
+    weight: 34
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_person_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_phone_number:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_responsibilities:
+    weight: 39
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_service_description:
+    weight: 30
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_service_in_swedish:
+    weight: 38
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_service_title:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_twitter_account:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_update_ip_ad:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_update_time_ad:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_updated_from_ad:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_user_reference:
+    weight: 10
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_weight:
+    weight: 37
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    weight: 17
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
+  publish_on:
+    type: datetime_timestamp
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 15
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 16
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  unpublish_on:
+    type: datetime_timestamp
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  url_redirects:
+    weight: 50
+    region: content
+hidden:
+  title: true

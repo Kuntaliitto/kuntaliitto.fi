@@ -1,0 +1,19 @@
+uuid: f870229a-1d8c-44da-9f9d-890424cd5ef3
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_liftup_links
+field_name: field_liftup_links
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

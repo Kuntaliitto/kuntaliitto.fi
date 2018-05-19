@@ -1,0 +1,9 @@
+exclude_paths: "/admin\r\n/admin/*"
+popup_agreed:
+  value: "<h2>Thank you for accepting cookies</h2>\r\n\r\n<p>You can now hide this message or find out more about cookies.</p>\r\n"
+popup_agree_button_message: Hyväksy
+popup_disagree_button_message: 'Lue lisää'
+popup_find_more_button_message: 'Lue lisää'
+popup_hide_button_message: Piilossa
+popup_info:
+  value: "<h2>Sivuilla käytetään evästeitä</h2>\r\n\r\n<p>Sivuilla käytetään evästeitä käyttökokemuksen parantamiseksi ja yksilöimiseksi. Sivut saattavat sisältää myös kolmansien osapuolten evästeitä. Käyttämällä tätä sivustoa hyväksyt evästeiden käytön.</p>"

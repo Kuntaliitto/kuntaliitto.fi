@@ -1,0 +1,33 @@
+uuid: b2f74d6b-dc8d-419c-9c75-c27980a11415
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.active_content.field_activities_link
+    - field.field.node.active_content.field_text
+    - node.type.active_content
+  module:
+    - link
+    - user
+id: node.active_content.teaser
+targetEntityType: node
+bundle: active_content
+mode: teaser
+content:
+  field_activities_link:
+    type: link
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_text: true
+  langcode: true
+  links: true

@@ -1,0 +1,16 @@
+uuid: 9ef2ddbf-daf0-42b8-9bc4-b6b3ec3d376d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.concern_webpages
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.concern_webpages
+target_entity_type_id: block_content
+target_bundle: concern_webpages
+default_langcode: current_interface
+language_alterable: true

@@ -1,0 +1,78 @@
+uuid: a59f358d-d836-44e3-ba5b-325061bd7902
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.teaser
+    - field.field.media.file.field_file
+    - media_entity.bundle.file
+  module:
+    - ds
+    - field_group
+    - file_entity
+third_party_settings:
+  field_group:
+    group_linked_media:
+      children: {  }
+      parent_name: ''
+      weight: 7
+      format_type: link
+      format_settings:
+        label: 'Linked media'
+        target: field_file
+        custom_uri: ''
+        target_attribute: default
+        id: ''
+        classes: field-group-link--file
+      label: 'Linked media'
+  ds:
+    layout:
+      id: listing_item
+      path: themes/custom/kuntaliitto
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      meta:
+        - created
+      title:
+        - name
+      main:
+        - field_file
+id: media.file.teaser
+targetEntityType: media
+bundle: file
+mode: teaser
+content:
+  created:
+    type: timestamp
+    weight: 0
+    label: visually_hidden
+    settings:
+      date_format: kuntaliitto_default
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    region: meta
+  field_file:
+    type: file_download_link
+    weight: 2
+    label: visually_hidden
+    settings:
+      access_message: 'You don''t have access to download this file.'
+      text: 'Download [file:name]'
+    third_party_settings: {  }
+    region: main
+  name:
+    type: string
+    weight: 1
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: title
+hidden:
+  langcode: true
+  thumbnail: true
+  uid: true

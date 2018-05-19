@@ -1,0 +1,16 @@
+uuid: 7a1a3875-a572-4ddf-bdd8-383e1dbdc1a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.circular
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.circular
+target_entity_type_id: node
+target_bundle: circular
+default_langcode: current_interface
+language_alterable: true

@@ -1,0 +1,14 @@
+uuid: aca494cc-a012-43f5-8d0e-843edae932de
+langcode: fi
+status: true
+dependencies:
+  config:
+    - user.role.blogin_yllapitaja
+  module:
+    - user
+id: user_add_role_action.blogin_yllapitaja
+label: 'Add the Blogin ylläpitäjä role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: blogin_yllapitaja

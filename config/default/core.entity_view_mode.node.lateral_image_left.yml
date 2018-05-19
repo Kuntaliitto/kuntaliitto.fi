@@ -1,0 +1,10 @@
+uuid: 9eedd81e-09b1-4fab-a979-6a21fd5bb34d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.lateral_image_left
+label: 'Lateral (Image left)'
+targetEntityType: node
+cache: true

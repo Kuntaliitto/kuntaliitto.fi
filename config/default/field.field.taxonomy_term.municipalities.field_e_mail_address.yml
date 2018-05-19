@@ -1,0 +1,19 @@
+uuid: 395c78c9-9f9b-4d7e-9556-d10e41186696
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_e_mail_address
+    - taxonomy.vocabulary.municipalities
+id: taxonomy_term.municipalities.field_e_mail_address
+field_name: field_e_mail_address
+entity_type: taxonomy_term
+bundle: municipalities
+label: 'E-mail address'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

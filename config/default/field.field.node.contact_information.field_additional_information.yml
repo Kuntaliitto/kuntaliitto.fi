@@ -1,0 +1,21 @@
+uuid: d3b8dfcd-cc7c-49d4-8c04-a26d4db67dcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_information
+    - node.type.contact_information
+  module:
+    - text
+id: node.contact_information.field_additional_information
+field_name: field_additional_information
+entity_type: node
+bundle: contact_information
+label: 'Additional information'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

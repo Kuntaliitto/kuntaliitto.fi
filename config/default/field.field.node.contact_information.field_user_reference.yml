@@ -1,0 +1,28 @@
+uuid: 4a875ed0-0273-4369-b56c-aebbc80d3392
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user_reference
+    - node.type.contact_information
+id: node.contact_information.field_user_reference
+field_name: field_user_reference
+entity_type: node
+bundle: contact_information
+label: 'User reference'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

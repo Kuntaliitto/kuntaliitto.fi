@@ -1,0 +1,41 @@
+uuid: d52422b5-c06f-4bcd-a37a-0d6107290075
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.image_bank_browse
+  module:
+    - views
+name: image_file_browser
+label: 'Image file browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select images'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  87691bb0-0e27-4998-933b-e26e8ac873e8:
+    settings:
+      view: image_bank_browse
+      view_display: image_bank_file_browser
+      submit_text: 'Select images'
+      auto_select: false
+    uuid: 87691bb0-0e27-4998-933b-e26e8ac873e8
+    weight: 1
+    label: 'Image bank'
+    id: view
+  81c5e8fb-78dc-4fc4-a013-e3d16c418f27:
+    settings:
+      upload_location: 'public://public-image-bank/'
+      multiple: true
+      submit_text: 'Select files'
+      extensions: 'jpg jpeg gif png'
+    uuid: 81c5e8fb-78dc-4fc4-a013-e3d16c418f27
+    weight: 2
+    label: Upload
+    id: upload

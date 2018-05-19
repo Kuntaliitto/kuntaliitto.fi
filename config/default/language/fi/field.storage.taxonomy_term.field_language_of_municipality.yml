@@ -1,0 +1,10 @@
+settings:
+  allowed_values:
+    -
+      label: 'suomenkielinen kunta'
+    -
+      label: 'ruotsinkielinen kunta'
+    -
+      label: 'kaksikielinen kunta, pääkieli suomi'
+    -
+      label: 'kaksikielinen kunta, pääkieli ruotsi'

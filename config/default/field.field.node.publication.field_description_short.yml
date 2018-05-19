@@ -1,0 +1,21 @@
+uuid: 3d2ceb31-3028-4a38-9620-5883def8443e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_short
+    - node.type.publication
+  module:
+    - text
+id: node.publication.field_description_short
+field_name: field_description_short
+entity_type: node
+bundle: publication
+label: 'Description short'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: a294ba2b-c3e6-4e06-8c83-d58d4fadfcd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_phone
+    - taxonomy.vocabulary.municipalities
+  module:
+    - telephone
+id: taxonomy_term.municipalities.field_phone
+field_name: field_phone
+entity_type: taxonomy_term
+bundle: municipalities
+label: Phone
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

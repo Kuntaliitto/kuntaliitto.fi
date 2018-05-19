@@ -1,0 +1,19 @@
+uuid: c1a8886a-dfa2-44fd-8c3f-eb33d96927d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - text
+id: taxonomy_term.field_search_result_info
+field_name: field_search_result_info
+entity_type: taxonomy_term
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

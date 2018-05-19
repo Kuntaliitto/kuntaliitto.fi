@@ -1,0 +1,39 @@
+uuid: 5a3cde59-0c40-461f-8f94-aa5e5c6a0254
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_information
+    - field.field.block_content.contact_information.body
+    - field.field.block_content.contact_information.field_address
+    - field.field.block_content.contact_information.field_contact_info_link
+  module:
+    - link
+    - text
+id: block_content.contact_information.default
+targetEntityType: block_content
+bundle: contact_information
+mode: default
+content:
+  field_address:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_contact_info_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  body: true
+  langcode: true

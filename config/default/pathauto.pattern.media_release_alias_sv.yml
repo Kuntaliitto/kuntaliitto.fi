@@ -1,0 +1,33 @@
+uuid: c57876a2-7848-410a-bcce-bb0f07f7ca6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: media_release_alias_sv
+label: 'Media release alias SV'
+type: 'canonical_entities:node'
+pattern: 'pressmeddelande/[node:created:html_year]/[node:title]'
+selection_criteria:
+  b14460bb-aace-4e1a-894e-d81244a930f1:
+    id: node_type
+    bundles:
+      media_release: media_release
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b14460bb-aace-4e1a-894e-d81244a930f1
+  22c03b76-0d82-402f-a2aa-bef05ea898db:
+    id: language
+    langcodes:
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 22c03b76-0d82-402f-a2aa-bef05ea898db
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

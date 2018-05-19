@@ -1,0 +1,22 @@
+uuid: 58ff06b8-298b-435f-89ca-08e9c8e03903
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_information
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.contact_information.body
+field_name: body
+entity_type: block_content
+bundle: contact_information
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

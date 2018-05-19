@@ -1,0 +1,33 @@
+uuid: 3f74c0e8-13e9-4e18-b74f-7f3cada3949b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.narrow
+    - field.field.paragraph.uplift_centalised.field_lifted_content
+    - field.field.paragraph.uplift_centalised.field_liftup_style
+    - paragraphs.paragraphs_type.uplift_centalised
+  module:
+    - options
+id: paragraph.uplift_centalised.narrow
+targetEntityType: paragraph
+bundle: uplift_centalised
+mode: narrow
+content:
+  field_lifted_content:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: narrow
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_liftup_style:
+    type: list_key
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

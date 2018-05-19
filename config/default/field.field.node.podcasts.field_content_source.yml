@@ -1,0 +1,33 @@
+uuid: 95943771-e49e-4afc-9a87-3b7faf0841a8
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_source
+    - node.type.podcasts
+    - taxonomy.vocabulary.content_types
+  content:
+    - 'taxonomy_term:content_types:b6933f7c-02d3-4806-b3e3-270f90a265f6'
+id: node.podcasts.field_content_source
+field_name: field_content_source
+entity_type: node
+bundle: podcasts
+label: 'Sisällön lähde'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: b6933f7c-02d3-4806-b3e3-270f90a265f6
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_types: content_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

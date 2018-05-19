@@ -1,0 +1,33 @@
+uuid: 8cb05f7f-3ef5-49ac-8f34-814b5c0fd0ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: expert_content_alias_fi
+label: 'Expert content alias FI'
+type: 'canonical_entities:node'
+pattern: 'asiantuntijapalvelut/[node:field_topics:0:entity]/[node:title]'
+selection_criteria:
+  501ca237-74dc-4c8e-b814-c97ff1ad7a81:
+    id: node_type
+    bundles:
+      expert_content: expert_content
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 501ca237-74dc-4c8e-b814-c97ff1ad7a81
+  18d90514-96a2-41d1-9a53-8ff69bbbd4c7:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 18d90514-96a2-41d1-9a53-8ff69bbbd4c7
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

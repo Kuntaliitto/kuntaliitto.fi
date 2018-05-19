@@ -1,0 +1,9 @@
+uuid: c69d19ee-7c01-44bc-aa8e-514fda27d765
+langcode: en
+status: true
+dependencies: {  }
+id: uplift_thematic_content
+label: 'Automated liftup'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

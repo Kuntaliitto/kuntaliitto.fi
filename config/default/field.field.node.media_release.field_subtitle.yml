@@ -1,0 +1,19 @@
+uuid: 32879225-f2fb-4309-8d66-815e01d71de8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.media_release
+id: node.media_release.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: media_release
+label: 'Top title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

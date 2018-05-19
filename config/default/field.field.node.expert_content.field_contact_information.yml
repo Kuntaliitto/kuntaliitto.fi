@@ -1,0 +1,36 @@
+uuid: f3eaa33c-94c4-4efc-8d06-2e2446704324
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_information
+    - node.type.expert_content
+    - paragraphs.paragraphs_type.contact_information
+  module:
+    - entity_reference_revisions
+id: node.expert_content.field_contact_information
+field_name: field_contact_information
+entity_type: node
+bundle: expert_content
+label: 'Contact information'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      contact_information: contact_information
+    target_bundles_drag_drop:
+      contact_information:
+        enabled: true
+        weight: 4
+      uplift_content:
+        weight: 5
+        enabled: false
+      uplift_thematic_content:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

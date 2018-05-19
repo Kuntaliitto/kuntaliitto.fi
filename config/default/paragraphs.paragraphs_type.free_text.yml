@@ -1,0 +1,9 @@
+uuid: c28c83f8-0381-4c39-9df1-8093a7930947
+langcode: en
+status: true
+dependencies: {  }
+id: free_text
+label: 'Free Text'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

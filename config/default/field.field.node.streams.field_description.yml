@@ -1,0 +1,21 @@
+uuid: f9c435f4-1fa2-42b4-a65d-ef5ef1cc24c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.streams
+  module:
+    - text
+id: node.streams.field_description
+field_name: field_description
+entity_type: node
+bundle: streams
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

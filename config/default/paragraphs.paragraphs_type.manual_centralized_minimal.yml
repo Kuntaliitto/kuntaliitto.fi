@@ -1,0 +1,9 @@
+uuid: c7bac4de-1d7c-4c4e-87bd-24abab580f34
+langcode: en
+status: true
+dependencies: {  }
+id: manual_centralized_minimal
+label: 'Manual centralized (Minimal)'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

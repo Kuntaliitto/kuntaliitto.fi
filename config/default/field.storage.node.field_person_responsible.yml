@@ -1,0 +1,20 @@
+uuid: 04e77ebf-547f-4fe2-93e2-0ce5787539f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: node.field_person_responsible
+field_name: field_person_responsible
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

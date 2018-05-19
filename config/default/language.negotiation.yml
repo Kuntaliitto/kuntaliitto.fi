@@ -1,0 +1,17 @@
+session:
+  parameter: language
+url:
+  source: domain
+  prefixes:
+    en: en
+    fi: fi
+    sv: sv
+    '': null
+  domains:
+    en: open.kuntaliitto.fi
+    fi: avoin.kuntaliitto.fi
+    sv: oppen.kommunforbundet.fi
+selected_langcode: site_default
+_core:
+  default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
+langcode: en

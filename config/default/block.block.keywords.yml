@@ -1,0 +1,22 @@
+uuid: 7c2b0c67-4695-4b25-a4f0-d16d51a8045d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.keywords
+  module:
+    - facets
+  theme:
+    - kuntaliitto
+id: keywords
+theme: kuntaliitto
+region: column_left
+weight: -16
+provider: null
+plugin: 'facet_block:keywords'
+settings:
+  id: 'facet_block:keywords'
+  label: Keywords
+  provider: facets
+  label_display: visible
+visibility: {  }

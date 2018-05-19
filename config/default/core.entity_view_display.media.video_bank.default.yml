@@ -1,0 +1,60 @@
+uuid: 8fcfbfbb-6897-40ec-9eee-91590a762fdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.video_bank.field_video
+    - media_entity.bundle.video_bank
+  module:
+    - ds
+    - file_entity
+    - user
+id: media.video_bank.default
+targetEntityType: media
+bundle: video_bank
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 0
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    region: content
+  field_video:
+    weight: 2
+    label: hidden
+    settings:
+      controls: true
+      width: 300
+      height: 200
+      multiple_file_behavior: tags
+      autoplay: false
+      loop: false
+      muted: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: file_video
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: -5
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  uid:
+    label: hidden
+    type: author
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  thumbnail: true

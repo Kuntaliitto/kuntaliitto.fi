@@ -1,0 +1,22 @@
+uuid: 881c9f11-4f73-4d56-943f-c25b42316993
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.export_content_book_page
+  module:
+    - text
+id: node.export_content_book_page.body
+field_name: body
+entity_type: node
+bundle: export_content_book_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

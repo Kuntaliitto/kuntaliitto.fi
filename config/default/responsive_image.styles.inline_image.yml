@@ -1,0 +1,18 @@
+uuid: 8583dcb7-cee3-43de-8929-bd21df081545
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.body_image
+  theme:
+    - kuntaliitto
+id: inline_image
+label: 'Inline image'
+image_style_mappings:
+  -
+    breakpoint_id: kuntaliitto.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: body_image
+breakpoint_group: kuntaliitto
+fallback_image_style: body_image

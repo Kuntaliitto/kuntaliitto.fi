@@ -1,0 +1,16 @@
+uuid: 75887823-0684-41ac-b5ef-79775122f66e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.embedds
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.embedds
+target_entity_type_id: node
+target_bundle: embedds
+default_langcode: site_default
+language_alterable: true

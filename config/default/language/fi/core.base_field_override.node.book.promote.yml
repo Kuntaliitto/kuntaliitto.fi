@@ -1,0 +1,4 @@
+label: 'Nostetaan etusivulle (ei vaikuta mihinkään Kuntaliitto.fissä)'
+settings:
+  on_label: 'On'
+  off_label: 'Off'

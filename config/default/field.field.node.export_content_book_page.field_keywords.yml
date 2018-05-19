@@ -1,0 +1,28 @@
+uuid: 0145e3f8-9892-4db4-85de-53b72b960c7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_keywords
+    - node.type.export_content_book_page
+    - taxonomy.vocabulary.keywords
+id: node.export_content_book_page.field_keywords
+field_name: field_keywords
+entity_type: node
+bundle: export_content_book_page
+label: Keywords
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      keywords: keywords
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

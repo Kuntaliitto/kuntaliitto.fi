@@ -1,0 +1,27 @@
+uuid: 449f73b8-2e59-4228-95a0-e2f03b76b3b8
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.events-menu
+  module:
+    - menu_block
+  theme:
+    - kuntaliitto
+id: eventsmenu
+theme: kuntaliitto
+region: header
+weight: -17
+provider: null
+plugin: 'menu_block:events-menu'
+settings:
+  id: 'menu_block:events-menu'
+  label: 'Events menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'events-menu:'
+  suggestion: tabs
+visibility: {  }

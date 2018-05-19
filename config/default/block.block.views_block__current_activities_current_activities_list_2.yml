@@ -1,0 +1,24 @@
+uuid: 3fb9c3cd-bc8a-4ba2-9d0e-c7a8113124ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.current_activities
+  module:
+    - views
+  theme:
+    - kuntaliitto
+id: views_block__current_activities_current_activities_list_2
+theme: kuntaliitto
+region: content
+weight: -18
+provider: null
+plugin: 'views_block:current_activities-current_activities_list'
+settings:
+  id: 'views_block:current_activities-current_activities_list'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

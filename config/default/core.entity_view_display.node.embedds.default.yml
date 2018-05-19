@@ -1,0 +1,66 @@
+uuid: a55c0b56-b367-41ca-9211-343af5c59dd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.embedds.body
+    - field.field.node.embedds.field_content_source
+    - field.field.node.embedds.field_embed_frame_height
+    - field.field.node.embedds.field_embed_frame_width
+    - field.field.node.embedds.field_external_url
+    - field.field.node.embedds.field_liftup_embed
+    - node.type.embedds
+  module:
+    - ds
+    - entity_reference_revisions
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - body
+        - field_liftup_embed
+id: node.embedds.default
+targetEntityType: node
+bundle: embedds
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_liftup_embed:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: ds_content
+hidden:
+  content_moderation_control: true
+  field_content_source: true
+  field_embed_frame_height: true
+  field_embed_frame_width: true
+  field_external_url: true
+  langcode: true
+  links: true

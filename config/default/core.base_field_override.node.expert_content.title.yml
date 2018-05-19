@@ -1,0 +1,18 @@
+uuid: d0ff6d52-83b2-4897-b1e7-561e7cfcba26
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.expert_content
+id: node.expert_content.title
+field_name: title
+entity_type: node
+bundle: expert_content
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

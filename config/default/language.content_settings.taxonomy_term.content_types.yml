@@ -1,0 +1,16 @@
+uuid: be5c4352-db25-42b2-9e9e-514b1cccc6f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.content_types
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.content_types
+target_entity_type_id: taxonomy_term
+target_bundle: content_types
+default_langcode: current_interface
+language_alterable: true

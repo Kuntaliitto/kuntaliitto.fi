@@ -1,0 +1,309 @@
+uuid: 39a5469d-86fe-4acf-b621-67c6c14ebb80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.municipalities.field_area
+    - field.field.taxonomy_term.municipalities.field_contact_directory
+    - field.field.taxonomy_term.municipalities.field_content
+    - field.field.taxonomy_term.municipalities.field_designer
+    - field.field.taxonomy_term.municipalities.field_do_not_update_from_ad
+    - field.field.taxonomy_term.municipalities.field_e_mail_address
+    - field.field.taxonomy_term.municipalities.field_internet_address
+    - field.field.taxonomy_term.municipalities.field_language_of_municipality
+    - field.field.taxonomy_term.municipalities.field_logo
+    - field.field.taxonomy_term.municipalities.field_logo_description
+    - field.field.taxonomy_term.municipalities.field_mailing_address
+    - field.field.taxonomy_term.municipalities.field_municipality_number
+    - field.field.taxonomy_term.municipalities.field_municipality_type
+    - field.field.taxonomy_term.municipalities.field_neighboring_municipalities
+    - field.field.taxonomy_term.municipalities.field_paragraph_a
+    - field.field.taxonomy_term.municipalities.field_paragraph_b
+    - field.field.taxonomy_term.municipalities.field_paragraph_c
+    - field.field.taxonomy_term.municipalities.field_phone
+    - field.field.taxonomy_term.municipalities.field_province
+    - field.field.taxonomy_term.municipalities.field_search_result_info
+    - field.field.taxonomy_term.municipalities.field_visiting_address
+    - taxonomy.vocabulary.municipalities
+  module:
+    - entity_browser_entity_form
+    - field_group
+    - inline_entity_form
+    - link
+    - paragraphs
+    - path
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_coat_of_arms:
+      children:
+        - field_logo
+        - field_designer
+        - field_province
+        - field_logo_description
+      parent_name: ''
+      weight: 3
+      label: 'Coat of arms'
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_local_information:
+      children:
+        - field_municipality_type
+        - field_municipality_number
+        - field_language_of_municipality
+        - field_area
+      parent_name: ''
+      weight: 4
+      label: 'Local information'
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_contacts:
+      children:
+        - field_visiting_address
+        - field_mailing_address
+        - field_phone
+        - field_internet_address
+        - field_e_mail_address
+        - field_contact_directory
+      parent_name: ''
+      weight: 5
+      label: Contacts
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_neighbors:
+      children:
+        - field_neighboring_municipalities
+      parent_name: ''
+      weight: 6
+      label: Neighbors
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+id: taxonomy_term.municipalities.default
+targetEntityType: taxonomy_term
+bundle: municipalities
+mode: default
+content:
+  field_area:
+    weight: 45
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_contact_directory:
+    weight: 11
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_content:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_designer:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_do_not_update_from_ad:
+    weight: 11
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_e_mail_address:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_internet_address:
+    weight: 9
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_language_of_municipality:
+    weight: 44
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_logo:
+    weight: 31
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
+      override_labels: false
+      allow_existing: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: image_browser_image_bank_upload_new_
+    type: inline_entity_form_complex
+    region: content
+  field_logo_description:
+    weight: 39
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_mailing_address:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_municipality_number:
+    weight: 43
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_municipality_type:
+    weight: 42
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_neighboring_municipalities:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_paragraph_a:
+    type: entity_reference_paragraphs
+    weight: 7
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_paragraph_b:
+    type: entity_reference_paragraphs
+    weight: 8
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_paragraph_c:
+    type: entity_reference_paragraphs
+    weight: 9
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_phone:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_province:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_search_result_info:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_visiting_address:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true

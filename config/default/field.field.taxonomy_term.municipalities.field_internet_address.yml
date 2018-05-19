@@ -1,0 +1,23 @@
+uuid: 87a4ae26-12f5-46ea-b90f-84885649e324
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_internet_address
+    - taxonomy.vocabulary.municipalities
+  module:
+    - link
+id: taxonomy_term.municipalities.field_internet_address
+field_name: field_internet_address
+entity_type: taxonomy_term
+bundle: municipalities
+label: 'Internet address'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

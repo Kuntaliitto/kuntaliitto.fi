@@ -1,0 +1,33 @@
+uuid: 373bf982-fa82-4480-8ab2-d2e640fa417f
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: contact_information_alias_sv
+label: 'Contact information alias SV'
+type: 'canonical_entities:node'
+pattern: 'kontaktuppgifter/[node:title]'
+selection_criteria:
+  784a0c34-00ba-4f2f-8bd0-b6db006a3133:
+    id: node_type
+    bundles:
+      contact_information: contact_information
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 784a0c34-00ba-4f2f-8bd0-b6db006a3133
+  cd3033b1-3b4e-4f49-b582-78d4ab3f9733:
+    id: language
+    langcodes:
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: cd3033b1-3b4e-4f49-b582-78d4ab3f9733
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

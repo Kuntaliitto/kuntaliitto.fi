@@ -1,0 +1,15 @@
+uuid: 5c02b175-922d-4ab4-9098-f7f0706326fc
+name: avoin.kuntaliitto.fi
+mail: noreply@kuntaliitto.fi
+slogan: ''
+page:
+  403: /node/6111
+  404: /node/6111
+  front: /node/216
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

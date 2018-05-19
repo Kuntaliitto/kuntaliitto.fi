@@ -1,0 +1,9 @@
+uuid: b3a9c660-618e-4406-99bb-f99e4a74eb90
+langcode: en
+status: true
+dependencies: {  }
+id: manual_decentralized_minimal
+label: 'Manual decentralized (Minimal)'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

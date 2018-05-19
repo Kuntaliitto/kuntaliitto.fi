@@ -1,0 +1,266 @@
+uuid: cb0f72c6-7618-4ac4-a904-344c97977285
+langcode: fi
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 25
+template: false
+id: kontaktforfragan
+title: Kontaktförfrågan
+description: 'Kommunf&ouml;rbundets blankett f&ouml;r kontaktf&ouml;rfr&aring;gan'
+category: Yleislomake
+elements: "infotext:\n  '#type': webform_markup\n  '#markup': \"<h2>S&auml;nd servicef&ouml;rfr&aring;gan eller beg&auml;ran om utl&aring;tande till Kommunf&ouml;rbundet</h2>\\n<br />\\nObservera, att Kommunf&ouml;rbundet betj&auml;nar kommunernas f&ouml;rtroendevalda och tj&auml;nsteinnehavare samt f&ouml;rbundets kunder med serviceavtal i fr&aring;gor som g&auml;ller deras arbete. F&ouml;r intressentgrupper &auml;r v&aring;r service avgiftsbelagd.<br />\\n<br />\\nInformation om v&aring;ra <a href=\\\"https://www.kommunforbundet.fi/kommunforbundet/medlemsservice\\\" target=\\\"_blank\\\">serviceprinciper och avgiftsbelagda tj&auml;nster</a> finns h&auml;r. Privatpersoner uppmanar vi att kontakta sin egen hemkommun.<br />\\n<br />\\nI v&aring;r &ouml;ppna webbtj&auml;nst <a href=\\\"https://www.kommunforbundet.fi\\\" target=\\\"_blank\\\">www.kommunforbundet.fi</a> finns dessutom detaljerad information om kommunernas verksamhet och verksamhetsmilj&ouml;.\"\nradionapit_testi:\n  '#type': radios\n  '#title': Ämnesområde\n  '#help': 'V&auml;lj &auml;mnesomr&aring;de f&ouml;r din f&ouml;rfr&aring;gan. P&aring; basen av valt &auml;mnesomr&aring;de skickas f&ouml;rfr&aring;gan vidare till r&auml;tt sakkunnig.'\n  '#options':\n    6: '<b>Demokrati och deltagande</b>'\n    50: '<b>Offentliga upphandlingar och upphandlingslagstiftning</b>'\n    2: '<b>Kommunalteknik</b>, infra, avfallshantering och byggande'\n    7: '<b>Ansökan om heders- och förtjänsttecken</b>'\n    1: '<b>Kommun- och servicestrukturerna</b>'\n    57: '<b>Kommunernas ekonomi</b>'\n    58: '<b>Skötseln av kommunernas uppgifter</b>:  kommunstrukturen och beslutsförfarandet'\n    3: '<b>Markanvändning, boende och byggande</b>'\n    9: '<b>Utbildning och kultur</b>'\n    10: '<b>Social- och hälsovård</b>'\n    54: '<b>Vård- och landskapsreformen</b>'\n    5: '<b>Informationssamhället</b>: utnyttjande av informationsteknik, kundservice och dokumentförvaltning'\n    4: '<b>Miljövård och miljö- och hälsoskydd</b>'\n    11: '<b>Privaträtt</b>: juridik kring avtal, skadestånd och bolagsrätt samt arrendering av mark och fastighetsköp'\n    100: '<b>Något annat</b>'\n  '#required': true\npyyntosi_aihe:\n  '#type': textfield\n  '#title': Rubrik\n  '#required': true\npyyntoni:\n  '#type': textarea\n  '#title': Förfrågan\n  '#description': \"Inkludera inte personnummer eller andra identifierande personuppgifter i f&ouml;rfr&aring;gan.<br />\\n&nbsp;\"\n  '#default_value': 'Beskriv din förfrågan här.'\n  '#required': true\nsekretess:\n  '#type': checkbox\n  '#title': 'Innehållet i förfrågan skall behandlas konfidentiellt.'\n  '#help': 'F&ouml;rfr&aring;gan kan behandlas under sekretess om den inneh&aring;ller uppgifter som &auml;r sekretessbelagda med st&ouml;d av offentlighetslagen 621/1999 eller personuppgiftslagen 523/1999.'\nskriftligt_utlatande:\n  '#type': checkbox\n  '#title': 'Jag ber om ett skriftligt utlåtande'\n  '#description': \"<span style=\\\"tab-stops:list 36.0pt\\\">Utl&aring;tanden &auml;r Kommunf&ouml;rbundets officiella st&auml;llningstaganden som skickas skriftligt i dokumentform.<br />\\n<br />\\nDetta &auml;r i regel en tj&auml;nst mot till&auml;ggsavgift. Vi skickar en kostnadskalkyl f&ouml;re uppg&ouml;rande av utl&aring;tandet.<br />\\n<br />\\nInformation om v&aring;ra <a href=\\\"https://www.kommunforbundet.fi/kommunforbundet/medlemsservice\\\" target=\\\"_blank\\\">serviceprinciper och avgiftsbelagda tj&auml;nster</a> finns h&auml;r.</span>\"\najankohta_johon_mennessa_vastaus_tarvitaan_v2:\n  '#type': date\n  '#title': 'Ange vilket datum du senast behöver få svar.'\n  '#help': 'Ange vilket datum du senast beh&ouml;ver f&aring; svar. Vi behandlar f&ouml;rfr&aring;gningar i den ordning de anl&auml;nder. I br&aring;dskande &auml;renden ber vi dig kontakta Kommunf&ouml;rbundets v&auml;xel, tfn (09) 7711.'\n  '#description': \"Vi str&auml;var efter att ta upp f&ouml;rfr&aring;gningar till behandling inom ungef&auml;r fem arbetsdagar efter de anl&auml;nt.<br />\\n<br />\\n&nbsp;\"\n  '#min': '+6 days'\n  '#datepicker': true\n  '#date_date_format': d.m.Y\nyhteystiedot_2:\n  '#type': fieldset\n  '#title': Kontaktinformation\n  etunimi:\n    '#type': textfield\n    '#title': Förnamn\n    '#required': true\n  sukunimi:\n    '#type': textfield\n    '#title': Efternamn\n    '#required': true\n  tehtavanimike:\n    '#type': textfield\n    '#title': Titel\n  edustamani_organisaatio:\n    '#type': textfield\n    '#title': Organisation\n    '#required': true\n  puhelinnumero:\n    '#type': textfield\n    '#title': Telefonnummer\n  sahkoposstiosoite:\n    '#type': email\n    '#title': E-postadress\n    '#required': true\ntiedostot:\n  '#type': managed_file\n  '#title': Bilagor\n  '#help': 'Du kan bifoga h&ouml;gst fem filer.'\n  '#multiple': 5\n  '#max_filesize': '20'\n  '#file_extensions': 'gif jpg png bmp tif txt rtf html odf pdf doc docx ppt pptx xls xlsx'\ntietosuoja:\n  '#type': webform_markup\n  '#markup': \"Genom att skicka f&ouml;rfr&aring;gan godk&auml;nner du att uppgifterna sparas i Kommunf&ouml;rbudets kundregister.<br />\\n<br />\\nEn registerbeskrivning enligt 10 &sect; i personuppgiftslagen (523/1999) &ouml;ver Kommunf&ouml;rbundets kundregister finns h&auml;r.\"\nsand_forfragan:\n  '#type': webform_actions\n  '#title': 'Sänd förfrågan'\n  '#submit__label': 'Sänd förfrågan'\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: false
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: inline
+  confirmation_title: ''
+  confirmation_message: "<h2>Kiitos viestist&auml;si!</h2>\r\nTiedot on vastaanotettu. Otamme asiasi k&auml;sittelyyn mahdollisimman pian. Saat s&auml;hk&ouml;postilla vahvistusviestin jossa on asiasi k&auml;sittelytunnus.&nbsp;"
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: false
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  mattias_test:
+    id: email
+    label: 'Palvelupyynnöt CRM:ään'
+    handler_id: mattias_test
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:radionapit_testi:raw]'
+      to_options:
+        -
+          value: 6
+          text: demokratia@kuntaliitto.fi
+        -
+          value: 2
+          text: tekniikka@kuntaliitto.fi
+        -
+          value: 7
+          text: merkit@kuntaliitto.fi
+        -
+          value: 1
+          text: kuntamuutos@kuntaliitto.fi
+        -
+          value: 3
+          text: mara@kuntaliitto.fi
+        -
+          value: 9
+          text: sivistys@kuntaliitto.fi
+        -
+          value: 10
+          text: soster@kuntaliitto.fi
+        -
+          value: 5
+          text: tietoyhteiskunta@kuntaliitto.fi
+        -
+          value: 4
+          text: ymparistoasiat@kuntaliitto.fi
+        -
+          value: 11
+          text: siviililakimiehet@kuntaliitto.fi
+        -
+          value: 100
+          text: anne.haimi@kuntaliitto.fi
+        -
+          value: _default_
+          text: 'anne.haimi@kuntaliitto.fi, mattias.lindroth@kuntaliitto.fi'
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:sahkoposstiosoite:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:sukunimi:raw]'
+      subject: '[webform_submission:values:pyyntosi_aihe:raw]'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: false
+      debug: false
+      reply_to: '[webform_submission:values:sahkoposstiosoite:raw]'
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      twig: false
+  lausuntopyynot_myos_kirjaamolle:
+    id: email
+    label: 'Lausuntopyynöt myös kirjaamolle'
+    handler_id: lausuntopyynot_myos_kirjaamolle
+    status: true
+    conditions:
+      enabled:
+        ':input[name="tama_on_lausuntopyynto"]':
+          checked: true
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: kirjaamo@kuntaliitto.fi
+      to_options:
+        -
+          value: 6
+          text: demokratia@kuntaliitto.fi
+        -
+          value: '<b>Julkiset hankinnat ja hankintalaki</b>'
+          text: hankinnat@kuntaliitto.fi
+        -
+          value: 2
+          text: tekniikka@kuntaliitto.fi
+        -
+          value: 7
+          text: merkit@kuntaliitto.fi
+        -
+          value: 1
+          text: kuntamuutos@kuntaliitto.fi
+        -
+          value: '<b>Kuntien talouteen liittyvät asiat</b>'
+          text: kuntatalous@kuntaliitto.fi
+        -
+          value: '<b>Kuntien tehtävien hoito</b>, kuntarakenne ja kuntien päätöksentekomenettely'
+          text: hallintolakimiehet@kuntaliitto.fi
+        -
+          value: 3
+          text: mara@kuntaliitto.fi
+        -
+          value: 9
+          text: sivistys@kuntaliitto.fi
+        -
+          value: 10
+          text: soster@kuntaliitto.fi
+        -
+          value: '<b>Sote- ja maakuntauudistus</b>'
+          text: muutostuki@kuntaliitto.fi
+        -
+          value: 5
+          text: tietoyhteiskunta@kuntaliitto.fi
+        -
+          value: 4
+          text: ymparistoasiat@kuntaliitto.fi
+        -
+          value: 11
+          text: siviililakimiehet@kuntaliitto.fi
+        -
+          value: 100
+          text: anne.haimi@kuntaliitto.fi
+        -
+          value: _default_
+          text: 'anne.haimi@kuntaliitto.fi, mattias.lindroth@kuntaliitto.fi'
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:sahkoposstiosoite:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:sukunimi:raw]'
+      subject: '[webform_submission:values:pyyntosi_aihe:raw]'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: false
+      debug: false
+      reply_to: '[webform_submission:values:sahkoposstiosoite:raw]'
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      twig: false

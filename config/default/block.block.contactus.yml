@@ -1,0 +1,25 @@
+uuid: 2b0149f0-8f6e-404a-9189-5b88bc96a800
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:contact_us:b717e152-e946-4cc6-8b36-55fac612b2cd'
+  module:
+    - block_content
+  theme:
+    - kuntaliitto
+id: contactus
+theme: kuntaliitto
+region: footer
+weight: -20
+provider: null
+plugin: 'block_content:b717e152-e946-4cc6-8b36-55fac612b2cd'
+settings:
+  id: 'block_content:b717e152-e946-4cc6-8b36-55fac612b2cd'
+  label: 'For more information'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

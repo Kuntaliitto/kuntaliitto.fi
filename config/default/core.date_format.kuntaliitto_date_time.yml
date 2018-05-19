@@ -1,0 +1,8 @@
+uuid: 65e3fe67-f03c-4917-a2f3-6dd6b48b54d9
+langcode: fi
+status: true
+dependencies: {  }
+id: kuntaliitto_date_time
+label: 'Kuntaliitto date and time'
+locked: false
+pattern: 'j.n.Y G:i'

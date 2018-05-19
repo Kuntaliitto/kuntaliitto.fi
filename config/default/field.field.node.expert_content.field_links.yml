@@ -1,0 +1,23 @@
+uuid: aa6c7af3-faf6-4ba8-bf65-e6122800008f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links
+    - node.type.expert_content
+  module:
+    - link
+id: node.expert_content.field_links
+field_name: field_links
+entity_type: node
+bundle: expert_content
+label: Links
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

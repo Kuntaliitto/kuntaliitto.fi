@@ -1,0 +1,14 @@
+uuid: 5842667b-2596-40dc-b107-47b20ad08577
+langcode: en
+status: true
+dependencies: {  }
+name: larger
+label: Larger
+effects:
+  bf43535a-c481-4716-90e2-288b021516a0:
+    uuid: bf43535a-c481-4716-90e2-288b021516a0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 500

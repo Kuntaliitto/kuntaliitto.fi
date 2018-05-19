@@ -1,0 +1,31 @@
+uuid: 5c744ead-3e89-49aa-a23f-c8555ccb8634
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+      - main-navigation-en-
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Manual centralized liftup'
+type: manual_centralized_liftup
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

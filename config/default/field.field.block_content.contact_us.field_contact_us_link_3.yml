@@ -1,0 +1,23 @@
+uuid: 6cd271c6-ed75-47c5-92c2-cd01966c64f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_us
+    - field.storage.block_content.field_contact_us_link_3
+  module:
+    - link
+id: block_content.contact_us.field_contact_us_link_3
+field_name: field_contact_us_link_3
+entity_type: block_content
+bundle: contact_us
+label: 'Link 3'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

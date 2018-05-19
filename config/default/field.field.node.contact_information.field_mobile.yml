@@ -1,0 +1,19 @@
+uuid: 7f6db26e-1b0e-417f-ac97-e8ed3a7ee57d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mobile
+    - node.type.contact_information
+id: node.contact_information.field_mobile
+field_name: field_mobile
+entity_type: node
+bundle: contact_information
+label: Mobile
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

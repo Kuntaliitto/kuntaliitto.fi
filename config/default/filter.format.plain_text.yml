@@ -1,0 +1,57 @@
+uuid: 2d796d17-37ab-484e-9f01-7cf33bbd5d61
+langcode: en
+status: true
+dependencies:
+  module:
+    - inline_responsive_images
+_core:
+  default_config_hash: NIKBt6kw_uPhNI0qtR2DnRf7mSOgAQdx7Q94SKMjXbQ
+name: 'Plain text'
+format: plain_text
+weight: 10
+filters:
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: true
+    weight: -10
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_imagestyle:
+    id: filter_imagestyle
+    provider: inline_responsive_images
+    status: false
+    weight: 0
+    settings:
+      image_style_body_image: '0'
+      image_style_expert_page: '0'
+      image_style_large: '0'
+      image_style_linkit_result_thumbnail: '0'
+      image_style_media_browser_image_style_160x160_: '0'
+      image_style_medium: '0'
+      image_style_medium_cropped: '0'
+      image_style_narrow_320_x_600_: '0'
+      image_style_narrow_320_x_600_cropped_: '0'
+      image_style_responsive_large_780_424: '0'
+      image_style_thumbnail: '0'
+      image_style_wide_and_low: '0'
+  filter_responsive_image_style:
+    id: filter_responsive_image_style
+    provider: inline_responsive_images
+    status: false
+    weight: 0
+    settings:
+      responsive_style_double_liftup: '0'
+      responsive_style_extra_large_790px_: '0'

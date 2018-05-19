@@ -1,0 +1,28 @@
+uuid: c1ec2d9e-2256-4876-9a41-f5e41ae976a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attachments
+    - media_entity.bundle.file
+    - node.type.expert_statement
+id: node.expert_statement.field_attachments
+field_name: field_attachments
+entity_type: node
+bundle: expert_statement
+label: Attachments
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

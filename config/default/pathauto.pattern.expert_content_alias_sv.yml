@@ -1,0 +1,33 @@
+uuid: 03b4e7e4-7993-4edf-8c6f-4fdc2d6a3ed9
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: expert_content_alias_sv
+label: 'Expert content alias SV'
+type: 'canonical_entities:node'
+pattern: 'sakkunnigtjanster/[node:field_topics:0:entity]/[node:title]'
+selection_criteria:
+  7eaf4a88-6f2f-4046-b264-96c3aa66471e:
+    id: node_type
+    bundles:
+      expert_content: expert_content
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7eaf4a88-6f2f-4046-b264-96c3aa66471e
+  931c28af-1151-4138-a4f5-bc4ee3016d09:
+    id: language
+    langcodes:
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 931c28af-1151-4138-a4f5-bc4ee3016d09
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -1,0 +1,14 @@
+uuid: 664a2a03-232c-4960-a299-0a8219ad800d
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_large_780_424
+label: 'Responsive large 760×400'
+effects:
+  3e917328-69db-488a-bd7a-f16cf9d95e36:
+    uuid: 3e917328-69db-488a-bd7a-f16cf9d95e36
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 760
+      height: 400

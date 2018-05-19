@@ -1,0 +1,28 @@
+uuid: 4c434291-e454-4d02-98d1-eebbfae50fe8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kuntaliitto_terms
+    - node.type.circular
+    - taxonomy.vocabulary.kuntaliitto_terms
+id: node.circular.field_kuntaliitto_terms
+field_name: field_kuntaliitto_terms
+entity_type: node
+bundle: circular
+label: 'Kuntaliitto terms'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      kuntaliitto_terms: kuntaliitto_terms
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: keywords
+field_type: entity_reference

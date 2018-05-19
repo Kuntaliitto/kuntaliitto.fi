@@ -1,0 +1,34 @@
+uuid: c89c2b9d-797a-400c-8371-7b8da141c8c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: department_alias_fi
+label: 'Department alias FI'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'yksikko/[term:name]'
+selection_criteria:
+  dba73293-b08e-4589-8675-6c1597016935:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      department: department
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: dba73293-b08e-4589-8675-6c1597016935
+  c82cd4a5-3974-43ef-858b-41492c1dd79f:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: c82cd4a5-3974-43ef-858b-41492c1dd79f
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

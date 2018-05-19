@@ -1,0 +1,34 @@
+uuid: cfb3477f-babf-4899-a09e-ffb52233d8c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: keywords_alias_fi
+label: 'Keywords alias FI'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'asiasanat/[term:name]'
+selection_criteria:
+  c137ddd9-f63a-4b75-b8ca-bcf9b3b4ef43:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      keywords: keywords
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: c137ddd9-f63a-4b75-b8ca-bcf9b3b4ef43
+  a870f699-bad6-46ff-9c4e-814e47aadc00:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: a870f699-bad6-46ff-9c4e-814e47aadc00
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

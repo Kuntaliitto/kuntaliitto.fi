@@ -1,0 +1,32 @@
+uuid: 424d7e1a-2847-498b-86f7-348c78725f2f
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.newsroom-menu
+  module:
+    - menu_block
+    - menu_multilingual
+  theme:
+    - kuntaliitto
+third_party_settings:
+  menu_multilingual:
+    only_translated_labels: 1
+    only_translated_content: 0
+id: newsroommenu
+theme: kuntaliitto
+region: header
+weight: -12
+provider: null
+plugin: 'menu_block:newsroom-menu'
+settings:
+  id: 'menu_block:newsroom-menu'
+  label: 'Newsroom menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'newsroom-menu:'
+  suggestion: tabs
+visibility: {  }

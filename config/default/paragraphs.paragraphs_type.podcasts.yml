@@ -1,0 +1,9 @@
+uuid: be4ba70a-90f6-47bb-9113-49aba48f04ec
+langcode: en
+status: true
+dependencies: {  }
+id: podcasts
+label: Podcasts
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

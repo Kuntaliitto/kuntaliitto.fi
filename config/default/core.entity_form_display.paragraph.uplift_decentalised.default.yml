@@ -1,0 +1,60 @@
+uuid: cdac8c3d-9d19-468a-a60e-a58c67f16949
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.uplift_decentalised.field_lifted_content
+    - field.field.paragraph.uplift_decentalised.field_liftup_style
+    - paragraphs.paragraphs_type.uplift_decentalised
+  module:
+    - content_moderation
+    - field_group
+    - inline_entity_form
+third_party_settings:
+  field_group:
+    group_liftup:
+      children:
+        - field_lifted_content
+      parent_name: ''
+      weight: 1
+      label: Liftup
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+id: paragraph.uplift_decentalised.default
+targetEntityType: paragraph
+bundle: uplift_decentalised
+mode: default
+content:
+  field_lifted_content:
+    weight: 2
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: 'Decentralised liftup'
+      label_plural: 'Decentralised liftups'
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+    region: content
+  field_liftup_style:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

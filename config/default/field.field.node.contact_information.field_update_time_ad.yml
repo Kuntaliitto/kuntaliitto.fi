@@ -1,0 +1,21 @@
+uuid: 7b3ca2c6-f243-430b-878a-e40094a8813f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_update_time_ad
+    - node.type.contact_information
+  module:
+    - datetime
+id: node.contact_information.field_update_time_ad
+field_name: field_update_time_ad
+entity_type: node
+bundle: contact_information
+label: 'Update time (AD)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

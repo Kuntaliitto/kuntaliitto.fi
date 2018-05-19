@@ -1,0 +1,10 @@
+uuid: 670b7b1f-48e6-40f2-8456-8545628cb81e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.liftup_image_on_side
+label: 'Liftup - image on side'
+targetEntityType: media
+cache: true

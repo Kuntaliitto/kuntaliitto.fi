@@ -1,0 +1,76 @@
+uuid: 333884e7-44eb-4f63-b42f-6df494bee5fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.basic_page
+    - node.type.blog_post
+    - node.type.book
+    - node.type.circular
+    - node.type.embedds
+    - node.type.expert_content
+    - node.type.expert_statement
+    - node.type.export_content_book_page
+    - node.type.media_release
+    - node.type.news
+  module:
+    - content_moderation
+_core:
+  default_config_hash: Ghgleft8dw4jdQJNdoZgETzr0anBqsDMIdH9KIhHZI8
+id: editorial
+label: 'Editorial workflow'
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      published: false
+      default_revision: true
+      label: Unpublished
+      weight: -10
+    draft:
+      published: false
+      default_revision: false
+      label: Draft
+      weight: -10
+    published:
+      published: true
+      default_revision: true
+      label: Published
+      weight: -10
+  entity_types:
+    node:
+      - basic_page
+      - blog_post
+      - book
+      - circular
+      - embedds
+      - expert_content
+      - expert_statement
+      - export_content_book_page
+      - media_release
+      - news
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: -9
+      from:
+        - archived
+        - draft
+        - published
+    publish:
+      label: Publish
+      to: published
+      weight: -10
+      from:
+        - archived
+        - draft
+        - published
+    unpublish:
+      label: Unpublish
+      from:
+        - archived
+        - draft
+        - published
+      to: archived
+      weight: 0

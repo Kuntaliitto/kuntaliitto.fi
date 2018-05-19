@@ -1,0 +1,101 @@
+uuid: 24741afb-de6a-416a-a3b5-079e7e4aa901
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_liftup
+    - node.type.export_content_book_page
+    - paragraphs.paragraphs_type.contact_information
+    - paragraphs.paragraphs_type.double_liftup
+    - paragraphs.paragraphs_type.free_text
+    - paragraphs.paragraphs_type.highchart
+    - paragraphs.paragraphs_type.organs
+    - paragraphs.paragraphs_type.podcasts
+    - paragraphs.paragraphs_type.publication
+    - paragraphs.paragraphs_type.quadruple_liftup
+    - paragraphs.paragraphs_type.some
+    - paragraphs.paragraphs_type.uplift_centalised
+    - paragraphs.paragraphs_type.uplift_decentalised
+    - paragraphs.paragraphs_type.uplift_thematic_content
+  module:
+    - entity_reference_revisions
+id: node.export_content_book_page.field_liftup
+field_name: field_liftup
+entity_type: node
+bundle: export_content_book_page
+label: Liftup
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      contact_information: contact_information
+      double_liftup: double_liftup
+      quadruple_liftup: quadruple_liftup
+      some: some
+      uplift_centalised: uplift_centalised
+      free_text: free_text
+      highchart: highchart
+      uplift_decentalised: uplift_decentalised
+      uplift_thematic_content: uplift_thematic_content
+      organs: organs
+      publication: publication
+      podcasts: podcasts
+    target_bundles_drag_drop:
+      contact_information:
+        enabled: true
+        weight: 13
+      content_teaser:
+        weight: 14
+        enabled: false
+      double_liftup:
+        enabled: true
+        weight: 15
+      manual_centralized_minimal:
+        weight: 16
+        enabled: false
+      manual_decentralized_minimal:
+        weight: 17
+        enabled: false
+      contact_form:
+        weight: 17
+        enabled: false
+      quadruple_liftup:
+        enabled: true
+        weight: 18
+      some:
+        enabled: true
+        weight: 20
+      uplift_centalised:
+        enabled: true
+        weight: 21
+      free_text:
+        enabled: true
+        weight: 21
+      uplift_content:
+        weight: 22
+        enabled: false
+      highchart:
+        enabled: true
+        weight: 22
+      uplift_decentalised:
+        enabled: true
+        weight: 23
+      uplift_thematic_content:
+        enabled: true
+        weight: 24
+      organs:
+        enabled: true
+        weight: 25
+      publication:
+        enabled: true
+        weight: 26
+      podcasts:
+        enabled: true
+        weight: 27
+field_type: entity_reference_revisions

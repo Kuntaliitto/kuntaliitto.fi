@@ -1,0 +1,44 @@
+uuid: 0bc6492a-482b-49eb-803c-581ef536505d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_taxonomy_term
+    - paragraphs.paragraphs_type.uplift_thematic_content
+    - taxonomy.vocabulary.department
+    - taxonomy.vocabulary.division
+    - taxonomy.vocabulary.keywords
+    - taxonomy.vocabulary.kuntaliitto_terms
+    - taxonomy.vocabulary.municipalities
+    - taxonomy.vocabulary.organization
+    - taxonomy.vocabulary.product_groups
+    - taxonomy.vocabulary.target_group
+    - taxonomy.vocabulary.topics
+id: paragraph.uplift_thematic_content.field_taxonomy_term
+field_name: field_taxonomy_term
+entity_type: paragraph
+bundle: uplift_thematic_content
+label: Term
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      keywords: keywords
+      department: department
+      division: division
+      product_groups: product_groups
+      topics: topics
+      target_group: target_group
+      municipalities: municipalities
+      kuntaliitto_terms: kuntaliitto_terms
+      organization: organization
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: keywords
+field_type: entity_reference

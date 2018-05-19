@@ -1,0 +1,23 @@
+uuid: 6a61c002-fd68-45d7-9929-2fe3f5f41d6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_do_not_show_mobile
+    - node.type.contact_information
+id: node.contact_information.field_do_not_show_mobile
+field_name: field_do_not_show_mobile
+entity_type: node
+bundle: contact_information
+label: 'Do not show mobile'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

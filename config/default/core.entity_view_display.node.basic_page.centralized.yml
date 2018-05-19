@@ -1,0 +1,42 @@
+uuid: 828e522c-6327-4f4c-971b-5fa32fdc9901
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.centralized
+    - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_content_source
+    - field.field.node.basic_page.field_liftup
+    - field.field.node.basic_page.field_search_exclude
+    - node.type.basic_page
+  module:
+    - smart_trim
+    - user
+id: node.basic_page.centralized
+targetEntityType: node
+bundle: basic_page
+mode: centralized
+content:
+  body:
+    label: hidden
+    type: smart_trim
+    weight: 0
+    settings:
+      trim_length: 300
+      trim_type: chars
+      trim_suffix: ''
+      more_link: false
+      more_text: More
+      summary_handler: full
+      trim_options:
+        text: true
+      more_class: more-link
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  field_content_source: true
+  field_liftup: true
+  field_search_exclude: true
+  langcode: true
+  links: true

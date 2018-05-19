@@ -1,0 +1,16 @@
+uuid: 9371ee14-079a-491a-ac95-70cedc9191fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: media.image
+target_entity_type_id: media
+target_bundle: image
+default_langcode: current_interface
+language_alterable: false

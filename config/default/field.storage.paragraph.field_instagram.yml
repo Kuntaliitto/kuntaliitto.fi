@@ -1,0 +1,19 @@
+uuid: 05fdc0d3-de42-4a1b-aaa3-12c4ca67acf0
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_instagram
+field_name: field_instagram
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

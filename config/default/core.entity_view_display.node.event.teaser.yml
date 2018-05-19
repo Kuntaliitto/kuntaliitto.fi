@@ -1,0 +1,160 @@
+uuid: e5e66310-0f26-4f99-9f3e-012aeec61fa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.field_attachments
+    - field.field.node.event.field_content_source
+    - field.field.node.event.field_description
+    - field.field.node.event.field_end_date
+    - field.field.node.event.field_event_city
+    - field.field.node.event.field_event_id
+    - field.field.node.event.field_event_organiser
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_event_url
+    - field.field.node.event.field_expert_service
+    - field.field.node.event.field_has_attachment
+    - field.field.node.event.field_keywords
+    - field.field.node.event.field_link
+    - field.field.node.event.field_main_media
+    - field.field.node.event.field_person_responsible
+    - field.field.node.event.field_price_excluding_vat
+    - field.field.node.event.field_related_events
+    - field.field.node.event.field_signup_date
+    - field.field.node.event.field_start_date
+    - field.field.node.event.field_subtitle
+    - field.field.node.event.field_target_group
+    - field.field.node.event.field_topics
+    - field.field.node.event.field_vat_percentage
+    - field.field.node.event.field_venue_address
+    - field.field.node.event.field_venue_name
+    - node.type.event
+  module:
+    - datetime
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_start_date
+        - field_venue_name
+        - field_event_city
+        - field_event_organiser
+        - field_topics
+        - field_keywords
+        - field_main_media
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: ''
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  field_event_city:
+    type: string
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: ds_content
+  field_event_organiser:
+    type: string
+    weight: 4
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: ds_content
+  field_keywords:
+    type: entity_reference_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: ds_content
+  field_main_media:
+    type: entity_reference_entity_view
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: ds_content
+  field_start_date:
+    type: datetime_default
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: kuntaliitto_default
+    third_party_settings: {  }
+    region: ds_content
+  field_topics:
+    type: entity_reference_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: ds_content
+  field_venue_name:
+    type: string
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: ds_content
+hidden:
+  field_attachments: true
+  field_content_source: true
+  field_description: true
+  field_end_date: true
+  field_event_id: true
+  field_event_type: true
+  field_event_url: true
+  field_expert_service: true
+  field_has_attachment: true
+  field_kuntaliitto_terms: true
+  field_link: true
+  field_person_responsible: true
+  field_price_excluding_vat: true
+  field_related_events: true
+  field_signup_date: true
+  field_subtitle: true
+  field_target_group: true
+  field_vat_percentage: true
+  field_venue_address: true
+  langcode: true
+  links: true

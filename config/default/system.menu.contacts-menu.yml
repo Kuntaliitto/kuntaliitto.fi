@@ -1,0 +1,8 @@
+uuid: 04db74fc-cba2-4dac-bc6a-20e0fbcff2f4
+langcode: en
+status: true
+dependencies: {  }
+id: contacts-menu
+label: 'Contacts menu'
+description: ''
+locked: false

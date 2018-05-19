@@ -1,0 +1,23 @@
+uuid: 3d441ab9-4fd0-4334-a469-9f6096e4c325
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.concern_webpages
+    - field.storage.block_content.field_link_2
+  module:
+    - link
+id: block_content.concern_webpages.field_link_2
+field_name: field_link_2
+entity_type: block_content
+bundle: concern_webpages
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

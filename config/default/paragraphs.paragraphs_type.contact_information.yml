@@ -1,0 +1,9 @@
+uuid: a3775e26-ec25-439c-a9a6-3d6a3a4795ba
+langcode: en
+status: true
+dependencies: {  }
+id: contact_information
+label: 'Contact information'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

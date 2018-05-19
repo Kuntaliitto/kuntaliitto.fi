@@ -1,0 +1,19 @@
+uuid: a761b5a2-8459-4a60-a480-723178036004
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_title
+    - node.type.contact_information
+id: node.contact_information.field_person_title
+field_name: field_person_title
+entity_type: node
+bundle: contact_information
+label: 'Person title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

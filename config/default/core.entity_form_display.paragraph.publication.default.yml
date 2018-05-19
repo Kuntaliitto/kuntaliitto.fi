@@ -1,0 +1,33 @@
+uuid: 4111a18b-73e4-41b2-829a-f79811ebb755
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.publication.field_lifted_content
+    - field.field.paragraph.publication.field_liftup_style
+    - paragraphs.paragraphs_type.publication
+id: paragraph.publication.default
+targetEntityType: paragraph
+bundle: publication
+mode: default
+content:
+  field_lifted_content:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_liftup_style:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  status: true
+  uid: true

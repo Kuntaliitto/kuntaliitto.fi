@@ -1,0 +1,25 @@
+uuid: 0a4fb898-0f15-4144-9d59-d70c4ccfa6a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kuntaliitto
+id: mainpagecontent_3
+theme: kuntaliitto
+region: content
+weight: -12
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: true
+    context_mapping: {  }

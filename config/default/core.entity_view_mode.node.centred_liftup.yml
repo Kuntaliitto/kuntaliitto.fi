@@ -1,0 +1,10 @@
+uuid: eadcce16-138c-4023-bd3b-3cf19e366d18
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.centred_liftup
+label: 'Centred liftup'
+targetEntityType: node
+cache: true

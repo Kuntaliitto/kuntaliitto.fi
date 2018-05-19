@@ -1,0 +1,27 @@
+uuid: da01411a-886f-4f86-bd77-87af5f8031e7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonyymi käyttäjä'
+weight: -10
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'display eu cookie compliance popup'
+  - 'download any audio files'
+  - 'download any document files'
+  - 'download any image files'
+  - 'download any video files'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'use search_api_autocomplete for search_api_views_solrsearch'
+  - 'view external_video media'
+  - 'view file media'
+  - 'view files'
+  - 'view image media'
+  - 'view media'
+  - 'view video media'

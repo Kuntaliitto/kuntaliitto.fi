@@ -1,0 +1,22 @@
+uuid: 7885aa17-a82e-4d75-8cde-f13d7593aa93
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.media_release
+id: node.media_release.promote
+field_name: promote
+entity_type: node
+bundle: media_release
+label: 'Näytetään etusivulla'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Käytössä
+  off_label: 'Pois päältä'
+field_type: boolean

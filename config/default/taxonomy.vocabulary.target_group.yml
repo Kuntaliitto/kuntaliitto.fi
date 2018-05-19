@@ -1,0 +1,9 @@
+uuid: 6262b780-916a-4e25-bbe2-4bc6062611ae
+langcode: en
+status: true
+dependencies: {  }
+name: 'Target group'
+vid: target_group
+description: ''
+hierarchy: 0
+weight: 0

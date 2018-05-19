@@ -1,0 +1,24 @@
+uuid: fc783485-b444-4e70-b505-3029087ce5ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_teaser.field_lifted_content
+    - field.field.paragraph.content_teaser.field_title
+    - paragraphs.paragraphs_type.content_teaser
+id: paragraph.content_teaser.default
+targetEntityType: paragraph
+bundle: content_teaser
+mode: default
+content:
+  field_lifted_content:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: minimal
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  field_title: true

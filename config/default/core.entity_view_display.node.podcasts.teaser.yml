@@ -1,0 +1,28 @@
+uuid: 8b519311-90af-4242-b02d-d71861bb1081
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.podcasts.field_podcast_file
+    - node.type.podcasts
+  module:
+    - user
+id: node.podcasts.teaser
+targetEntityType: node
+bundle: podcasts
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_content_source: true
+  field_description: true
+  field_image_files: true
+  field_keywords: true
+  field_kuntaliitto_terms: true
+  field_municipalities: true
+  field_podcast_file: true
+  field_topics: true
+  langcode: true

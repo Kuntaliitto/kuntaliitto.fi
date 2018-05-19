@@ -1,0 +1,70 @@
+display:
+  default:
+    display_options:
+      filters:
+        status:
+          group_info:
+            group_items:
+              1:
+                value: '1'
+                title: Published
+              2:
+                title: 'Ej publicerad'
+            label: 'Status för publicering'
+          expose:
+            label: Sant
+        bundle:
+          expose:
+            label: Leverantör
+        langcode:
+          expose:
+            label: Språk
+      exposed_form:
+        options:
+          submit_button: Verkställ
+          reset_button_label: Återställ
+          exposed_sorts_label: 'Sortera efter'
+          sort_asc_label: Stigande
+          sort_desc_label: Fallande
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Inlägg per sida'
+            items_per_page_options_all_label: '- Alla -'
+            offset_label: Kompensera
+          tags:
+            previous: '‹ Föregående'
+            next: 'Nästa ›'
+            first: '« Första'
+            last: 'Sista »'
+      fields:
+        thumbnail__target_id:
+          label: Thumbnail
+          separator: ', '
+        name:
+          separator: ', '
+        uid:
+          label: Författare
+          separator: ', '
+        status:
+          label: Status
+          settings:
+            format_custom_true: Published
+            format_custom_false: 'Ej publicerad'
+          separator: ', '
+        changed:
+          label: Uppdaterad
+          separator: ', '
+        operations:
+          label: Funktioner
+      title: Media
+      empty:
+        area_text_custom:
+          content: 'Inget innehåll tillgängligt.'
+    display_title: Huvud
+  media_page_list:
+    display_title: Media
+    display_options:
+      menu:
+        title: Media
+label: Media

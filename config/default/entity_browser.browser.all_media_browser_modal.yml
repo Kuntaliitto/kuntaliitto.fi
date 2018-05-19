@@ -1,0 +1,69 @@
+uuid: 3b4553a1-2391-470f-b084-b06b055c9366
+langcode: en
+status: true
+dependencies:
+  module:
+    - views
+name: all_media_browser_modal
+label: 'All media browser (modal)'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select media'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  f18ee759-063c-4792-99bd-31b19e528c0c:
+    settings:
+      view: media_selection
+      view_display: all_media_browser
+      submit_text: 'Select media'
+      auto_select: false
+    uuid: f18ee759-063c-4792-99bd-31b19e528c0c
+    weight: 1
+    label: 'All media'
+    id: view
+  8ac134b3-d14f-4005-a877-fd1f43dad1ed:
+    settings:
+      view: media_selection
+      view_display: file_browser
+      submit_text: 'Select file'
+      auto_select: false
+    uuid: 8ac134b3-d14f-4005-a877-fd1f43dad1ed
+    weight: 2
+    label: Files
+    id: view
+  bc95ae85-9275-4ecc-a3a9-2d03941efc5f:
+    settings:
+      view: media_selection
+      view_display: image_browser
+      submit_text: 'Select image'
+      auto_select: false
+    uuid: bc95ae85-9275-4ecc-a3a9-2d03941efc5f
+    weight: 3
+    label: Images
+    id: view
+  fbd4c310-9c3c-4007-b5f9-9ed081662d38:
+    settings:
+      view: media_selection
+      view_display: video_browser
+      submit_text: 'Select video'
+      auto_select: false
+    uuid: fbd4c310-9c3c-4007-b5f9-9ed081662d38
+    weight: 4
+    label: Video
+    id: view
+  5cc3fab5-a2ba-4859-af6f-360b5f5383fc:
+    settings:
+      view: media_selection
+      view_display: external_video_browser
+      submit_text: 'Select external video'
+      auto_select: false
+    uuid: 5cc3fab5-a2ba-4859-af6f-360b5f5383fc
+    weight: 5
+    label: 'External video'
+    id: view

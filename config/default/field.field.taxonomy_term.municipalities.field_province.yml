@@ -1,0 +1,25 @@
+uuid: 7665250b-1018-472b-b447-e3b85dfedc90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_province
+    - taxonomy.vocabulary.municipalities
+id: taxonomy_term.municipalities.field_province
+field_name: field_province
+entity_type: taxonomy_term
+bundle: municipalities
+label: Province
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: provinces
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

@@ -1,0 +1,41 @@
+uuid: 8b701c52-c395-434f-baf9-feb40cb2f893
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - language
+    - menu_block
+    - menu_multilingual
+  theme:
+    - kuntaliitto
+third_party_settings:
+  menu_multilingual:
+    only_translated_labels: 1
+    only_translated_content: 0
+id: paavalikko
+theme: kuntaliitto
+region: header_afterfix
+weight: -17
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: Päävalikko
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'main:'
+  suggestion: main
+visibility:
+  language:
+    id: language
+    langcodes:
+      fi: fi
+      sv: sv
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

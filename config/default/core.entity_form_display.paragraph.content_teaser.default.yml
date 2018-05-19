@@ -1,0 +1,51 @@
+uuid: 2a1ecc26-b9bc-4aca-ab0d-557c0e192676
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.all_content_browser
+    - field.field.paragraph.content_teaser.field_lifted_content
+    - field.field.paragraph.content_teaser.field_title
+    - paragraphs.paragraphs_type.content_teaser
+  module:
+    - content_moderation
+    - entity_browser
+id: paragraph.content_teaser.default
+targetEntityType: paragraph
+bundle: content_teaser
+mode: default
+content:
+  field_lifted_content:
+    weight: 7
+    settings:
+      entity_browser: all_content_browser
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      open: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_title:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

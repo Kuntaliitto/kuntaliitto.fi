@@ -1,0 +1,30 @@
+uuid: 8f160496-a8cb-40d1-900f-7b1ba7fda56d
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.highchart.field_json
+    - field.field.paragraph.highchart.field_json_settings
+    - paragraphs.paragraphs_type.highchart
+  module:
+    - options
+id: paragraph.highchart.default
+targetEntityType: paragraph
+bundle: highchart
+mode: default
+content:
+  field_json:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_json_settings:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

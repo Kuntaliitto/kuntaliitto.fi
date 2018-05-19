@@ -1,0 +1,21 @@
+uuid: 1ba571aa-b9fe-4bf2-98e8-49b1acaba04a
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_municipality_number
+field_name: field_municipality_number
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 4
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: 27415da0-e3d3-440b-b17e-8854998e9197
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: T744d_CMtx_CsVZD1MNNvyiSNlemzmFgmzVdBKtuKq8
+id: days
+label: Days
+category: 'Date and time'
+likert: false
+options: "Sunday: Sunday\nMonday: Monday\nTuesday: Tuesday\nWednesday: Wednesday\nThursday: Thursday\nFriday: Friday\nSaturday: Saturday\n"

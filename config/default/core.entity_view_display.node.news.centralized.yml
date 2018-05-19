@@ -1,0 +1,122 @@
+uuid: 07863d29-4e1d-4470-8f79-3675528494e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.centralized
+    - field.field.node.news.body
+    - field.field.node.news.field_attachments
+    - field.field.node.news.field_comments
+    - field.field.node.news.field_contact_information
+    - field.field.node.news.field_contact_information_title
+    - field.field.node.news.field_content_source
+    - field.field.node.news.field_image
+    - field.field.node.news.field_keywords
+    - field.field.node.news.field_kuntaliitto_terms
+    - field.field.node.news.field_liftup
+    - field.field.node.news.field_liftup_title
+    - field.field.node.news.field_links
+    - field.field.node.news.field_main_media
+    - field.field.node.news.field_municipalities
+    - field.field.node.news.field_subtitle
+    - field.field.node.news.field_topics
+    - node.type.news
+  module:
+    - ds
+    - smart_trim
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_subtitle
+        - field_main_media
+        - body
+        - links
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h1
+          class: ''
+id: node.news.centralized
+targetEntityType: node
+bundle: news
+mode: centralized
+content:
+  body:
+    label: hidden
+    type: smart_trim
+    weight: 3
+    settings:
+      trim_length: 200
+      trim_type: chars
+      trim_suffix: ''
+      more_link: false
+      more_text: More
+      summary_handler: full
+      trim_options:
+        text: true
+      more_class: more-link
+    third_party_settings: {  }
+    region: ds_content
+  content_moderation_control:
+    weight: -20
+    region: content
+  field_main_media:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: full_width_790
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+  field_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  links:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+hidden:
+  field_attachments: true
+  field_comments: true
+  field_contact_information: true
+  field_contact_information_title: true
+  field_content_source: true
+  field_image: true
+  field_keywords: true
+  field_kuntaliitto_terms: true
+  field_liftup: true
+  field_liftup_title: true
+  field_links: true
+  field_municipalities: true
+  field_topics: true
+  langcode: true

@@ -1,0 +1,8 @@
+uuid: a562f4e1-dd29-46e2-8458-d74792373e8b
+langcode: en
+status: true
+dependencies: {  }
+id: streams-menu
+label: 'Streams menu'
+description: ''
+locked: false

@@ -1,0 +1,16 @@
+uuid: d339ac64-dd40-40a0-9d1b-84288185cf5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.file
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: media.file
+target_entity_type_id: media
+target_bundle: file
+default_langcode: current_interface
+language_alterable: false

@@ -1,0 +1,29 @@
+uuid: ff17375b-b5f7-4219-9b0b-28dbdcca5cbc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Expert statement'
+type: expert_statement
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,22 @@
+uuid: ab0b7474-7281-43ee-babd-fdd1f35baf10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.manual_decentralize_liftup
+  module:
+    - text
+id: node.manual_decentralize_liftup.body
+field_name: body
+entity_type: node
+bundle: manual_decentralize_liftup
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

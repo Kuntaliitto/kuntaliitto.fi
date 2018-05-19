@@ -1,0 +1,65 @@
+uuid: bde5cfd5-a728-42bd-84c9-374d279275c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.bloggers.field_picture
+    - taxonomy.vocabulary.bloggers
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_picture
+        - taxonomy_term_title
+        - description
+    fields:
+      taxonomy_term_title:
+        plugin_id: taxonomy_term_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: ''
+id: taxonomy_term.bloggers.default
+targetEntityType: taxonomy_term
+bundle: bloggers
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_picture:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+hidden:
+  langcode: true

@@ -1,0 +1,63 @@
+uuid: cbea1edc-9a9e-452c-b29c-53cef6fade21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.streams.field_description
+    - field.field.node.streams.field_keywords
+    - field.field.node.streams.field_link_to_stream
+    - field.field.node.streams.field_start_date
+    - node.type.streams
+  module:
+    - datetime
+    - link
+    - text
+    - user
+id: node.streams.default
+targetEntityType: node
+bundle: streams
+mode: default
+content:
+  field_description:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_keywords:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_link_to_stream:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 800
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_start_date:
+    weight: 105
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

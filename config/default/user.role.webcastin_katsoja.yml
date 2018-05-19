@@ -1,0 +1,9 @@
+uuid: a478bf15-196a-4b31-9831-379ec4e2da49
+langcode: fi
+status: true
+dependencies: {  }
+id: webcastin_katsoja
+label: 'Webcastin katsoja'
+weight: -3
+is_admin: null
+permissions: {  }

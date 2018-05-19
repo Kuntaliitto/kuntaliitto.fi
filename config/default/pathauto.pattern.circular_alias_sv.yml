@@ -1,0 +1,33 @@
+uuid: 37259fd0-183f-4312-b456-f6bea3f6a097
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: circular_alias_sv
+label: 'Circular alias SV'
+type: 'canonical_entities:node'
+pattern: 'cirkular/[node:created:html_year]/[node:title]'
+selection_criteria:
+  317700a0-abbc-4f86-a487-6732e8006687:
+    id: node_type
+    bundles:
+      circular: circular
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 317700a0-abbc-4f86-a487-6732e8006687
+  eb73133e-190c-4611-a701-ac73abc8e265:
+    id: language
+    langcodes:
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: eb73133e-190c-4611-a701-ac73abc8e265
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

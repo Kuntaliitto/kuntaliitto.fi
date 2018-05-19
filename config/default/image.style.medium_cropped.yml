@@ -1,0 +1,14 @@
+uuid: 86e8a221-6270-4910-99c3-f548db7d19d9
+langcode: fi
+status: true
+dependencies: {  }
+name: medium_cropped
+label: 'Medium (220 x 220 cropped)'
+effects:
+  7989dbf3-7ce8-4a89-8a0e-bf27f90467bd:
+    uuid: 7989dbf3-7ce8-4a89-8a0e-bf27f90467bd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 220
+      height: 220

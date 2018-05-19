@@ -1,0 +1,76 @@
+uuid: a7e52469-29d6-4121-a73c-dccad7b8a528
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.minimal
+    - field.field.node.external_article.field_content
+    - field.field.node.external_article.field_content_source
+    - field.field.node.external_article.field_link
+    - field.field.node.external_article.field_tags
+    - field.field.node.external_article.field_thumbnail
+    - node.type.external_article
+  module:
+    - ds
+    - link
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_content
+        - field_link
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.external_article.minimal
+targetEntityType: node
+bundle: external_article
+mode: minimal
+content:
+  field_content:
+    type: text_trimmed
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+    region: ds_content
+  field_link:
+    type: link
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    region: ds_content
+hidden:
+  field_content_source: true
+  field_tags: true
+  field_thumbnail: true
+  langcode: true
+  links: true

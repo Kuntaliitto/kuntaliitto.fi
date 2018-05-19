@@ -1,0 +1,35 @@
+uuid: 3f15a016-0a38-43cc-9ae9-584ae863fb7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: book_alias_en
+label: 'Book alias All'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  a81fa13e-ddda-48c7-a0b9-c03b3f04f34d:
+    id: node_type
+    bundles:
+      book: book
+    negate: false
+    context_mapping:
+      node: node
+    uuid: a81fa13e-ddda-48c7-a0b9-c03b3f04f34d
+  68b53bb2-1744-4c3a-a2e5-18fa8be9063e:
+    id: language
+    langcodes:
+      en: en
+      fi: fi
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 68b53bb2-1744-4c3a-a2e5-18fa8be9063e
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

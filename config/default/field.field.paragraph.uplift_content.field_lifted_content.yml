@@ -1,0 +1,42 @@
+uuid: 056cd07b-294b-46d9-806c-0185edfaab53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_lifted_content
+    - node.type.basic_page
+    - node.type.circular
+    - node.type.event
+    - node.type.expert_content
+    - node.type.expert_statement
+    - node.type.external_article
+    - node.type.media_release
+    - node.type.news
+    - paragraphs.paragraphs_type.uplift_content
+id: paragraph.uplift_content.field_lifted_content
+field_name: field_lifted_content
+entity_type: paragraph
+bundle: uplift_content
+label: 'Lifted content'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      basic_page: basic_page
+      circular: circular
+      event: event
+      expert_content: expert_content
+      expert_statement: expert_statement
+      external_article: external_article
+      media_release: media_release
+      news: news
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: circular
+field_type: entity_reference

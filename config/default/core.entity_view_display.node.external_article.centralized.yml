@@ -1,0 +1,56 @@
+uuid: cb4a28ac-2d8b-4cab-bd22-e52e9ab45039
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.centralized
+    - field.field.node.external_article.field_content
+    - field.field.node.external_article.field_content_source
+    - field.field.node.external_article.field_link
+    - field.field.node.external_article.field_tags
+    - field.field.node.external_article.field_thumbnail
+    - image.style.medium
+    - node.type.external_article
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.external_article.centralized
+targetEntityType: node
+bundle: external_article
+mode: centralized
+content:
+  field_content:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_thumbnail:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  field_content_source: true
+  field_tags: true
+  langcode: true
+  links: true

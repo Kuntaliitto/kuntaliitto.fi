@@ -1,0 +1,21 @@
+uuid: db93bed6-a89c-40b7-89b5-dc6685bfa251
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_liftup_style
+    - paragraphs.paragraphs_type.uplift_content
+  module:
+    - options
+id: paragraph.uplift_content.field_liftup_style
+field_name: field_liftup_style
+entity_type: paragraph
+bundle: uplift_content
+label: 'Liftup style'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 34b13b10-a628-4566-b8d2-4453ee4445c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: file.field_subject
+field_name: field_subject
+entity_type: file
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

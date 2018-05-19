@@ -1,0 +1,23 @@
+uuid: d539b459-2454-49e2-8606-f495527818a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_information
+    - field.storage.block_content.field_contact_info_link
+  module:
+    - link
+id: block_content.contact_information.field_contact_info_link
+field_name: field_contact_info_link
+entity_type: block_content
+bundle: contact_information
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

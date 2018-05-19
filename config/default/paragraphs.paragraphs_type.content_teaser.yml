@@ -1,0 +1,9 @@
+uuid: cb353704-d26d-4d2e-8c1b-77e6b71040b6
+langcode: en
+status: true
+dependencies: {  }
+id: content_teaser
+label: 'Content (Minimal)'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

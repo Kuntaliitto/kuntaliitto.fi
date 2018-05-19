@@ -1,0 +1,39 @@
+uuid: 2a087416-3a79-4bdf-9527-92856573bdb5
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+  theme:
+    - kuntaliitto
+id: breadcrumbs_2
+theme: kuntaliitto
+region: content
+weight: -19
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_page: basic_page
+      blog_post: blog_post
+      book: book
+      circular: circular
+      embedds: embedds
+      event: event
+      expert_content: expert_content
+      expert_statement: expert_statement
+      export_content_book_page: export_content_book_page
+      external_article: external_article
+      media_release: media_release
+      news: news
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,33 @@
+uuid: 57163098-f6bd-49a8-bbb2-0fd60886a70a
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: expers_statements_alias_fi
+label: 'Experts statements alias FI'
+type: 'canonical_entities:node'
+pattern: 'lausunnot/[node:created:html_year]/[node:title]'
+selection_criteria:
+  7340b4b3-5225-4932-81eb-109c638f6e3e:
+    id: node_type
+    bundles:
+      expert_statement: expert_statement
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7340b4b3-5225-4932-81eb-109c638f6e3e
+  4ba6cdc0-f09c-4f5c-a808-c66b0a21e3ea:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 4ba6cdc0-f09c-4f5c-a808-c66b0a21e3ea
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

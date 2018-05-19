@@ -1,0 +1,15 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Sök
+          text_input_required: 'Hittade inget med dina sökvillkor.'
+      title: Sök
+      filters:
+        created:
+          expose:
+            label: Från
+        created_1:
+          expose:
+            label: Till

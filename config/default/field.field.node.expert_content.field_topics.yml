@@ -1,0 +1,28 @@
+uuid: 62aec0c0-04c8-4f01-b939-2079943eb55a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topics
+    - node.type.expert_content
+    - taxonomy.vocabulary.topics
+id: node.expert_content.field_topics
+field_name: field_topics
+entity_type: node
+bundle: expert_content
+label: Topics
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      topics: topics
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

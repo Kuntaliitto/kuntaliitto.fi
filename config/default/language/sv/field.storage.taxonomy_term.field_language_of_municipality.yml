@@ -1,0 +1,10 @@
+settings:
+  allowed_values:
+    -
+      label: Finskspråkig
+    -
+      label: Svenskspråkig
+    -
+      label: 'Tvåspråkiga kommun, finsk majoritet'
+    -
+      label: 'Tvåspråkig kommun, svensk majoritet'

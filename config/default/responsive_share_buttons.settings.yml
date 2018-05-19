@@ -1,0 +1,25 @@
+networks:
+  facebook:
+    active: 1
+    weight: '1'
+  twitter:
+    active: 1
+    weight: '1'
+  digg:
+    active: 0
+    weight: '1'
+  stumbleupon:
+    active: 0
+    weight: '1'
+  delicious:
+    active: 0
+    weight: '1'
+  google:
+    active: 1
+    weight: '1'
+  linkedin:
+    active: 1
+    weight: '1'
+_core:
+  default_config_hash: qVz9R-42jCrKyTb__axRXnh-PaRdeCBlklgoeFW4N0I
+twitter_name: ''

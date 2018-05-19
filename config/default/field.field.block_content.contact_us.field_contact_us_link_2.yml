@@ -1,0 +1,23 @@
+uuid: b2bf9e85-3d33-4c6f-a32f-494f08ef68c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_us
+    - field.storage.block_content.field_contact_us_link_2
+  module:
+    - link
+id: block_content.contact_us.field_contact_us_link_2
+field_name: field_contact_us_link_2
+entity_type: block_content
+bundle: contact_us
+label: 'Link 2'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

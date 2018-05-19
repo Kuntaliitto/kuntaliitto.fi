@@ -1,0 +1,32 @@
+uuid: fd900aa4-7f47-42f1-a377-985937184407
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_source
+    - node.type.blog_post
+    - taxonomy.vocabulary.content_types
+  content:
+    - 'taxonomy_term:content_types:6f37ddc3-4a3f-46de-b9a4-a26e3e13cab7'
+id: node.blog_post.field_content_source
+field_name: field_content_source
+entity_type: node
+bundle: blog_post
+label: 'Content source'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: 6f37ddc3-4a3f-46de-b9a4-a26e3e13cab7
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_types: content_types
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

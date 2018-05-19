@@ -1,0 +1,32 @@
+uuid: 089b1cc7-d1f5-47b8-a65f-2f359bc8328f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.uplift_decentalised.field_lifted_content
+    - field.field.paragraph.uplift_decentalised.field_liftup_style
+    - paragraphs.paragraphs_type.uplift_decentalised
+  module:
+    - options
+id: paragraph.uplift_decentalised.default
+targetEntityType: paragraph
+bundle: uplift_decentalised
+mode: default
+content:
+  field_lifted_content:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_liftup_style:
+    type: list_key
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

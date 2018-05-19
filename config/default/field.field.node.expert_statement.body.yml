@@ -1,0 +1,22 @@
+uuid: 65a19437-923b-4bc8-8d04-96de02a3828f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.expert_statement
+  module:
+    - text
+id: node.expert_statement.body
+field_name: body
+entity_type: node
+bundle: expert_statement
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

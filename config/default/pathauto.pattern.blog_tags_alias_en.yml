@@ -1,0 +1,34 @@
+uuid: b9521d69-0fb1-4f2c-bc56-0bff594b573f
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: blog_tags_alias_en
+label: 'Blog tags alias EN'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'blog-topics/[term:name]'
+selection_criteria:
+  cd9d757b-bc8c-4595-9c15-2e622bbd88d0:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      blog_tags: blog_tags
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: cd9d757b-bc8c-4595-9c15-2e622bbd88d0
+  ddb917d4-61a1-443e-b891-2b9e7bc60c21:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: ddb917d4-61a1-443e-b891-2b9e7bc60c21
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

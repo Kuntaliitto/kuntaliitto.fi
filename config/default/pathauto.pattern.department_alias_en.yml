@@ -1,0 +1,34 @@
+uuid: 0cf3ef96-4392-460b-831c-78c681bfb11a
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: department_alias_en
+label: 'Department alias EN'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'departments/[term:name]'
+selection_criteria:
+  2b1d99eb-ab05-4eb1-8036-c95e90acfc52:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      department: department
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 2b1d99eb-ab05-4eb1-8036-c95e90acfc52
+  c1d32edb-dd62-425b-956b-198179654c39:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: c1d32edb-dd62-425b-956b-198179654c39
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

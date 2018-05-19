@@ -1,0 +1,34 @@
+uuid: 69aa4762-918f-47b8-8f75-ce4a212291e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: target_group_alias_fi
+label: 'Target group alias FI'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'kohderyhma/[term:name]'
+selection_criteria:
+  a796b23a-fb59-4f94-a859-af6581113183:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      target_group: target_group
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: a796b23a-fb59-4f94-a859-af6581113183
+  c9696032-2872-4468-be26-87c652fc759e:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: c9696032-2872-4468-be26-87c652fc759e
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

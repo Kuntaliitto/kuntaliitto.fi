@@ -1,0 +1,39 @@
+uuid: 35a8fe9d-d740-4be2-972c-778161d532c0
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.publication.field_content_source
+    - field.field.node.publication.field_description_short
+    - field.field.node.publication.field_file
+    - field.field.node.publication.field_price
+    - field.field.node.publication.field_product_description
+    - field.field.node.publication.field_product_group
+    - field.field.node.publication.field_product_image_large
+    - field.field.node.publication.field_product_image_small
+    - field.field.node.publication.field_publication_year
+    - field.field.node.publication.field_url
+    - node.type.publication
+  module:
+    - user
+id: node.publication.teaser
+targetEntityType: node
+bundle: publication
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_content_source: true
+  field_description_short: true
+  field_file: true
+  field_price: true
+  field_product_description: true
+  field_product_group: true
+  field_product_image_large: true
+  field_product_image_small: true
+  field_publication_year: true
+  field_url: true
+  langcode: true

@@ -1,0 +1,16 @@
+uuid: 3ebc8298-43b8-4252-9431-ea272e125e3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.export_content_book_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.export_content_book_page
+target_entity_type_id: node
+target_bundle: export_content_book_page
+default_langcode: current_interface
+language_alterable: true

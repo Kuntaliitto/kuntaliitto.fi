@@ -1,0 +1,21 @@
+uuid: 19643097-f119-4ee5-9380-69194ac5ab76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_content
+    - taxonomy.vocabulary.municipalities
+  module:
+    - text
+id: taxonomy_term.municipalities.field_content
+field_name: field_content
+entity_type: taxonomy_term
+bundle: municipalities
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

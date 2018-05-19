@@ -1,0 +1,23 @@
+uuid: 3af4e441-bdb3-48aa-beee-c06c20f1af3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_in_swedish
+    - node.type.contact_information
+id: node.contact_information.field_service_in_swedish
+field_name: field_service_in_swedish
+entity_type: node
+bundle: contact_information
+label: 'Service in Swedish'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

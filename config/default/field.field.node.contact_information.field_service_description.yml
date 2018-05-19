@@ -1,0 +1,21 @@
+uuid: 77995014-b11b-4fe3-bba1-32a57285511a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_description
+    - node.type.contact_information
+  module:
+    - text
+id: node.contact_information.field_service_description
+field_name: field_service_description
+entity_type: node
+bundle: contact_information
+label: 'Service description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

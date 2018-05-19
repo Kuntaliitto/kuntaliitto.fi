@@ -1,0 +1,8 @@
+uuid: 35f44743-0bd0-4b3b-8bc1-673433709e7f
+langcode: en
+status: true
+dependencies: {  }
+id: main-navigation-en-
+label: 'Main navigation (EN)'
+description: 'Main navigation for English site'
+locked: false

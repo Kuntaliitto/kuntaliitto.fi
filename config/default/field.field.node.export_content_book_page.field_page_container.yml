@@ -1,0 +1,23 @@
+uuid: 5f19c1fd-3c4b-45cf-9381-15df3cbabd43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_container
+    - node.type.export_content_book_page
+id: node.export_content_book_page.field_page_container
+field_name: field_page_container
+entity_type: node
+bundle: export_content_book_page
+label: 'Page container'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

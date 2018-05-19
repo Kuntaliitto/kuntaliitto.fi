@@ -1,0 +1,21 @@
+uuid: adbf7473-d129-4440-b111-db64771392c6
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_json
+    - paragraphs.paragraphs_type.highchart
+  module:
+    - options
+id: paragraph.highchart.field_json
+field_name: field_json
+entity_type: paragraph
+bundle: highchart
+label: JSON
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,32 @@
+uuid: e823a7fe-31a0-4650-91b5-1b94ac389e9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_source
+    - node.type.media_release
+    - taxonomy.vocabulary.content_types
+  content:
+    - 'taxonomy_term:content_types:66bc23ff-9c91-45ff-aa1e-ade780a6f95c'
+id: node.media_release.field_content_source
+field_name: field_content_source
+entity_type: node
+bundle: media_release
+label: 'Content source'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: 66bc23ff-9c91-45ff-aa1e-ade780a6f95c
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_types: content_types
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

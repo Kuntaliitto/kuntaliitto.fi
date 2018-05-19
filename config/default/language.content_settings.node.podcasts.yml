@@ -1,0 +1,16 @@
+uuid: 7daec8cb-7391-423b-844a-54d0a3e8591e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.podcasts
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.podcasts
+target_entity_type_id: node
+target_bundle: podcasts
+default_langcode: site_default
+language_alterable: true

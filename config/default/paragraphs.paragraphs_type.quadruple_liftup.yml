@@ -1,0 +1,9 @@
+uuid: bb75f2c5-c68b-45bb-82a8-1b2821da96d3
+langcode: en
+status: true
+dependencies: {  }
+id: quadruple_liftup
+label: 'Quadruple liftup'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

@@ -1,0 +1,25 @@
+uuid: a85a280e-8b7a-4e36-864a-014ba47d6203
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - taxonomy
+id: topics_alias_fi
+label: 'Topics alias FI'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'aihealue/[term:name]'
+selection_criteria:
+  a0b4770f-b71a-4902-b69d-92ee749bd136:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: a0b4770f-b71a-4902-b69d-92ee749bd136
+selection_logic: and
+weight: -5
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

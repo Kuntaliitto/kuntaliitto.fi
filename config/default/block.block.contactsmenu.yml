@@ -1,0 +1,27 @@
+uuid: 9d2eb0e6-a251-4eae-8729-46bcd5f9d924
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.contacts-menu
+  module:
+    - menu_block
+  theme:
+    - kuntaliitto
+id: contactsmenu
+theme: kuntaliitto
+region: header
+weight: -18
+provider: null
+plugin: 'menu_block:contacts-menu'
+settings:
+  id: 'menu_block:contacts-menu'
+  label: 'Contacts menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'contacts-menu:'
+  suggestion: tabs
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: e84fb9e3-2095-48b5-b315-370fec929a13
+langcode: en
+status: true
+dependencies:
+  module:
+    - views
+name: centralised_liftup_browser
+label: 'Centralised liftup browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select centralised liftup'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  38369e19-b3dd-4423-96ae-442f40372664:
+    settings:
+      view: all_content_browser
+      view_display: centralised_liftup_browser
+      submit_text: 'Select centralised liftup'
+      auto_select: false
+    uuid: 38369e19-b3dd-4423-96ae-442f40372664
+    weight: 1
+    label: 'Centralised liftup'
+    id: view

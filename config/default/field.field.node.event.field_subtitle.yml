@@ -1,0 +1,19 @@
+uuid: c276615d-b87e-40bc-9c19-47a4bbf82130
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.event
+id: node.event.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: event
+label: 'Top title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

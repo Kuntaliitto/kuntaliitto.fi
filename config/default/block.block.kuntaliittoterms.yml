@@ -1,0 +1,22 @@
+uuid: 98eaa67d-2aad-4cc5-90c1-21721ef78fac
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.kuntaliitto_terms
+  module:
+    - facets
+  theme:
+    - kuntaliitto
+id: kuntaliittoterms
+theme: kuntaliitto
+region: column_left
+weight: -19
+provider: null
+plugin: 'facet_block:kuntaliitto_terms'
+settings:
+  id: 'facet_block:kuntaliitto_terms'
+  label: 'Kuntaliitto terms'
+  provider: facets
+  label_display: visible
+visibility: {  }

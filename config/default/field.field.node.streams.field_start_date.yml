@@ -1,0 +1,21 @@
+uuid: a3206a57-8cce-4540-bcfa-9296abe51d96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start_date
+    - node.type.streams
+  module:
+    - datetime
+id: node.streams.field_start_date
+field_name: field_start_date
+entity_type: node
+bundle: streams
+label: 'Stream start time'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

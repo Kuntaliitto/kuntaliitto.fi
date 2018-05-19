@@ -1,0 +1,33 @@
+uuid: 21eeb7fb-20ac-4fe0-8595-0f831bb9f11b
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: blog_alias_sv
+label: Blogg
+type: 'canonical_entities:node'
+pattern: 'blogg/[node:created:html_year]/[node:title]'
+selection_criteria:
+  de6a1065-50ef-47a7-b680-dd87dba66a84:
+    id: node_type
+    bundles:
+      blog_post: blog_post
+    negate: false
+    context_mapping:
+      node: node
+    uuid: de6a1065-50ef-47a7-b680-dd87dba66a84
+  aa02a957-bf51-46cb-b299-2b980ea5efb2:
+    id: language
+    langcodes:
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: aa02a957-bf51-46cb-b299-2b980ea5efb2
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

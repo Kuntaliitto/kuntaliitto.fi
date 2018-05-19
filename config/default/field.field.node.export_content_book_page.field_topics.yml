@@ -1,0 +1,28 @@
+uuid: dc102c57-9f63-4518-8079-29990a10c912
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topics
+    - node.type.export_content_book_page
+    - taxonomy.vocabulary.topics
+id: node.export_content_book_page.field_topics
+field_name: field_topics
+entity_type: node
+bundle: export_content_book_page
+label: Topics
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      topics: topics
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,25 @@
+uuid: 1655d73c-5da8-4a40-817f-3afcd4e79a84
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:contact_information:482faaad-4618-405e-9d3e-ce3876304f4f'
+  module:
+    - block_content
+  theme:
+    - kuntaliitto
+id: contactinformation
+theme: kuntaliitto
+region: footer
+weight: -19
+provider: null
+plugin: 'block_content:482faaad-4618-405e-9d3e-ce3876304f4f'
+settings:
+  id: 'block_content:482faaad-4618-405e-9d3e-ce3876304f4f'
+  label: 'Contact information'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,81 @@
+uuid: b1fbd32b-7caa-453b-a77f-9b2850b2835d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.file.image.field_artist
+    - field.field.file.image.field_image_alt_text
+    - field.field.file.image.field_image_description
+    - field.field.file.image.field_image_title_text
+    - field.field.file.image.field_subject
+    - file_entity.type.image
+  module:
+    - path
+_core:
+  default_config_hash: HYzof_QiEoo7449yRhD_uJoLXMEAmSafqexxGS9OmjQ
+id: file.image.default
+targetEntityType: file
+bundle: image
+mode: default
+content:
+  field_artist:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_alt_text:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_image_description:
+    weight: 34
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_title_text:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_subject:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  filename:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

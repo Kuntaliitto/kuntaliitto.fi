@@ -1,0 +1,19 @@
+uuid: e2decc12-7603-4e04-8921-0886db97a43d
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_json_settings
+    - paragraphs.paragraphs_type.highchart
+id: paragraph.highchart.field_json_settings
+field_name: field_json_settings
+entity_type: paragraph
+bundle: highchart
+label: Asetukset
+description: 'Syötekohtaiset esimääritelly parametrit'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

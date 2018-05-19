@@ -1,0 +1,73 @@
+uuid: d9eab6fd-3cd4-44da-86d5-de998cae81ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_content_source
+    - field.field.node.basic_page.field_liftup
+    - field.field.node.basic_page.field_search_exclude
+    - node.type.basic_page
+  module:
+    - ds
+    - entity_reference_revisions
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - body
+        - field_liftup
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+id: node.basic_page.default
+targetEntityType: node
+bundle: basic_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_liftup:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: ds_content
+hidden:
+  content_moderation_control: true
+  field_content_source: true
+  field_search_exclude: true
+  langcode: true
+  links: true

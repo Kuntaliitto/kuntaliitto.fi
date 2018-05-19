@@ -1,0 +1,34 @@
+uuid: 3bb11ffc-7b0d-4ab3-ad37-200c0fd73381
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: department_alias_sv
+label: 'Department alias SV'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'enhet/[term:name]'
+selection_criteria:
+  2173abdf-7319-4619-aefb-f7e8b961c4f5:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      department: department
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 2173abdf-7319-4619-aefb-f7e8b961c4f5
+  48d7e4ba-9fd4-4021-9b92-5fba06b846e9:
+    id: language
+    langcodes:
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: 48d7e4ba-9fd4-4021-9b92-5fba06b846e9
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

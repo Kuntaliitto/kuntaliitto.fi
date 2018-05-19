@@ -1,0 +1,31 @@
+uuid: c94b7932-ff1e-4af3-9d27-8b466b48d7ec
+langcode: fi
+status: true
+dependencies: {  }
+id: blogin_yllapitaja
+label: Blogioikeudet
+weight: -1
+is_admin: null
+permissions:
+  - 'access files overview'
+  - 'create blog_post content'
+  - 'create files'
+  - 'create manual_decentralize_liftup content'
+  - 'delete any audio files'
+  - 'delete any blog_post content'
+  - 'delete any document files'
+  - 'delete any image files'
+  - 'delete any media'
+  - 'delete any video files'
+  - 'delete blog_post revisions'
+  - 'delete own blog_post content'
+  - 'edit any audio files'
+  - 'edit any blog_post content'
+  - 'edit any document files'
+  - 'edit any image files'
+  - 'edit any video files'
+  - 'edit own blog_post content'
+  - 'revert blog_post revisions'
+  - 'update any media'
+  - 'use text format filtered_html'
+  - 'view blog_post revisions'

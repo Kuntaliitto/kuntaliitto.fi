@@ -1,0 +1,33 @@
+uuid: 224f84be-00ad-4373-b1bc-049a125d209d
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: media_release_alias_fi
+label: 'Media release alias Fi'
+type: 'canonical_entities:node'
+pattern: 'tiedotteet/[node:created:html_year]/[node:title]'
+selection_criteria:
+  41e8d838-3311-4583-b148-0a67414e5831:
+    id: node_type
+    bundles:
+      media_release: media_release
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 41e8d838-3311-4583-b148-0a67414e5831
+  81b3e35d-e73e-41a3-aa72-9ded5641e078:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 81b3e35d-e73e-41a3-aa72-9ded5641e078
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

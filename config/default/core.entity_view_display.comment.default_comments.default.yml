@@ -1,0 +1,30 @@
+uuid: bac59ac3-f5d5-46b4-abac-edee5109c56d
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.default_comments
+    - field.field.comment.default_comments.comment_body
+    - field.field.comment.default_comments.field_email
+  module:
+    - text
+id: comment.default_comments.default
+targetEntityType: comment
+bundle: default_comments
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_email: true
+  langcode: true

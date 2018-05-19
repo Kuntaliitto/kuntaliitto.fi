@@ -1,0 +1,28 @@
+uuid: 60913f69-5649-4160-bec2-01ac57814525
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_picture
+    - media_entity.bundle.image
+    - taxonomy.vocabulary.bloggers
+id: taxonomy_term.bloggers.field_picture
+field_name: field_picture
+entity_type: taxonomy_term
+bundle: bloggers
+label: Picture
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

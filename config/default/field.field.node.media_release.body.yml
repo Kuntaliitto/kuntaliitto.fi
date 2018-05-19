@@ -1,0 +1,22 @@
+uuid: 113accbb-b0e5-438e-a280-816e655e9958
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.media_release
+  module:
+    - text
+id: node.media_release.body
+field_name: body
+entity_type: node
+bundle: media_release
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,29 @@
+uuid: 30ec3540-4a1d-4fc4-924a-ab05e2b44892
+langcode: en
+status: true
+dependencies:
+  module:
+    - views
+name: media_external_video_browser
+label: 'Media external video browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select external video'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  8d7d2467-085a-4682-acf2-7d55348b109d:
+    settings:
+      view: media_selection
+      view_display: external_video_browser
+      submit_text: 'Select external video'
+      auto_select: false
+    uuid: 8d7d2467-085a-4682-acf2-7d55348b109d
+    weight: 1
+    label: 'External video'
+    id: view

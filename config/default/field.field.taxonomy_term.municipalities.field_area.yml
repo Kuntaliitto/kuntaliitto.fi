@@ -1,0 +1,23 @@
+uuid: ed1da17c-1be2-45c0-972a-aa571295641f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_area
+    - taxonomy.vocabulary.municipalities
+id: taxonomy_term.municipalities.field_area
+field_name: field_area
+entity_type: taxonomy_term
+bundle: municipalities
+label: Area
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: 999999999
+  prefix: ''
+  suffix: ' km<sup>2</sup>'
+field_type: integer

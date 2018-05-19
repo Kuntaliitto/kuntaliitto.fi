@@ -1,0 +1,9 @@
+uuid: 8fbd6b71-fa80-49b9-8944-8662c2f9c441
+langcode: fi
+status: true
+dependencies: {  }
+id: organs
+label: Toimieliment
+icon_uuid: null
+description: 'Kuntien toimielimet-kyselyn tulosten esittäminen'
+behavior_plugins: {  }

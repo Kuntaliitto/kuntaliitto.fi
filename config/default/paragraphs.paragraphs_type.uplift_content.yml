@@ -1,0 +1,9 @@
+uuid: 54f1ae8f-4c3f-47fd-8dfa-33530e2ce844
+langcode: en
+status: true
+dependencies: {  }
+id: uplift_content
+label: Content
+icon_uuid: null
+description: null
+behavior_plugins: {  }

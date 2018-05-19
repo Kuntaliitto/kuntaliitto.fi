@@ -1,0 +1,99 @@
+uuid: a9b9ee22-4c13-4114-98cf-0120412475d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.podcasts.field_content_source
+    - field.field.node.podcasts.field_description
+    - field.field.node.podcasts.field_image_files
+    - field.field.node.podcasts.field_keywords
+    - field.field.node.podcasts.field_kuntaliitto_terms
+    - field.field.node.podcasts.field_municipalities
+    - field.field.node.podcasts.field_podcast_file
+    - field.field.node.podcasts.field_topics
+    - image.style.expert_page
+    - node.type.podcasts
+  module:
+    - audiofield
+    - ds
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_image_files
+        - field_description
+        - field_podcast_file
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.podcasts.default
+targetEntityType: node
+bundle: podcasts
+mode: default
+content:
+  field_description:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    type: text_trimmed
+    region: ds_content
+  field_image_files:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: expert_page
+      image_link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: image
+    region: ds_content
+  field_podcast_file:
+    weight: 3
+    label: hidden
+    settings:
+      audio_player: audiojs_audio_player
+      audio_player_jplayer_theme: none
+      audio_player_wordpress_animation: '1'
+      audio_player_soundmanager_theme: default
+      audio_player_initial_volume: '8'
+      audio_player_wavesurfer_combine_files: 0
+      audio_player_wordpress_combine_files: 0
+      audio_player_autoplay: 0
+      audio_player_lazyload: 0
+      download_button: 0
+      download_link: 0
+    third_party_settings: {  }
+    type: audiofield_audioplayer
+    region: ds_content
+hidden:
+  field_content_source: true
+  field_keywords: true
+  field_kuntaliitto_terms: true
+  field_municipalities: true
+  field_topics: true
+  langcode: true
+  links: true

@@ -1,0 +1,19 @@
+uuid: 2601dbd0-ce69-4768-baeb-c88d1500d992
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.file.field_subject
+    - file_entity.type.image
+id: file.image.field_subject
+field_name: field_subject
+entity_type: file
+bundle: image
+label: Subject
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

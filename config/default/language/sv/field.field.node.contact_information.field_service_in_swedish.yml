@@ -1,0 +1,4 @@
+label: 'Ger service på svenska'
+settings:
+  on_label: Ja
+  off_label: Nej

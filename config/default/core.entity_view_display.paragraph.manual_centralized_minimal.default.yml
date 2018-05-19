@@ -1,0 +1,22 @@
+uuid: e953864e-b13d-434e-aa83-4fb759d1f11b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.manual_centralized_minimal.field_lifted_content
+    - paragraphs.paragraphs_type.manual_centralized_minimal
+id: paragraph.manual_centralized_minimal.default
+targetEntityType: paragraph
+bundle: manual_centralized_minimal
+mode: default
+content:
+  field_lifted_content:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: minimal
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

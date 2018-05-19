@@ -1,0 +1,18 @@
+uuid: e9239091-152c-4f33-953d-4dc8b4a2b303
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_image
+id: image
+label: Image
+description: 'Image media that can be reused throughout site.'
+type: image
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_image_file
+  gather_exif: false
+field_map:
+  width: field_width
+  height: field_height

@@ -1,0 +1,127 @@
+uuid: bce0aae3-e964-46ee-923f-22f000da2d25
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.default_comments.default
+    - field.field.node.blog_post.body
+    - field.field.node.blog_post.field_author
+    - field.field.node.blog_post.field_blog_tags
+    - field.field.node.blog_post.field_comments
+    - field.field.node.blog_post.field_content_source
+    - field.field.node.blog_post.field_image
+    - field.field.node.blog_post.field_keywords
+    - field.field.node.blog_post.field_kuntaliitto_terms
+    - field.field.node.blog_post.field_municipalities
+    - field.field.node.blog_post.field_subtitle
+    - field.field.node.blog_post.field_topics
+    - node.type.blog_post
+  module:
+    - comment
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - content_moderation_control
+        - field_subtitle
+        - node_title
+        - field_image
+        - body
+        - field_author
+        - field_blog_tags
+        - field_comments
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+id: node.blog_post.default
+targetEntityType: node
+bundle: blog_post
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  content_moderation_control:
+    weight: -20
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+  field_author:
+    weight: 4
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+  field_blog_tags:
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: ds_content
+  field_comments:
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: ds_content
+  field_image:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: narrow_content_width
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+  field_subtitle:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+hidden:
+  field_content_source: true
+  field_keywords: true
+  field_kuntaliitto_terms: true
+  field_municipalities: true
+  field_topics: true
+  langcode: true
+  links: true

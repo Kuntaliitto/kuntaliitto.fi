@@ -1,0 +1,28 @@
+uuid: 6170c471-3c1b-4b8f-bf09-47ef6972f719
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media_entity.bundle.image
+    - node.type.export_content_book_page
+id: node.export_content_book_page.field_image
+field_name: field_image
+entity_type: node
+bundle: export_content_book_page
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

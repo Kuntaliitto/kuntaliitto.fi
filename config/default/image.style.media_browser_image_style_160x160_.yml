@@ -1,0 +1,15 @@
+uuid: 2647f1b2-213f-4685-8902-bb6453fd560f
+langcode: en
+status: true
+dependencies: {  }
+name: media_browser_image_style_160x160_
+label: 'Media browser image style (160x160)'
+effects:
+  e49d7f59-8c1d-4339-9913-7e14cbdcc24d:
+    uuid: e49d7f59-8c1d-4339-9913-7e14cbdcc24d
+    id: image_scale
+    weight: 1
+    data:
+      width: 160
+      height: 160
+      upscale: false

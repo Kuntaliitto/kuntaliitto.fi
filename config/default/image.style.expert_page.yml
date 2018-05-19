@@ -1,0 +1,14 @@
+uuid: f0a3c2f5-7026-495c-9ef4-bc3202080116
+langcode: en
+status: true
+dependencies: {  }
+name: expert_page
+label: 'Wide (790px x 424)'
+effects:
+  92b5ea8b-e760-461b-95b2-200100ebdbf7:
+    uuid: 92b5ea8b-e760-461b-95b2-200100ebdbf7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 790
+      height: 424

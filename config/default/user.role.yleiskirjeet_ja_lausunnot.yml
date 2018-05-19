@@ -1,0 +1,26 @@
+uuid: d46d5a12-79f2-4475-9fb3-2757a5691065
+langcode: fi
+status: true
+dependencies: {  }
+id: yleiskirjeet_ja_lausunnot
+label: 'Yleiskirjeet ja lausunnot'
+weight: 0
+is_admin: null
+permissions:
+  - 'create circular content'
+  - 'create expert_statement content'
+  - 'create manual_decentralize_liftup content'
+  - 'delete any circular content'
+  - 'delete any expert_statement content'
+  - 'delete circular revisions'
+  - 'delete expert_statement revisions'
+  - 'delete own circular content'
+  - 'delete own expert_statement content'
+  - 'edit any circular content'
+  - 'edit any expert_statement content'
+  - 'edit own circular content'
+  - 'edit own expert_statement content'
+  - 'revert circular revisions'
+  - 'revert expert_statement revisions'
+  - 'view circular revisions'
+  - 'view expert_statement revisions'

@@ -1,0 +1,19 @@
+uuid: 28cbe70c-7fe6-4f6f-8b28-53b92a34607a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_designer
+    - taxonomy.vocabulary.municipalities
+id: taxonomy_term.municipalities.field_designer
+field_name: field_designer
+entity_type: taxonomy_term
+bundle: municipalities
+label: Designer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

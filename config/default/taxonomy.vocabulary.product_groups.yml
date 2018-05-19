@@ -1,0 +1,9 @@
+uuid: 71420065-e360-45b6-b621-545cbba1849e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Product groups'
+vid: product_groups
+description: ''
+hierarchy: 0
+weight: 0

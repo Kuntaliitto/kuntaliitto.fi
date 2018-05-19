@@ -1,0 +1,28 @@
+uuid: 42fecb83-11cd-4a72-86d0-ec6b2db2f4d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topics
+    - node.type.media_release
+    - taxonomy.vocabulary.topics
+id: node.media_release.field_topics
+field_name: field_topics
+entity_type: node
+bundle: media_release
+label: Topics
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      topics: topics
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

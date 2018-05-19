@@ -1,0 +1,24 @@
+uuid: f0cffa1a-8f19-4cb0-874d-0ff8df62d8b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.streams.field_description
+    - node.type.streams
+  module:
+    - user
+id: node.streams.teaser
+targetEntityType: node
+bundle: streams
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_keywords: true
+  field_link_to_stream: true
+  field_start_date: true
+  langcode: true

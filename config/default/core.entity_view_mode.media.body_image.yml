@@ -1,0 +1,10 @@
+uuid: 9bf7c1bf-6356-4fd9-bdf7-bc5c6cf512c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.body_image
+label: 'Body image'
+targetEntityType: media
+cache: true

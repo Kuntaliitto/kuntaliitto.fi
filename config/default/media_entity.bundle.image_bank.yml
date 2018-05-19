@@ -1,0 +1,16 @@
+uuid: 696e7676-9102-4755-8e01-2b2ebf300442
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_image
+id: image_bank
+label: 'Image bank'
+description: 'Reusable image bank for site editor use'
+type: image
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_images
+  gather_exif: true
+field_map: {  }

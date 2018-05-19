@@ -1,0 +1,16 @@
+uuid: 9827d6f9-8026-4b32-a645-4359556a094b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.streams
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.streams
+target_entity_type_id: node
+target_bundle: streams
+default_langcode: site_default
+language_alterable: true

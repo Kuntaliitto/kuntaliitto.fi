@@ -1,0 +1,36 @@
+uuid: 6c553c84-e941-4bc3-8d72-dd26b66b9af8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_liftup_style
+field_name: field_liftup_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: centred-liftup
+      label: Centred
+    -
+      value: lateral-image-left
+      label: 'Lateral (Image left)'
+    -
+      value: lateral-image-right
+      label: 'Lateral (Image right)'
+    -
+      value: no-image
+      label: 'No image'
+    -
+      value: narrow
+      label: Narrow
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

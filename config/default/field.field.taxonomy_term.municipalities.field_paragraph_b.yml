@@ -1,0 +1,92 @@
+uuid: 2bbf5b58-c51f-452c-86c4-87dc6be2b570
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_paragraph_b
+    - paragraphs.paragraphs_type.contact_information
+    - paragraphs.paragraphs_type.double_liftup
+    - paragraphs.paragraphs_type.free_text
+    - paragraphs.paragraphs_type.highchart
+    - paragraphs.paragraphs_type.quadruple_liftup
+    - paragraphs.paragraphs_type.some
+    - paragraphs.paragraphs_type.uplift_centalised
+    - paragraphs.paragraphs_type.uplift_decentalised
+    - paragraphs.paragraphs_type.uplift_thematic_content
+    - taxonomy.vocabulary.municipalities
+  module:
+    - entity_reference_revisions
+id: taxonomy_term.municipalities.field_paragraph_b
+field_name: field_paragraph_b
+entity_type: taxonomy_term
+bundle: municipalities
+label: 'Paragraph area B'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      uplift_thematic_content: uplift_thematic_content
+      contact_information: contact_information
+      quadruple_liftup: quadruple_liftup
+      double_liftup: double_liftup
+      uplift_centalised: uplift_centalised
+      uplift_decentalised: uplift_decentalised
+      some: some
+      free_text: free_text
+      highchart: highchart
+    target_bundles_drag_drop:
+      uplift_content:
+        weight: -31
+        enabled: false
+      uplift_thematic_content:
+        enabled: true
+        weight: -30
+      contact_information:
+        enabled: true
+        weight: -29
+      quadruple_liftup:
+        enabled: true
+        weight: -28
+      double_liftup:
+        enabled: true
+        weight: -27
+      uplift_centalised:
+        enabled: true
+        weight: -26
+      uplift_decentalised:
+        enabled: true
+        weight: -25
+      some:
+        enabled: true
+        weight: -24
+      content_teaser:
+        weight: -23
+        enabled: false
+      manual_centralized_minimal:
+        weight: -22
+        enabled: false
+      contact_form:
+        weight: -21
+        enabled: false
+      manual_decentralized_minimal:
+        weight: -20
+        enabled: false
+      free_text:
+        enabled: true
+        weight: -19
+      highchart:
+        enabled: true
+        weight: -18
+      organs:
+        weight: -17
+        enabled: false
+      publication:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

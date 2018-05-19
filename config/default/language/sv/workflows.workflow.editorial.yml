@@ -1,0 +1,14 @@
+label: 'Editorial workflow'
+type_settings:
+  states:
+    archived:
+      label: Archived
+    draft:
+      label: Draft
+    published:
+      label: Published
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+    publish:
+      label: Publish

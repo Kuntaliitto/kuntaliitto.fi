@@ -1,0 +1,8 @@
+uuid: dc006892-2210-43ed-b0f9-05b313581f11
+langcode: en
+status: true
+dependencies: {  }
+id: contact_information
+label: 'Contact information'
+revision: 0
+description: ''

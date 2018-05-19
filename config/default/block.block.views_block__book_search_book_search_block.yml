@@ -1,0 +1,24 @@
+uuid: a133665d-746e-46a7-bf8f-c5a8c4dc340a
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.book_search
+  module:
+    - views
+  theme:
+    - kuntaliitto
+id: views_block__book_search_book_search_block
+theme: kuntaliitto
+region: footer
+weight: 0
+provider: null
+plugin: 'views_block:book_search-book_search_block'
+settings:
+  id: 'views_block:book_search-book_search_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

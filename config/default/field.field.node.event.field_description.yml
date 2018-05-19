@@ -1,0 +1,21 @@
+uuid: f5a4c22d-6500-4874-9402-ef2c09d5b280
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.event
+  module:
+    - text
+id: node.event.field_description
+field_name: field_description
+entity_type: node
+bundle: event
+label: Description
+description: 'Huom! Jos tiedot tulevat automaattisesti FCG:ltä, niin et voi muokata niitä tässä yhteydessä. Ota yhteyttä FCG:n suuntaan, ja pidä huolta, että tiedot ovat ajan tasalla.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,22 @@
+uuid: 78f6500b-d8f8-4349-8387-59ba0647ab99
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.content_types
+  module:
+    - text
+id: taxonomy_term.content_types.default
+targetEntityType: taxonomy_term
+bundle: content_types
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

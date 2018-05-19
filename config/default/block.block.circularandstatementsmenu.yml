@@ -1,0 +1,27 @@
+uuid: 31f840d7-1553-4890-b9ea-046fb17c7475
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.circular-and-statements-men
+  module:
+    - menu_block
+  theme:
+    - kuntaliitto
+id: circularandstatementsmenu
+theme: kuntaliitto
+region: header
+weight: -19
+provider: null
+plugin: 'menu_block:circular-and-statements-men'
+settings:
+  id: 'menu_block:circular-and-statements-men'
+  label: 'Circular and statements menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'circular-and-statements-men:'
+  suggestion: tabs
+visibility: {  }

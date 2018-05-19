@@ -1,0 +1,27 @@
+uuid: bbfe840c-bb86-43f5-ab47-0e66d82cfb39
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: book_page_alias_en
+label: 'Book page alias All'
+type: 'canonical_entities:node'
+pattern: '[node:book:parents:join-path]/[node:title]'
+selection_criteria:
+  8c5c8b60-4c5a-4105-8483-220d5d65776e:
+    id: language
+    langcodes:
+      en: en
+      fi: fi
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 8c5c8b60-4c5a-4105-8483-220d5d65776e
+selection_logic: and
+weight: -5
+relationships:
+  'node:langcode:language':
+    label: Language

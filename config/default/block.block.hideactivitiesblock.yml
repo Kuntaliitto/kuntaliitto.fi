@@ -1,0 +1,20 @@
+uuid: 43bf0dba-2556-4272-93e9-ea5e4753bff5
+langcode: en
+status: false
+dependencies:
+  module:
+    - kuntaliitto_liftup
+  theme:
+    - kuntaliitto
+id: hideactivitiesblock
+theme: kuntaliitto
+region: header
+weight: -14
+provider: null
+plugin: hide_activities_block
+settings:
+  id: hide_activities_block
+  label: 'Hide activities block'
+  provider: kuntaliitto_liftup
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,9 @@
+uuid: 66b3724c-3746-4dcc-af9e-fac8f2d18638
+langcode: en
+status: true
+dependencies: {  }
+id: uplift_decentalised
+label: 'Manual decentralized liftup'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

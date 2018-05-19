@@ -1,0 +1,22 @@
+uuid: 2165ddbc-af00-400e-aa79-82d5635d7f99
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.tags
+  module:
+    - facets
+  theme:
+    - kuntaliitto
+id: tags
+theme: kuntaliitto
+region: column_left
+weight: -15
+provider: null
+plugin: 'facet_block:tags'
+settings:
+  id: 'facet_block:tags'
+  label: Tags
+  provider: facets
+  label_display: visible
+visibility: {  }

@@ -1,0 +1,14 @@
+uuid: fcc707f2-72d8-4c77-a700-7470b5f5e6f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.kuntaliitto_admin
+  module:
+    - user
+id: user_remove_role_action.kuntaliitto_admin
+label: 'Remove the Kuntaliitto Admin role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: kuntaliitto_admin

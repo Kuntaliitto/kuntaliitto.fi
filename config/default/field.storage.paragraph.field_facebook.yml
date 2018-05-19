@@ -1,0 +1,19 @@
+uuid: 7008b33e-2ae6-49de-9678-9c12d34ed391
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_facebook
+field_name: field_facebook
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

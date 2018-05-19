@@ -1,0 +1,115 @@
+uuid: d56d9ff9-7343-4156-92b1-a0ca5dbb920d
+langcode: fi
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 19
+template: false
+id: liityn_viestinnan_sahkopostilist
+title: 'Liityn viestinnän sähköpostilistoille'
+description: ''
+category: Verkosto
+elements: "liity_sahkopostilistoille:\n  '#type': webform_markup\n  '#markup': '<h2>Liity Kuntaliiton viestinn&auml;n verkostoihin ja s&auml;hk&ouml;postilistoille</h2>'\n  kuntamarkkinoijat:\n    '#type': checkbox\n    '#title': Kuntamarkkinoijat\n    '#help': 'Kuntamarkkinointi-s&auml;hk&ouml;postilista on tarkoitettu kuntien-, kuntayhtymien, sairaanhoitopiirien ja maakuntaliittojen markkinoinnin parissa p&auml;&auml;- tai sivutoimisesti ty&ouml;skenteleville.'\n  kuntatiedottajat_:\n    '#type': checkbox\n    '#title': Kuntatiedottajat\n    '#help': '<p>Kuntatiedottajien verkostoon voivat liitty&auml; kaikki kunta-alalla p&auml;&auml;toimisesti viestinn&auml;n parissa ty&ouml;skentelev&auml;t. Kuntatiedottajien s&auml;hk&ouml;postilistan v&auml;lityksell&auml; keskustellaan kuntien viestinn&auml;st&auml; ja kysell&auml;&auml;n neuvoja kollegoilta.</p>'\n  maakuntatiedottajat:\n    '#type': checkbox\n    '#title': Maakuntatiedottajat\n    '#help': '<p>Maakuntaliittojen tiedottajilla on oma verkosto; tiedottajat tapaavat toisiaan aika ajoin ja k&auml;yt&ouml;ss&auml; on yhteinen s&auml;hk&ouml;postilista.&nbsp;</p>'\n  soster_tiedottajat:\n    '#type': checkbox\n    '#title': Soster-tiedottajat\n    '#help': '<p>Sairaanhoitopiirien ja kuntien sosiaali- ja terveystoimen tiedottajilla on jo pitk&auml;&auml;n ollut k&auml;yt&ouml;ss&auml; oma s&auml;hk&ouml;postilista. Eri sairaanhoitopiirit organisoivat my&ouml;s viestint&auml;tapaamisia, joissa k&auml;sitell&auml;&auml;n ajankohtaisia teemoja.</p>'\n  verkkotiedottajat:\n    '#type': checkbox\n    '#title': Verkkotiedottajat\n    '#help': 'Kuntien ja kuntayhtymien verkkoviestij&auml;t ovat tehneet yhteisty&ouml;t&auml; koko 2000-luvun ajan. Verkkotiedottajat tapaavat kerran vuodessa eri kaupunkien ja Kuntaliiton j&auml;rjest&auml;miss&auml; tapaamisissa. K&auml;yt&ouml;ss&auml; on my&ouml;s oma vuorovaikutteinen s&auml;hk&ouml;postilista, joka tarjoaa mahdollisuuden hyvien k&auml;yt&auml;nt&ouml;jen vaihtoon.'\nyhteystiedot_:\n  '#type': webform_markup\n  '#markup': '<h3>Yhteystiedot</h3>'\n  nimi:\n    '#type': textfield\n    '#title': Nimi\n  organisaatio:\n    '#type': textfield\n    '#title': Organisaatio\n  sahkopostiosoite:\n    '#type': email\n    '#title': Sähköpostiosoite\nloppusanat:\n  '#type': webform_markup\n  '#markup': 'Tiedot tallennetaan Kuntaliitto asiakasrekisteriin. Henkil&ouml;tietolain (523/99) 10&sect;:n mukainen tietosuoja- ja rekisteriseloste Kuntaliiton asiakasrekisterist&auml; l&ouml;ytyy t&auml;&auml;lt&auml;.'\nactions:\n  '#type': webform_actions\n  '#title': 'Lähetä tiedot'\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }

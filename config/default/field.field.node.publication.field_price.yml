@@ -1,0 +1,23 @@
+uuid: 8362f4f9-0fb9-4e85-b53e-c4e922406420
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.publication
+id: node.publication.field_price
+field_name: field_price
+entity_type: node
+bundle: publication
+label: Price
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: !!float 10000
+  prefix: ''
+  suffix: ' euro'
+field_type: float

@@ -1,0 +1,29 @@
+uuid: c65a00ea-0c95-4e8b-93d7-30b77ed92b0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - views
+name: media_video_browser
+label: 'Media video browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select video media'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  c77212dd-3bd5-49df-aefb-a43cbf9b225f:
+    settings:
+      view: media_selection
+      view_display: video_browser
+      submit_text: 'Select video media'
+      auto_select: false
+    uuid: c77212dd-3bd5-49df-aefb-a43cbf9b225f
+    weight: 1
+    label: Video
+    id: view

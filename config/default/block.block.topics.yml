@@ -1,0 +1,22 @@
+uuid: eab8cc5d-6f08-4458-9d10-a384ab3424bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.topics
+  module:
+    - facets
+  theme:
+    - kuntaliitto
+id: topics
+theme: kuntaliitto
+region: column_left
+weight: -17
+provider: null
+plugin: 'facet_block:topics'
+settings:
+  id: 'facet_block:topics'
+  label: Topics
+  provider: facets
+  label_display: visible
+visibility: {  }

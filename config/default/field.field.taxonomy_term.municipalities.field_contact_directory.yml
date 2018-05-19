@@ -1,0 +1,23 @@
+uuid: 6fc20bb1-6eec-4bac-a374-a7b37654fd62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_contact_directory
+    - taxonomy.vocabulary.municipalities
+  module:
+    - link
+id: taxonomy_term.municipalities.field_contact_directory
+field_name: field_contact_directory
+entity_type: taxonomy_term
+bundle: municipalities
+label: 'Contact directory'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

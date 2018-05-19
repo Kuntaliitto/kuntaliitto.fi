@@ -1,0 +1,14 @@
+uuid: c1dafe56-3cf1-4835-b00d-f80a83459ba6
+langcode: fi
+status: true
+dependencies:
+  config:
+    - user.role.yleiskirjeet_ja_lausunnot
+  module:
+    - user
+id: user_add_role_action.yleiskirjeet_ja_lausunnot
+label: 'Add the Yleiskirjeet ja lausunnot role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: yleiskirjeet_ja_lausunnot

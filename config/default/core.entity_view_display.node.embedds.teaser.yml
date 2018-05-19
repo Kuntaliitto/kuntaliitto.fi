@@ -1,0 +1,83 @@
+uuid: 59920820-89d2-41a8-93c8-b8b62e864a08
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.embedds.body
+    - field.field.node.embedds.field_content_source
+    - field.field.node.embedds.field_embed_frame_height
+    - field.field.node.embedds.field_embed_frame_width
+    - field.field.node.embedds.field_external_url
+    - field.field.node.embedds.field_liftup_embed
+    - node.type.embedds
+  module:
+    - ds
+    - kuntaliitto_common
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: listing_item
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          meta: div
+          title: div
+          main: div
+          keywords: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      meta:
+        - field_content_source
+      title:
+        - node_title
+      main:
+        - body
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.embedds.teaser
+targetEntityType: node
+bundle: embedds
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: main
+  field_content_source:
+    type: kuntaliitto_term_label
+    weight: 0
+    region: meta
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  field_embed_frame_height: true
+  field_embed_frame_width: true
+  field_external_url: true
+  field_liftup_embed: true
+  langcode: true
+  links: true

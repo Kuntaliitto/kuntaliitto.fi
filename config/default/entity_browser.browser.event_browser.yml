@@ -1,0 +1,29 @@
+uuid: 300e8e7f-6090-4d47-9ca6-799c408d62fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - views
+name: event_browser
+label: 'Event browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: Select
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  1c4574a8-37bb-425e-bc3f-21f9bfbd89f1:
+    settings:
+      view: all_content_browser
+      view_display: event_browser
+      submit_text: Select
+      auto_select: false
+    uuid: 1c4574a8-37bb-425e-bc3f-21f9bfbd89f1
+    weight: 1
+    label: Events
+    id: view

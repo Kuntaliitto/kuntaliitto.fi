@@ -1,0 +1,6 @@
+display:
+  default:
+    display_options:
+      title: 'Lisää kirjoittajalta'
+  block_more_from_blogger:
+    display_title: 'Lisää kirjoittajalta'

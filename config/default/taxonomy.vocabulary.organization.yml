@@ -1,0 +1,9 @@
+uuid: 0b7aa8c9-4118-4379-9532-fdd29d58bf14
+langcode: en
+status: true
+dependencies: {  }
+name: Organization
+vid: organization
+description: 'Taxonomy for contact information'
+hierarchy: 0
+weight: 0

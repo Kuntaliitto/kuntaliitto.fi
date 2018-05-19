@@ -1,0 +1,451 @@
+uuid: 2d95a951-45bd-4fc5-89a0-b4ccf51524d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_content_source
+    - field.storage.node.field_keywords
+    - field.storage.node.field_municipalities
+    - field.storage.node.field_topics
+    - field.storage.node.field_tags
+    - field.storage.node.field_kuntaliitto_terms
+    - field.storage.node.field_don_t_show_in_contact_dire
+    - field.storage.media.field_file
+    - field.storage.taxonomy_term.field_e_mail_address
+    - field.storage.taxonomy_term.field_visiting_address
+    - field.storage.taxonomy_term.field_province
+    - field.storage.taxonomy_term.field_phone
+    - field.storage.taxonomy_term.field_mailing_address
+    - field.storage.taxonomy_term.field_internet_address
+    - search_api.server.kuntaliitto_solr_server
+  module:
+    - file
+    - search_api
+    - kuntaliitto_books
+    - search_api_bundle_boost
+    - search_api_exclude_entity
+    - node
+    - media_entity
+    - taxonomy
+id: content_and_media
+name: 'Content and Media'
+description: ''
+read_only: false
+field_settings:
+  aggregated_field:
+    label: 'Aggregated field'
+    property_path: aggregated_field
+    type: text
+    configuration:
+      type: union
+      fields:
+        - 'entity:node/field_additional_information'
+        - 'entity:node/body'
+        - 'entity:node/field_content'
+        - 'entity:node/field_content_source'
+        - 'entity:node/type'
+        - 'entity:node/field_department'
+        - 'entity:node/field_description'
+        - 'entity:node/field_division'
+        - 'entity:node/field_contact_email'
+        - 'entity:node/field_event_city'
+        - 'entity:node/field_event_organiser'
+        - 'entity:node/field_event_type'
+        - 'entity:node/field_expert_service'
+        - 'entity:node/field_first_name'
+        - 'entity:node/field_keywords'
+        - 'entity:node/field_last_name'
+        - 'entity:node/field_liftup_title'
+        - 'entity:node/field_main_media'
+        - 'entity:node/field_municipalities'
+        - 'entity:node/field_responsibilities'
+        - 'entity:node/field_service_description'
+        - 'entity:node/field_service_title'
+        - 'entity:node/field_tags'
+        - 'entity:node/field_target_group'
+        - 'entity:node/field_topics'
+        - 'entity:node/field_subtitle'
+        - 'entity:node/field_twitter_account'
+        - 'entity:node/field_venue_address'
+        - 'entity:node/field_venue_name'
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+  uuid:
+    label: UUID
+    datasource_id: 'entity:node'
+    property_path: uuid
+    type: string
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 8
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.body
+  field_content_source:
+    label: 'Content source'
+    datasource_id: 'entity:node'
+    property_path: field_content_source
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_content_source
+  field_keywords:
+    label: Keywords
+    datasource_id: 'entity:node'
+    property_path: field_keywords
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_keywords
+  field_municipalities:
+    label: Municipalities
+    datasource_id: 'entity:node'
+    property_path: field_municipalities
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_municipalities
+  field_topics:
+    label: Topics
+    datasource_id: 'entity:node'
+    property_path: field_topics
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_topics
+  field_tags:
+    label: Tags
+    datasource_id: 'entity:node'
+    property_path: field_tags
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_tags
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+  field_kuntaliitto_terms:
+    label: 'Kuntaliitto terms'
+    datasource_id: 'entity:node'
+    property_path: field_kuntaliitto_terms
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_kuntaliitto_terms
+  field_don_t_show_in_contact_dire:
+    label: 'Do not show in contact directory'
+    datasource_id: 'entity:node'
+    property_path: field_don_t_show_in_contact_dire
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_don_t_show_in_contact_dire
+  name:
+    label: 'Media name'
+    datasource_id: 'entity:media'
+    property_path: name
+    type: text
+  filename:
+    label: 'File » File » Filename'
+    datasource_id: 'entity:media'
+    property_path: 'field_file:entity:filename'
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_file
+      module:
+        - file
+  created_media:
+    label: Created
+    datasource_id: 'entity:media'
+    property_path: created
+    type: date
+  tid:
+    label: 'Term ID'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: tid
+    type: integer
+  name_1:
+    label: Name
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: text
+    boost: !!float 21
+  field_e_mail_address:
+    label: 'E-mail address'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_e_mail_address
+    type: string
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_e_mail_address
+  field_visiting_address:
+    label: 'Visiting address'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_visiting_address
+    type: text
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_visiting_address
+  field_province:
+    label: Province
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_province
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_province
+  field_phone:
+    label: Phone
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_phone
+    type: string
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_phone
+  field_mailing_address:
+    label: 'Mailing address'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_mailing_address
+    type: text
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_mailing_address
+  field_internet_address:
+    label: 'Internet address'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_internet_address
+    type: string
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_internet_address
+  vid:
+    label: Vocabulary
+    datasource_id: 'entity:taxonomy_term'
+    property_path: vid
+    type: string
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - basic_page
+        - blog_post
+        - book
+        - circular
+        - contact_information
+        - embedds
+        - event
+        - expert_content
+        - expert_statement
+        - export_content_book_page
+        - external_article
+        - media_release
+        - news
+    languages:
+      default: true
+      selected: {  }
+  'entity:media':
+    bundles:
+      default: false
+      selected:
+        - file
+    languages:
+      default: true
+      selected: {  }
+  'entity:taxonomy_term':
+    bundles:
+      default: false
+      selected:
+        - municipalities
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  book_id: {  }
+  hierarchy:
+    fields:
+      field_municipalities: taxonomy_term-parent
+    weights:
+      preprocess_index: -48
+  add_url: {  }
+  aggregated_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -50
+  entity_status: {  }
+  highlight:
+    highlight: always
+    highlight_partial: false
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  html_filter:
+    all_fields: false
+    fields:
+      - aggregated_field
+      - uuid
+      - title
+      - body
+      - field_content_source
+      - field_keywords
+      - field_municipalities
+      - field_topics
+      - field_tags
+      - name
+      - filename
+      - name_1
+      - field_e_mail_address
+      - field_visiting_address
+      - field_phone
+      - field_mailing_address
+      - field_internet_address
+      - vid
+    title: true
+    alt: true
+    tags:
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      b: 2
+    weights:
+      preprocess_index: -50
+      preprocess_query: -49
+  ignorecase:
+    all_fields: false
+    fields:
+      - aggregated_field
+      - uuid
+      - title
+      - body
+      - field_content_source
+      - field_keywords
+      - field_municipalities
+      - field_topics
+      - field_tags
+      - name
+      - filename
+      - name_1
+      - field_e_mail_address
+      - field_visiting_address
+      - field_phone
+      - field_mailing_address
+      - field_internet_address
+    weights:
+      preprocess_index: -49
+      preprocess_query: -48
+  rendered_item: {  }
+  tokenizer:
+    all_fields: false
+    fields:
+      - aggregated_field
+      - title
+      - body
+      - name
+      - filename
+      - name_1
+      - field_visiting_address
+      - field_mailing_address
+    spaces: ' '
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -46
+      preprocess_query: -47
+  transliteration:
+    all_fields: false
+    fields:
+      - aggregated_field
+      - uuid
+      - title
+      - body
+      - field_content_source
+      - field_keywords
+      - field_municipalities
+      - field_topics
+      - field_tags
+      - name
+      - filename
+      - name_1
+      - field_e_mail_address
+      - field_visiting_address
+      - field_phone
+      - field_mailing_address
+      - field_internet_address
+      - vid
+    weights:
+      preprocess_index: -45
+      preprocess_query: -46
+  search_api_bundle_boost_processor:
+    bundles:
+      node:
+        basic_page: '1.0'
+        blog_post: '0.5'
+        book: '0.5'
+        circular: '0.5'
+        contact_information: '0.5'
+        embedds: '0.5'
+        event: '0.5'
+        expert_content: '0.5'
+        expert_statement: '0.5'
+        export_content_book_page: '0.5'
+        external_article: '0.5'
+        media_release: '0.5'
+        news: '0.5'
+      media:
+        file: '0.5'
+      taxonomy_term:
+        municipalities: '0.5'
+  search_api_exclude_entity_processor:
+    fields:
+      node:
+        - field_search_exclude
+      media: {  }
+      taxonomy_term: {  }
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: kuntaliitto_solr_server

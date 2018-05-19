@@ -1,0 +1,27 @@
+uuid: d8db5857-1bbb-4533-b114-0e8d0acba1c9
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - seven
+id: mainnavigation
+theme: seven
+region: header
+weight: -3
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  provider: menu_block
+  label_display: visible
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'main:'
+  suggestion: main
+visibility: {  }

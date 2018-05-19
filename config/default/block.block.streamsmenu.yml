@@ -1,0 +1,32 @@
+uuid: 3308290f-3b07-42b0-b9d4-0fdf2e84c68b
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.streams-menu
+  module:
+    - menu_block
+    - menu_multilingual
+  theme:
+    - kuntaliitto
+third_party_settings:
+  menu_multilingual:
+    only_translated_labels: 0
+    only_translated_content: 0
+id: streamsmenu
+theme: kuntaliitto
+region: header
+weight: 0
+provider: null
+plugin: 'menu_block:streams-menu'
+settings:
+  id: 'menu_block:streams-menu'
+  label: 'Streams menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'streams-menu:'
+  suggestion: tabs
+visibility: {  }

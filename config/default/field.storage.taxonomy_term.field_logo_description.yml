@@ -1,0 +1,19 @@
+uuid: c09a007c-6ca9-483c-97d2-2da8e671ab2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_logo_description
+field_name: field_logo_description
+entity_type: taxonomy_term
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

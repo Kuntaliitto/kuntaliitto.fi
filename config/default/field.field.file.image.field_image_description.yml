@@ -1,0 +1,19 @@
+uuid: db7b77b2-364a-4f3e-978e-93052a672e36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.file.field_image_description
+    - file_entity.type.image
+id: file.image.field_image_description
+field_name: field_image_description
+entity_type: file
+bundle: image
+label: 'Image Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

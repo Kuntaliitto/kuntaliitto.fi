@@ -1,0 +1,16 @@
+uuid: 5b75d098-0db9-4c4e-a890-0b8d564ca116
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.manual_decentralize_liftup
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.manual_decentralize_liftup
+target_entity_type_id: node
+target_bundle: manual_decentralize_liftup
+default_langcode: current_interface
+language_alterable: false

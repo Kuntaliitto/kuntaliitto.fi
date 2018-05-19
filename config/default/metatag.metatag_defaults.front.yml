@@ -1,0 +1,13 @@
+uuid: 210791c0-1158-440c-9350-c177490f6317
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yBqw6UD3j0MM1yoDSVDif7nw4SNdoS2e385nw--3ysk
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  description: 'Kuntaliitto on Suomen kuntien ja kaupunkien kaksikielinen etujärjestö, kunnallisten palvelujen asiantuntija ja kehittäjä. '
+  shortlink: '[site:url]'
+  title: Kuntaliitto.fi

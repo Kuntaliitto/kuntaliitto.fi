@@ -1,0 +1,15 @@
+uuid: eba44c59-2150-4b9b-9eb2-a4ecafd7f2a2
+langcode: en
+status: true
+dependencies: {  }
+name: body_image
+label: 'Body image (790x500)'
+effects:
+  ad685dc3-8597-4b7f-b4aa-45453a42810f:
+    uuid: ad685dc3-8597-4b7f-b4aa-45453a42810f
+    id: image_scale
+    weight: 1
+    data:
+      width: 790
+      height: null
+      upscale: false

@@ -1,0 +1,9 @@
+uuid: 47ca84f9-15de-4b29-81bc-21f01106c1f4
+langcode: fi
+status: true
+dependencies: {  }
+id: highchart
+label: Kuntakuvaaja
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

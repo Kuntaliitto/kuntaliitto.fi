@@ -1,0 +1,14 @@
+uuid: dca03948-fbf9-4b6d-b945-b183ae452b0a
+langcode: en
+status: true
+dependencies: {  }
+name: wide_and_low
+label: 'Wide and low (790 x 300)'
+effects:
+  b2b2d88d-3d14-40d6-9186-9996add36476:
+    uuid: b2b2d88d-3d14-40d6-9186-9996add36476
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 790
+      height: 300

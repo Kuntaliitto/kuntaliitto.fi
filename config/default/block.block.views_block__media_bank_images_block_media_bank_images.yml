@@ -1,0 +1,30 @@
+uuid: 415a9875-94ef-4800-92d2-766467aefccc
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_bank_images
+  module:
+    - system
+    - views
+  theme:
+    - kuntaliitto
+id: views_block__media_bank_images_block_media_bank_images
+theme: kuntaliitto
+region: content
+weight: -11
+provider: null
+plugin: 'views_block:media_bank_images-block_media_bank_images'
+settings:
+  id: 'views_block:media_bank_images-block_media_bank_images'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/media/*'
+    negate: false
+    context_mapping: {  }

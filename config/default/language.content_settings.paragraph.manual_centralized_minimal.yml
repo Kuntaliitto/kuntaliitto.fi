@@ -1,0 +1,16 @@
+uuid: b523321c-7727-4f74-aef0-2cfe88ea34f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.manual_centralized_minimal
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.manual_centralized_minimal
+target_entity_type_id: paragraph
+target_bundle: manual_centralized_minimal
+default_langcode: current_interface
+language_alterable: true

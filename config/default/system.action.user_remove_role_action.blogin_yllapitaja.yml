@@ -1,0 +1,14 @@
+uuid: 7ecf54d1-a316-4d3c-ac84-716a66b8cf7c
+langcode: fi
+status: true
+dependencies:
+  config:
+    - user.role.blogin_yllapitaja
+  module:
+    - user
+id: user_remove_role_action.blogin_yllapitaja
+label: 'Remove the Blogin ylläpitäjä role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: blogin_yllapitaja

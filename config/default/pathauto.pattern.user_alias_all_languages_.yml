@@ -1,0 +1,27 @@
+uuid: 532fb0f9-a70e-4a92-9e25-142c551d89d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - user
+id: user_alias_all_languages_
+label: 'User alias (All languages)'
+type: 'canonical_entities:user'
+pattern: '[user:display-name]'
+selection_criteria:
+  cb936fb5-5e41-473b-b41e-749569a8e429:
+    id: language
+    langcodes:
+      en: en
+      fi: fi
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'user:langcode:language'
+    uuid: cb936fb5-5e41-473b-b41e-749569a8e429
+selection_logic: and
+weight: -5
+relationships:
+  'user:langcode:language':
+    label: Language

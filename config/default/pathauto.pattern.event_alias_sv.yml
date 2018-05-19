@@ -1,0 +1,33 @@
+uuid: 687087a3-d319-441d-94d5-e0bb7fe3ce89
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: event_alias_sv
+label: 'Event alias SV'
+type: 'canonical_entities:node'
+pattern: 'evenemang/[node:field_start_date:date:html_year]/[node:field_event_id:value]-[node:title]'
+selection_criteria:
+  7b00e55e-0621-44ea-9178-85741a8bfa68:
+    id: node_type
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7b00e55e-0621-44ea-9178-85741a8bfa68
+  eb6d0ea2-fd9e-4b2c-bcaa-715589bead43:
+    id: language
+    langcodes:
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: eb6d0ea2-fd9e-4b2c-bcaa-715589bead43
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

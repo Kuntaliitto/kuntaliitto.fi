@@ -1,0 +1,19 @@
+uuid: f3b5f8a9-c3a8-415e-8852-4e54b1a9389f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_liftup_title
+    - node.type.circular
+id: node.circular.field_liftup_title
+field_name: field_liftup_title
+entity_type: node
+bundle: circular
+label: 'Liftup title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

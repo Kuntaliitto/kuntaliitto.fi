@@ -1,0 +1,28 @@
+uuid: dfbb099a-adb8-43cc-b5c3-9edac1d5dfa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_lifted_content
+    - node.type.manual_centralized_liftup
+    - paragraphs.paragraphs_type.uplift_centalised
+id: paragraph.uplift_centalised.field_lifted_content
+field_name: field_lifted_content
+entity_type: paragraph
+bundle: uplift_centalised
+label: 'Lifted content'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      manual_centralized_liftup: manual_centralized_liftup
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: manual_centralized_liftup
+field_type: entity_reference

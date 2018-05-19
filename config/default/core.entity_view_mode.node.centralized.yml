@@ -1,0 +1,10 @@
+uuid: f523de93-8446-4a9f-8ad9-8762ea3b3de8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.centralized
+label: Centralized
+targetEntityType: node
+cache: true

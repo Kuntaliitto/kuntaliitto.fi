@@ -1,0 +1,228 @@
+uuid: 1f96bd9b-5573-43ca-8ce1-8ba839275ab9
+langcode: fi
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 25
+template: false
+id: tietopyynto_kuntliiton_
+title: 'Tietopyyntö Kuntliiton...'
+description: 'Tietopyynt&ouml; Kuntaliiton arkistolle'
+category: Yleislomake
+elements: "palaute_otsikko:\n  '#type': webform_markup\n  '#markup': '<h2>Tietopyynt&ouml; Kuntaliiton arkistolle</h2>'\n  markup:\n    '#type': webform_markup\n    '#markup': \"<div class=\\\"WordSection1\\\">\\n<p style=\\\"margin-top:2.0pt; margin-right:0cm; margin-bottom:2.0pt; margin-left:0cm; margin:0cm 0cm 8pt\\\"><span style=\\\"page:WordSection1\\\"><span style=\\\"font-size:11pt\\\"><span style=\\\"line-height:normal\\\"><span style=\\\"text-autospace:none\\\"><span style=\\\"font-family:Calibri,sans-serif\\\"><span style=\\\"font-size:12.0pt\\\"><span style=\\\"font-family:&quot;Times New Roman&quot;,serif\\\">Suomen Kuntaliitto ry:n arkisto on k&auml;ytett&auml;viss&auml; historiallisiin ja tieteellisiin tutkimustarkoituksiin.&nbsp;</span></span></span></span></span></span></span></p>\\n</div>\"\npyyntosi_aihe:\n  '#type': textfield\n  '#title': 'Tutkimuksen tarkoitus'\n  '#required': true\npyyntoni:\n  '#type': textarea\n  '#title': 'Tutkimussuunnitelma (tutkimuksen aihe)'\n  '#default_value': 'Lähetä tutkimussuunnitelma liitetiedostona tai kuvaile tutkimuksen aihe. '\n  '#required': true\ntiedostot:\n  '#type': managed_file\n  '#title': Tiedostot\n  '#help': 'Voit liitt&auml;&auml; mukaan maksimissaan viisi tiedostoa.'\n  '#multiple': 5\n  '#max_filesize': '20'\n  '#file_extensions': 'gif jpg png bmp tif txt rtf html odf pdf doc docx ppt pptx xls xlsx'\nen_luovuta_asiakirjojen_sisaltamia_henkilotietoja_tutkimuksen_ul:\n  '#type': checkbox\n  '#title': 'En luovuta asiakirjojen sisältämiä henkilötietoja tutkimuksen ulkopuolisiin käyttötarkoituksiin'\n  '#required': true\n  '#required_error': 'Tämä kenttä on pakollinen'\nmarkup_01:\n  '#type': webform_markup\n  '#markup': 'T&auml;m&auml;n lomakkeen tietoja s&auml;ilytet&auml;&auml;n Kuntaliiton tietopyynt&ouml;tilastossa x vuotta.'\nyhteystiedot_1:\n  '#type': fieldset\n  '#title': Yhteystiedot\n  '#title_display': before\n  etunimi:\n    '#type': textfield\n    '#title': Nimi\n    '#required': true\n  edustamani_organisaatio:\n    '#type': textfield\n    '#title': 'Edustamani organisaatio'\n  puhelinnumero:\n    '#type': textfield\n    '#title': Puhelinnumero\n    '#states':\n      required:\n        ':input[name=\"vastaus\"]':\n          value: 'Haluan vastauksen puhelimitse'\n  sahkoposstiosoite:\n    '#type': email\n    '#title': Sähköpostiosoite\n    '#states':\n      required:\n        ':input[name=\"vastaus\"]':\n          value: 'Haluan vastauksen sähköpostitse'\nactions:\n  '#type': webform_actions\n  '#title': 'Lähetä lomake'\n  '#submit__label': 'Lähetä lomake'\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: false
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: inline
+  confirmation_title: ''
+  confirmation_message: "<h2>Kiitos viestist&auml;si!</h2>\r\nTiedot on vastaanotettu. Otamme asiasi k&auml;sittelyyn mahdollisimman pian.&nbsp;"
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: false
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+  ajax_scroll_top: form
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  sahkopostiosoite:
+    id: email
+    label: No_email
+    handler_id: sahkopostiosoite
+    status: true
+    conditions:
+      enabled:
+        ':input[name="vastaus"]':
+          '!value': 'En halua vastausta'
+        ':input[name="sahkoposstiosoite"]':
+          empty: true
+    weight: -49
+    settings:
+      states:
+        - completed
+      to_mail: asiakaspalvelu@kuntaliitto.fi
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      subject: '[webform_submission:values:pyyntosi_aihe:raw]'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: true
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      twig: false
+  en_halua_vastausta_sahkopostiosoite:
+    id: email
+    label: Sähköpostiosoite
+    handler_id: en_halua_vastausta_sahkopostiosoite
+    status: true
+    conditions:
+      enabled:
+        ':input[name="vastaus"]':
+          value: 'En halua vastausta'
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: asiakaspalvelu@kuntaliitto.fi
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      subject: 'Palautelomake / Responsblankett'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: true
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      twig: false
+  sahkopostiosoite_loytyy:
+    id: email
+    label: 'Sähköpostiosoite löytyy'
+    handler_id: sahkopostiosoite_loytyy
+    status: true
+    conditions:
+      enabled:
+        ':input[name="sahkoposstiosoite"]':
+          filled: true
+        ':input[name="vastaus"]':
+          '!value': 'En halua vastausta'
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: asiakaspalvelu@kuntaliitto.fi
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:sahkoposstiosoite:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:etunimi:raw]'
+      subject: '[webform_submission:values:pyyntosi_aihe:raw]'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: true
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      twig: false

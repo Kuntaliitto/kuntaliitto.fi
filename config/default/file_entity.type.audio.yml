@@ -1,0 +1,11 @@
+uuid: ca013f20-22c8-49be-bd40-8d85d873aec8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2piXWOEePay54jRRbflLmyIDgpizRktr2ddNgK6fLN0
+id: audio
+label: Audio
+description: 'An <em>Audio</em> file is a sound recording.'
+mimetypes:
+  - 'audio/*'

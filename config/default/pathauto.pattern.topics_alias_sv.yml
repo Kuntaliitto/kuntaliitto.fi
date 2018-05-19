@@ -1,0 +1,23 @@
+uuid: d9654663-fb82-481c-9ec7-da47a8b130cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: topics_alias_sv
+label: 'Topics alias SV'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'amnesomrade/[term:name]'
+selection_criteria:
+  2d4ce009-605e-4a3f-98ba-9d37dcf7b0de:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      topics: topics
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 2d4ce009-605e-4a3f-98ba-9d37dcf7b0de
+selection_logic: and
+weight: -5
+relationships: {  }

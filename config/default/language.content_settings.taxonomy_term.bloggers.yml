@@ -1,0 +1,16 @@
+uuid: 27f12808-0dec-4eb6-a887-883f3e8c6777
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.bloggers
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.bloggers
+target_entity_type_id: taxonomy_term
+target_bundle: bloggers
+default_langcode: current_interface
+language_alterable: true

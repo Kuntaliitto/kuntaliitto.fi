@@ -1,0 +1,35 @@
+uuid: 96ba1ed2-7b72-45ea-a9d3-879042b98bb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.narrow
+    - field.field.media.image.field_height
+    - field.field.media.image.field_image_file
+    - field.field.media.image.field_width
+    - image.style.narrow_320_x_600_
+    - media_entity.bundle.image
+  module:
+    - image
+id: media.image.narrow
+targetEntityType: media
+bundle: image
+mode: narrow
+content:
+  field_image_file:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: narrow_320_x_600_
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  field_height: true
+  field_width: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

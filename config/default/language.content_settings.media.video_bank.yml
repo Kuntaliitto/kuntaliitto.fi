@@ -1,0 +1,16 @@
+uuid: 8404ff8a-b5ae-4f70-a606-154289f51e51
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.video_bank
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: media.video_bank
+target_entity_type_id: media
+target_bundle: video_bank
+default_langcode: current_interface
+language_alterable: false

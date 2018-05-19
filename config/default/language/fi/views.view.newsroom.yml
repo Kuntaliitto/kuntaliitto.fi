@@ -1,0 +1,228 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          tags:
+            last: 'Viimeinen »'
+            first: '« Ensimmäinen'
+      title: Uutishuone
+      filters:
+        created:
+          expose:
+            label: Alkaen
+        created_1:
+          expose:
+            label: Loppuen
+        news_topics:
+          expose:
+            label: Aiheet
+        news_municipality:
+          expose:
+            label: Kunnat
+        news_keywords:
+          expose:
+            label: Asiasanat
+      empty:
+        area:
+          content:
+            value: "<p class=\"text-align-center\">Valitsemillasi hakukriteereillä ei löytynyt artikkeleja.</p>\r\n"
+            format: filtered_html
+  newsroom_blog_page:
+    display_options:
+      display_extenders: null
+      title: Blogit
+      menu:
+        title: Blogit
+      filters:
+        field_blog_tags_target_id:
+          expose:
+            label: Blogitagit
+        created:
+          admin_label: Alkaen
+          expose:
+            label: Alkaen
+        created_1:
+          admin_label: Loppuen
+          expose:
+            label: Loppuen
+    display_title: 'Uutishuone blogi'
+  newsroom_press_release_page:
+    display_title: 'Uutishuone mediatiedotteet'
+    display_options:
+      display_extenders: null
+      title: Mediatiedote
+      menu:
+        title: Mediatiedotteet
+      filters:
+        created:
+          expose:
+            label: Alkaen
+        created_1:
+          expose:
+            label: Loppuen
+        news_topics:
+          expose:
+            label: Aiheet
+        news_municipality:
+          expose:
+            label: Kunnat
+        news_keywords:
+          expose:
+            label: Asiasanat
+  newsroom_main_page:
+    display_options:
+      display_extenders: null
+      menu:
+        title: Kaikki
+      filters:
+        news_topics:
+          expose:
+            label: Aiheet
+        news_municipality:
+          expose:
+            label: Kunnat
+        news_keywords:
+          expose:
+            label: Asiasanat
+        created:
+          expose:
+            label: Alkaen
+        created_1:
+          expose:
+            label: Loppuen
+    display_title: 'Uutishuone pääsivu'
+  newsroom_recent_page:
+    display_title: 'Uutishuone Ajankohtaista'
+    display_options:
+      display_extenders: null
+      menu:
+        title: Ajankohtaista
+      title: Ajankohtaista
+      filters:
+        created:
+          expose:
+            label: Alkaen
+        created_1:
+          expose:
+            label: Loppuen
+        news_topics:
+          expose:
+            label: Aiheet
+        news_municipality:
+          expose:
+            label: Kunnat
+        news_keywords:
+          expose:
+            label: Asiasanat
+  newsroom_circular_experts_statements_main:
+    display_title: 'Yleiskirjeet ja lausunnot'
+    display_options:
+      display_extenders: null
+      menu:
+        title: Kaikki
+      title: 'Yleiskirjeet ja lausunnot'
+  newsroom_circular_page:
+    display_title: Yleiskirjeet
+    display_options:
+      display_extenders: null
+      menu:
+        title: Yleiskirjeet
+      filters:
+        news_topics:
+          expose:
+            label: Aiheet
+        news_municipality:
+          expose:
+            label: Kunnat
+        news_keywords:
+          expose:
+            label: Asiasanat
+        created:
+          expose:
+            label: Alkaen
+        created_1:
+          expose:
+            label: Loppuen
+      title: Yleiskirjeet
+  newsroom_experts_statements_page:
+    display_options:
+      display_extenders: null
+      menu:
+        title: Lausunnot
+      filters:
+        news_topics:
+          expose:
+            label: Aiheet
+        news_municipality:
+          expose:
+            label: Kunnat
+        news_keywords:
+          expose:
+            label: Asiasanat
+        created:
+          expose:
+            label: Alkaen
+        created_1:
+          expose:
+            label: Loppuen
+      title: Lausunnot
+    display_title: Lausunnot
+  experts_contents_overview:
+    display_options:
+      display_extenders: null
+      filters:
+        created:
+          expose:
+            label: Alkaen
+        created_1:
+          expose:
+            label: Loppuen
+        news_topics:
+          expose:
+            label: Aiheet
+        news_municipality:
+          expose:
+            label: Kunnat
+        news_keywords:
+          expose:
+            label: Asiasanat
+  newsroom_kuntalehti_page:
+    display_options:
+      display_extenders: null
+      filters:
+        created:
+          expose:
+            label: Alkaen
+        created_1:
+          expose:
+            label: Loppuen
+        news_topics:
+          expose:
+            label: Aiheet
+        news_municipality:
+          expose:
+            label: Kunnat
+        news_keywords:
+          expose:
+            label: Asiasanat
+  newsroom_kuntatekniikka_page:
+    display_options:
+      display_extenders: null
+      filters:
+        created:
+          expose:
+            label: Alkaen
+        created_1:
+          expose:
+            label: Loppuen
+        news_topics:
+          expose:
+            label: Aiheet
+        news_municipality:
+          expose:
+            label: Kunnat
+        news_keywords:
+          expose:
+            label: Asiasanat
+label: Uutishuone

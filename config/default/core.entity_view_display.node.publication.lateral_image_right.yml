@@ -1,0 +1,124 @@
+uuid: a29bfc34-0ca4-4cd8-80dc-8bc06b091595
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.lateral_image_right
+    - field.field.node.publication.field_content_source
+    - field.field.node.publication.field_description_short
+    - field.field.node.publication.field_file
+    - field.field.node.publication.field_price
+    - field.field.node.publication.field_product_description
+    - field.field.node.publication.field_product_group
+    - field.field.node.publication.field_product_image_large
+    - field.field.node.publication.field_product_image_small
+    - field.field.node.publication.field_publication_year
+    - field.field.node.publication.field_url
+    - node.type.publication
+  module:
+    - ds
+    - file_entity
+    - image
+    - link
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_product_image_small
+        - field_description_short
+        - field_publication_year
+        - field_price
+        - field_file
+        - field_url
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.publication.lateral_image_right
+targetEntityType: node
+bundle: publication
+mode: lateral_image_right
+content:
+  field_description_short:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    type: text_trimmed
+    region: ds_content
+  field_file:
+    weight: 5
+    label: hidden
+    settings:
+      access_message: 'You don''t have access to download this file.'
+      text: Download
+    third_party_settings: {  }
+    type: file_download_link
+    region: ds_content
+  field_price:
+    weight: 4
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: ds_content
+  field_product_image_small:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: ds_content
+  field_publication_year:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_url:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: ds_content
+hidden:
+  field_content_source: true
+  field_product_description: true
+  field_product_group: true
+  field_product_image_large: true
+  langcode: true
+  links: true

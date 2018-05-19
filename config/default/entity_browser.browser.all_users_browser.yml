@@ -1,0 +1,29 @@
+uuid: d3fdbe0e-964c-49e9-8882-0a8b4751a134
+langcode: en
+status: true
+dependencies:
+  module:
+    - views
+name: all_users_browser
+label: 'All users browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select users'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  626adbe1-de62-4b30-b859-dd94f5c5a0b6:
+    settings:
+      view: all_users_browser
+      view_display: user_browser
+      submit_text: 'Select users'
+      auto_select: false
+    uuid: 626adbe1-de62-4b30-b859-dd94f5c5a0b6
+    weight: 1
+    label: Users
+    id: view

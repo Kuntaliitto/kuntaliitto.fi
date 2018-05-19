@@ -1,0 +1,108 @@
+uuid: b0ed7d6f-ba11-4f26-a5fc-eed4cf9a796b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.concern_webpages
+    - field.field.block_content.concern_webpages.body
+    - field.field.block_content.concern_webpages.field_link_1
+    - field.field.block_content.concern_webpages.field_link_2
+    - field.field.block_content.concern_webpages.field_link_3
+  module:
+    - content_moderation
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_link_group_1:
+      children:
+        - field_link_3
+      parent_name: ''
+      weight: 2
+      label: 'Link group 1'
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_link_group_2:
+      children:
+        - field_link_2
+      parent_name: ''
+      weight: 3
+      label: 'Link group 2'
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_link_group_3:
+      children:
+        - field_link_1
+      parent_name: ''
+      weight: 4
+      label: 'Link group 3'
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+id: block_content.concern_webpages.default
+targetEntityType: block_content
+bundle: concern_webpages
+mode: default
+content:
+  field_link_1:
+    type: link_default
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    region: content
+  field_link_2:
+    type: link_default
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    region: content
+  field_link_3:
+    type: link_default
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true

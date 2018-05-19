@@ -1,0 +1,21 @@
+uuid: a4dc9640-a204-41eb-bcb0-09bc12d02ec1
+langcode: en
+status: false
+dependencies:
+  module:
+    - book
+  theme:
+    - kuntaliitto
+id: booknavigation
+theme: kuntaliitto
+region: footer
+weight: -15
+provider: null
+plugin: book_navigation
+settings:
+  id: book_navigation
+  label: 'Book navigation'
+  provider: book
+  label_display: '0'
+  block_mode: 'book pages'
+visibility: {  }

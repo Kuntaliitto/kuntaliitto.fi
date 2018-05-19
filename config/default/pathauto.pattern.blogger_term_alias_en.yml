@@ -1,0 +1,34 @@
+uuid: b1f840d5-ceaf-4821-b430-6181c0230173
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: blogger_term_alias_en
+label: 'Blogger term alias EN'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'bloggers/[term:name]'
+selection_criteria:
+  a12d15b8-320d-44b7-bc70-bbd33a240fea:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      bloggers: bloggers
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: a12d15b8-320d-44b7-bc70-bbd33a240fea
+  a587fb65-6d91-49d6-875d-c352645eb1bd:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: a587fb65-6d91-49d6-875d-c352645eb1bd
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

@@ -1,0 +1,27 @@
+uuid: cc89bb17-e8b6-4ca0-8598-f69c4c29726a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_neighboring_municipalities
+    - taxonomy.vocabulary.municipalities
+id: taxonomy_term.municipalities.field_neighboring_municipalities
+field_name: field_neighboring_municipalities
+entity_type: taxonomy_term
+bundle: municipalities
+label: 'Neighboring municipalities'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      municipalities: municipalities
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

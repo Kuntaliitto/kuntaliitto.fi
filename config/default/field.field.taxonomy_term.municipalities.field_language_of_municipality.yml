@@ -1,0 +1,21 @@
+uuid: d8f2671d-45c3-47ba-9602-e6e402dbc83c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_language_of_municipality
+    - taxonomy.vocabulary.municipalities
+  module:
+    - options
+id: taxonomy_term.municipalities.field_language_of_municipality
+field_name: field_language_of_municipality
+entity_type: taxonomy_term
+bundle: municipalities
+label: 'Language of the municipality'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,27 @@
+uuid: ce1e0b01-98ed-4fa0-b893-559de707db69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.double_liftup.field_lifted_blocks
+    - paragraphs.paragraphs_type.double_liftup
+  module:
+    - ds
+    - entity_reference_revisions
+id: paragraph.double_liftup.default
+targetEntityType: paragraph
+bundle: double_liftup
+mode: default
+content:
+  field_lifted_blocks:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: narrow
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: content
+hidden: {  }

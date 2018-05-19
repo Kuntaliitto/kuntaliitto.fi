@@ -1,0 +1,9 @@
+uuid: fec15a96-60cc-44b2-96b4-fbf77320cf13
+langcode: en
+status: true
+dependencies: {  }
+name: 'Kuntaliitto terms'
+vid: kuntaliitto_terms
+description: ''
+hierarchy: 0
+weight: 0

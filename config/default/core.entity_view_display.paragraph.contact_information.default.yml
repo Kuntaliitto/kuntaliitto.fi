@@ -1,0 +1,26 @@
+uuid: 788cdaaf-4a7a-486b-b251-3790a5d69799
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contact_information.field_contacts
+    - paragraphs.paragraphs_type.contact_information
+  module:
+    - ds
+id: paragraph.contact_information.default
+targetEntityType: paragraph
+bundle: contact_information
+mode: default
+content:
+  field_contacts:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: content
+hidden: {  }

@@ -1,0 +1,28 @@
+uuid: 43972a2f-ef8c-4e80-951c-30b0799ab31d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_keywords
+    - node.type.circular
+    - taxonomy.vocabulary.keywords
+id: node.circular.field_keywords
+field_name: field_keywords
+entity_type: node
+bundle: circular
+label: Keywords
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      keywords: keywords
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

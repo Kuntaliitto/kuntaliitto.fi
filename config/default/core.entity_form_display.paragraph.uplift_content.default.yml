@@ -1,0 +1,60 @@
+uuid: b356dcf9-4f47-4a3e-a226-05c16fd25eac
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.all_content_browser
+    - field.field.paragraph.uplift_content.field_lifted_content
+    - field.field.paragraph.uplift_content.field_liftup_style
+    - field.field.paragraph.uplift_content.field_title
+    - paragraphs.paragraphs_type.uplift_content
+  module:
+    - content_moderation
+    - entity_browser
+id: paragraph.uplift_content.default
+targetEntityType: paragraph
+bundle: uplift_content
+mode: default
+content:
+  field_lifted_content:
+    weight: 2
+    settings:
+      entity_browser: all_content_browser
+      field_widget_display: label
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_edit: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_liftup_style:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

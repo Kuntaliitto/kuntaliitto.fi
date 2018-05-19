@@ -1,0 +1,68 @@
+uuid: 44121cf0-beb0-4d8a-b812-835d2c2ef37b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.book.body
+    - field.field.node.book.field_color
+    - field.field.node.book.field_content_source
+    - field.field.node.book.field_page_container
+    - node.type.book
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: book_page
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: div
+          main: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - node_title
+      main:
+        - body
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+_core:
+  default_config_hash: 7UKHHzhlAE0hzKaKG_KHqUXXOp85mAQ1nZTOep8quTc
+id: node.book.default
+targetEntityType: node
+bundle: book
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: main
+hidden:
+  content_moderation_control: true
+  field_color: true
+  field_content_source: true
+  field_page_container: true
+  langcode: true
+  links: true

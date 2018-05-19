@@ -1,0 +1,33 @@
+uuid: f73a9bdd-3c2b-492e-84c1-a5b383bfcd1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: recent_alias_fi
+label: 'Recent alias FI'
+type: 'canonical_entities:node'
+pattern: 'ajankohtaista/[node:created:html_year]/[node:title]'
+selection_criteria:
+  58bd657d-0323-4a0f-9029-db741fcbcf24:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 58bd657d-0323-4a0f-9029-db741fcbcf24
+  9cc7736d-6f08-4c6a-bf8d-09090ece46bf:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 9cc7736d-6f08-4c6a-bf8d-09090ece46bf
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

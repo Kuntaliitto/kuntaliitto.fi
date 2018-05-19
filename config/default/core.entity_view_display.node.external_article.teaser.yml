@@ -1,0 +1,94 @@
+uuid: f795afa5-a3c0-484c-b0b1-150627b1673e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.external_article.field_content
+    - field.field.node.external_article.field_content_source
+    - field.field.node.external_article.field_link
+    - field.field.node.external_article.field_tags
+    - field.field.node.external_article.field_thumbnail
+    - node.type.external_article
+  module:
+    - ds
+    - kuntaliitto_common
+    - smart_trim
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: listing_item
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          meta: div
+          title: div
+          main: div
+          keywords: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      meta:
+        - field_content_source
+        - node_post_date
+      title:
+        - node_title
+      main:
+        - field_content
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 1
+        label: hidden
+        formatter: ds_post_date_kuntaliitto_default
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: ''
+          class: ''
+id: node.external_article.teaser
+targetEntityType: node
+bundle: external_article
+mode: teaser
+content:
+  field_content:
+    type: smart_trim
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 300
+      trim_type: chars
+      trim_suffix: ''
+      more_link: false
+      more_text: More
+      trim_options:
+        text: true
+      more_class: more-link
+      summary_handler: full
+    third_party_settings: {  }
+    region: main
+  field_content_source:
+    type: kuntaliitto_term_label
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: meta
+hidden:
+  field_link: true
+  field_tags: true
+  field_thumbnail: true
+  langcode: true
+  links: true

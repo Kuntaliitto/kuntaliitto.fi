@@ -1,0 +1,16 @@
+uuid: 0b973aac-2fa8-415f-9d7a-6fd0dc8dc040
+langcode: en
+status: true
+dependencies:
+  module:
+    - video_embed_media
+id: external_video
+label: 'External video'
+description: 'External source video that can be reused throughout site. e.g. youtube, youtube playlist, vimeo.'
+type: video_embed_field
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_media_video_embed_field
+field_map:
+  source_name: field_source

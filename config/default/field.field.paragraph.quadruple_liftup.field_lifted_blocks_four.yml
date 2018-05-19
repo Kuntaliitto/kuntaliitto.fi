@@ -1,0 +1,59 @@
+uuid: bb5bba5c-2514-4a5a-abdd-c82c3b770328
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_lifted_blocks_four
+    - paragraphs.paragraphs_type.manual_centralized_minimal
+    - paragraphs.paragraphs_type.manual_decentralized_minimal
+    - paragraphs.paragraphs_type.quadruple_liftup
+  module:
+    - entity_reference_revisions
+id: paragraph.quadruple_liftup.field_lifted_blocks_four
+field_name: field_lifted_blocks_four
+entity_type: paragraph
+bundle: quadruple_liftup
+label: 'Lifted blocks'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      manual_decentralized_minimal: manual_decentralized_minimal
+      manual_centralized_minimal: manual_centralized_minimal
+    target_bundles_drag_drop:
+      contact_information:
+        weight: 8
+        enabled: false
+      double_liftup:
+        weight: 9
+        enabled: false
+      content_teaser:
+        weight: 9
+        enabled: false
+      quadruple_liftup:
+        weight: 10
+        enabled: false
+      manual_decentralized_minimal:
+        enabled: true
+        weight: 11
+      uplift_centalised:
+        weight: 11
+        enabled: false
+      uplift_content:
+        weight: 12
+        enabled: false
+      uplift_decentalised:
+        weight: 13
+        enabled: false
+      uplift_thematic_content:
+        weight: 14
+        enabled: false
+      manual_centralized_minimal:
+        enabled: true
+        weight: 15
+field_type: entity_reference_revisions

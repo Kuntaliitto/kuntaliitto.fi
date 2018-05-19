@@ -1,0 +1,33 @@
+uuid: ce28ab6c-69cf-4db5-a66d-31a77051fba5
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: contact_information_alias_fi
+label: 'Contact information alias FI'
+type: 'canonical_entities:node'
+pattern: 'yhteystiedot/[node:title]'
+selection_criteria:
+  f560603a-67ba-43de-97b1-96a6a44f25ea:
+    id: node_type
+    bundles:
+      contact_information: contact_information
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f560603a-67ba-43de-97b1-96a6a44f25ea
+  3c9a3de6-47ae-439a-97b1-9bd3bdaef4d4:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 3c9a3de6-47ae-439a-97b1-9bd3bdaef4d4
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

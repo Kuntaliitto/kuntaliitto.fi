@@ -1,0 +1,10 @@
+uuid: 8f482cba-8239-4447-881a-ac32351c0a82
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: file.image_only
+label: 'Image only'
+targetEntityType: file
+cache: true

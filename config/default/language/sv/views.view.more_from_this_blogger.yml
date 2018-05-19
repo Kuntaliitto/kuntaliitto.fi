@@ -1,0 +1,6 @@
+display:
+  default:
+    display_options:
+      title: 'Mer från denna bloggare'
+  block_more_from_blogger:
+    display_title: 'Mer från denna bloggare'

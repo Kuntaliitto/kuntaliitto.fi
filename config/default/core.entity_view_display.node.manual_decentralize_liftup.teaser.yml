@@ -1,0 +1,65 @@
+uuid: 9c0e8c5f-9443-4947-bff8-83814f26d611
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.manual_decentralize_liftup.body
+    - field.field.node.manual_decentralize_liftup.field_links
+    - field.field.node.manual_decentralize_liftup.field_main_media
+    - node.type.manual_decentralize_liftup
+  module:
+    - ds
+    - smart_trim
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - links
+        - body
+id: node.manual_decentralize_liftup.teaser
+targetEntityType: node
+bundle: manual_decentralize_liftup
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: smart_trim
+    weight: 101
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ''
+      more_link: false
+      more_text: More
+      summary_handler: full
+      trim_options:
+        text: true
+      more_class: more-link
+    third_party_settings: {  }
+    region: ds_content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+hidden:
+  field_links: true
+  field_main_media: true
+  langcode: true

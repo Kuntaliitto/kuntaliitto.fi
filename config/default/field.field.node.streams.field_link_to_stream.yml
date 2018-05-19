@@ -1,0 +1,23 @@
+uuid: 5b420c29-9e49-4209-b3a6-7bf1e30e8ac6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_to_stream
+    - node.type.streams
+  module:
+    - link
+id: node.streams.field_link_to_stream
+field_name: field_link_to_stream
+entity_type: node
+bundle: streams
+label: 'Link to the stream'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

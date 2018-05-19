@@ -1,0 +1,15 @@
+uuid: f7e9197e-dbb7-4633-ad3d-d2aebc4fd7c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_video
+id: video
+label: Video
+description: 'Video that can be reused throughout site.'
+type: video
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_video_file
+field_map: {  }

@@ -1,0 +1,16 @@
+uuid: 50de8bac-e1a5-48a6-8785-6fe0ff493429
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.quadruple_liftup
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.quadruple_liftup
+target_entity_type_id: paragraph
+target_bundle: quadruple_liftup
+default_langcode: current_interface
+language_alterable: true

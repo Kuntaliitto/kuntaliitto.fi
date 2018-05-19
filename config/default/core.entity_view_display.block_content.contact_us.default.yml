@@ -1,0 +1,56 @@
+uuid: 3de7312e-0321-49e3-a540-5e6df1e32536
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_us
+    - field.field.block_content.contact_us.body
+    - field.field.block_content.contact_us.field_contact_us_link_1
+    - field.field.block_content.contact_us.field_contact_us_link_2
+    - field.field.block_content.contact_us.field_contact_us_link_3
+  module:
+    - link
+id: block_content.contact_us.default
+targetEntityType: block_content
+bundle: contact_us
+mode: default
+content:
+  field_contact_us_link_1:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_contact_us_link_2:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_contact_us_link_3:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  body: true
+  langcode: true

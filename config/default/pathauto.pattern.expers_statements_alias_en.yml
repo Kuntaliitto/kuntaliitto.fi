@@ -1,0 +1,33 @@
+uuid: 2ba06ad5-4fe8-4c99-86aa-6b65c35df941
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: expers_statements_alias_en
+label: 'Experts statements alias EN'
+type: 'canonical_entities:node'
+pattern: 'experts-statements/[node:created:html_year]/[node:title]'
+selection_criteria:
+  9a1d4a65-1775-43c1-97d1-3867467400a8:
+    id: node_type
+    bundles:
+      expert_statement: expert_statement
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 9a1d4a65-1775-43c1-97d1-3867467400a8
+  fcfd27c1-c7bf-4a61-86bd-4988dc57faa6:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: fcfd27c1-c7bf-4a61-86bd-4988dc57faa6
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

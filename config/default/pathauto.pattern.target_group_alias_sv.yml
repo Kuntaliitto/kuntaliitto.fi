@@ -1,0 +1,34 @@
+uuid: 5ee99d1f-3ceb-4244-be19-2fd9a92dfbbf
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: target_group_alias_sv
+label: 'Target group alias SV'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'malgrupp/[term:name]'
+selection_criteria:
+  dcc648f6-9103-4d5b-a2a2-665da5040fb6:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      target_group: target_group
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: dcc648f6-9103-4d5b-a2a2-665da5040fb6
+  25fa098c-97be-4b8a-a78d-ab1a6d3c5bb4:
+    id: language
+    langcodes:
+      sv: sv
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: 25fa098c-97be-4b8a-a78d-ab1a6d3c5bb4
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

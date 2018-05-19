@@ -1,0 +1,28 @@
+uuid: 6d933435-06c4-48c2-b80c-12b8b8e5d1d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_municipalities
+    - node.type.circular
+    - taxonomy.vocabulary.municipalities
+id: node.circular.field_municipalities
+field_name: field_municipalities
+entity_type: node
+bundle: circular
+label: Municipalities
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      municipalities: municipalities
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

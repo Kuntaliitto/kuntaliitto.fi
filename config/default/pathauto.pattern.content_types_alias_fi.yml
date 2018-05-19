@@ -1,0 +1,34 @@
+uuid: 534e658c-8390-4ead-98b0-91abd6b1e92c
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: content_types_alias_fi
+label: 'Content types alias FI'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'sisaltotyypit/[term:name]'
+selection_criteria:
+  2730a5ab-d478-42d0-9400-063c6c3976af:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      content_types: content_types
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 2730a5ab-d478-42d0-9400-063c6c3976af
+  6dbbc4d5-c7fc-4bd9-8c47-4e8d3539f7b6:
+    id: language
+    langcodes:
+      fi: fi
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: 6dbbc4d5-c7fc-4bd9-8c47-4e8d3539f7b6
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

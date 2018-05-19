@@ -1,0 +1,22 @@
+uuid: cf6fafe2-1a1d-46b9-877b-f4e2dc351508
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.podcasts.field_lifted_content
+    - paragraphs.paragraphs_type.podcasts
+id: paragraph.podcasts.default
+targetEntityType: paragraph
+bundle: podcasts
+mode: default
+content:
+  field_lifted_content:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

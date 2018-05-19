@@ -1,0 +1,23 @@
+uuid: 94b8cd3d-5fde-421b-b459-b69e88079444
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price_excluding_vat
+    - node.type.event
+id: node.event.field_price_excluding_vat
+field_name: field_price_excluding_vat
+entity_type: node
+bundle: event
+label: 'Price (excluding VAT)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: €
+field_type: float

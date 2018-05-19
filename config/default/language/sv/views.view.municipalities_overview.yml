@@ -1,0 +1,16 @@
+display:
+  page_municipality_overview:
+    display_options:
+      menu:
+        title: Kommuner
+  default:
+    display_options:
+      title: Kommunlistning
+      filters:
+        name:
+          expose:
+            label: 'Sök på kommunens namn'
+      exposed_form:
+        options:
+          submit_button: Sänd
+label: Kommunlistning

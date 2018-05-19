@@ -1,0 +1,29 @@
+uuid: 3308ad3c-99a4-45ee-9457-4c84bda74636
+langcode: en
+status: true
+dependencies:
+  module:
+    - views
+name: contact_information
+label: 'Contact information'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: Select
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  080a7817-e7c3-48cb-a5d3-8cd58dff8e3c:
+    settings:
+      view: all_content_browser
+      view_display: contacts_browser
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: 080a7817-e7c3-48cb-a5d3-8cd58dff8e3c
+    weight: 2
+    label: Contacts
+    id: view
