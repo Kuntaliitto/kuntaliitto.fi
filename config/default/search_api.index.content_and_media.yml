@@ -23,13 +23,12 @@ dependencies:
     - file
     - search_api
     - kuntaliitto_books
-    - search_api_bundle_boost
     - search_api_exclude_entity
     - node
     - media_entity
     - taxonomy
 id: content_and_media
-name: 'Content and Media'
+name: 'Sisältö ja media'
 description: ''
 read_only: false
 field_settings:
@@ -417,34 +416,43 @@ processor_settings:
     weights:
       preprocess_index: -45
       preprocess_query: -46
-  search_api_bundle_boost_processor:
-    bundles:
-      node:
-        basic_page: '1.0'
-        blog_post: '0.5'
-        book: '0.5'
-        circular: '0.5'
-        contact_information: '0.5'
-        embedds: '0.5'
-        event: '0.5'
-        expert_content: '0.5'
-        expert_statement: '0.5'
-        export_content_book_page: '0.5'
-        external_article: '0.5'
-        media_release: '0.5'
-        news: '0.5'
-      media:
-        file: '0.5'
-      taxonomy_term:
-        municipalities: '0.5'
   search_api_exclude_entity_processor:
     fields:
       node:
         - field_search_exclude
       media: {  }
       taxonomy_term: {  }
+  type_boost:
+    boosts:
+      'entity:node':
+        datasource_boost: 0.5
+        bundle_boosts:
+          basic_page: !!float 1
+          blog_post: 0.5
+          book: 0.5
+          circular: 0.5
+          contact_information: 0.5
+          embedds: 0.5
+          event: 0.5
+          expert_content: 0.5
+          expert_statement: 0.5
+          export_content_book_page: 0.5
+          external_article: 0.5
+          media_release: 0.5
+          news: 0.5
+      'entity:media':
+        datasource_boost: 0.5
+        bundle_boosts:
+          file: 0.5
+      'entity:taxonomy_term':
+        datasource_boost: 0.5
+        bundle_boosts:
+          municipalities: 0.5
+    weights:
+      preprocess_index: 0
 tracker_settings:
-  default: {  }
+  default:
+    indexing_order: fifo
 options:
   index_directly: true
   cron_limit: 50
