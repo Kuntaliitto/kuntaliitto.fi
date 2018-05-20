@@ -1,0 +1,12 @@
+entity.node.book.admin_edit:
+  route_name: entity.node.book.admin_edit
+  path: '/node/{node}/structure'
+  defaults:
+    _form: 'Drupal\kuntaliitto_books\KuntaliittoBooksBookAdminEditForm'
+    _title: 'Book pages'
+  requirements:
+    _permission: 'administer book outlines'
+    _entity_access: 'node.view'
+    node: \d+
+  options:
+    _node_operation_route: TRUE

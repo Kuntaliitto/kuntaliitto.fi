@@ -1,0 +1,4 @@
+services:
+  kuntaliitto_municipalities.process:
+    class: Drupal\kuntaliitto_municipalities\MunicipalitiesProcessor
+    arguments: ["@entity_type.manager", "@entity.query"]

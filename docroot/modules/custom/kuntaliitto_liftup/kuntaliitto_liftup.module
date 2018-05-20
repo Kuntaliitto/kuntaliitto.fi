@@ -1,0 +1,154 @@
+<?php
+
+/**
+ * @file
+ * Alterations for liftup functionality.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Access\AccessResult;
+use Drupal\views\Views;
+use Drupal\block\Entity\Block;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Render\BubbleableMetadata;
+
+/**
+ * Implements hook_help().
+ */
+function kuntaliitto_liftup_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kuntaliitto_liftup module.
+    case 'help.page.kuntaliitto_liftup':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Helper module for Liftup functionality') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_block_access().
+ */
+function kuntaliitto_liftup_block_access(Block $block, $operation, AccountInterface $account) {
+  /** @var Drupal\block\Entity\Block $block */
+  if ((($block->id() == 'hideactivitiesblock') ||
+        ($block->id() == 'views_block__current_activities_current_activities_list_2')) &&
+        ($operation == 'view')) {
+    if (isset($_SESSION['hide_activities'])) {
+      return AccessResult::forbidden();
+    }
+  }
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function kuntaliitto_liftup_views_data_alter(array &$data) {
+  $data['media_field_data']['media_names'] = [
+    'title' => t('Media titles'),
+    'filter' => [
+      'title' => t('Media titles'),
+      'help' => t('Specify a list of titles a media can have.'),
+      'field' => 'name',
+      'id' => 'd8views_media_titles',
+    ],
+    'relationship' => [
+      'id' => 'field_images',
+      'label' => t('Default label for relationship'),
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph--contact-form templates.
+ */
+function kuntaliitto_liftup_preprocess_paragraph__contact_form(&$variables) {
+  $variables['valid_form'] = FALSE;
+  if (!isset($variables['elements']['field_form'])) {
+    return;
+  }
+  if (isset($variables['elements']['field_form'][0]['#form_id'])) {
+    $variables['valid_form'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph--uplift-thematic-content templates.
+ */
+function kuntaliitto_liftup_preprocess_paragraph__uplift_thematic_content(&$variables) {
+  /** @var Drupal\paragraphs\Entity\Paragraph $entity */
+  $entity = $variables['paragraph'];
+  $tids = ['content_type' => [], 'tags' => []];
+  foreach ($entity->get('field_content_type')->getValue() as $references => $record) {
+    $tids['content_type'][] = $record['target_id'];
+  }
+  foreach ($entity->get('field_taxonomy_term')->getValue() as $references => $record) {
+    $tids['tags'][] = $record['target_id'];
+  }
+  $view = Views::getView('thematic_lift_up');
+  $view->setItemsPerPage((integer) $entity->get('field_items_to_display')->getString());
+  $view->args = [
+    implode('+', $tids['content_type']), implode(',', $tids['tags']),
+  ];
+  $view->setDisplay('default');
+  $view->preExecute();
+  $sort_by = $entity->get('field_sort_by');
+  $sort_direction = $entity->get('field_sort_direction');
+  if ($sort_by) {
+    if (isset($view->sort[$sort_by->value])) {
+      $sort_plugin = $view->sort[$sort_by->value];
+      unset($view->sort);
+      if ($sort_direction) {
+        if ($sort_direction->value) {
+          $sort_plugin->options['order'] = $sort_direction->value;
+        }
+      }
+      $view->sort[$sort_by->value] = $sort_plugin;
+    }
+  }
+  if ($view->execute()) {
+    $render = $view->buildRenderable();
+    $variables['content']['field_thematic_view'] = $render;
+  }
+}
+
+/**
+ * Implement hook_token_info()
+ */
+function kuntaliitto_liftup_token_info(){
+  $types['translatable_text'] = array(
+    'name' => t('Translatable text'),
+    'description' => t('Provides translatable text tokens')
+  );
+  $tokens['download'] = array(
+    'name' => t('Download text name'),
+    'description' => t('Text: Download')
+  );
+
+  return array(
+    'types' => $types,
+    'tokens' => array(
+      'translatable_text' => $tokens
+    )
+  );
+}
+
+/**
+ * Implement hook_token()
+ */
+function kuntaliitto_liftup_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata){
+  $replacements = array();
+  if($type == 'translatable_text') {
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'download':
+          $text = t('Download');
+          $replacements[$original] = $text;
+          break;
+      }
+    }
+  }
+  return $replacements;
+}

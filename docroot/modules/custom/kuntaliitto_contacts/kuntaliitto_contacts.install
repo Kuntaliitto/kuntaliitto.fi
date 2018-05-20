@@ -1,0 +1,95 @@
+<?php
+
+/**
+ * @file
+ * Setup file for contacts functionality.
+ */
+
+/**
+ * Clear contact field_responsibilities where only empty ul tag is present.
+ */
+function kuntaliitto_contacts_update_8101() {
+  $langs = ['en', 'fi', 'sv'];
+  $query = \Drupal::entityQuery('node')
+    ->condition('type', 'contact_information')
+    ->condition('field_first_name', 'Palvelusähköposti');
+
+  $nids = $query->execute();
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  $entities = $node_storage->loadMultiple($nids);
+
+  foreach ($entities as $entity) {
+    foreach ($langs as $lang_code) {
+      if ($entity->hasTranslation($lang_code)) {
+        $translation = $entity->getTranslation($lang_code);
+
+        if (trim($translation->get('field_responsibilities')->value) == "<ul>\r\n</ul>") {
+          // Echo 'Updating node: '.  $entity->id() . "\n";.
+          $translation->get('field_responsibilities')->value = "";
+          $translation->save();
+        }
+      }
+    }
+  }
+}
+
+/**
+ * KUN-453 Clear contact_information publish_on, unpublish_on.
+ */
+function kuntaliitto_contacts_update_8102() {
+  $langs = ['en', 'fi', 'sv'];
+
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+
+  $query = $node_storage->getQuery();
+
+  $group = $query->orConditionGroup()
+    ->condition('unpublish_on', 'value', 'IS NOT NULL')
+    ->condition('publish_on', 'value', 'IS NOT NULL');
+
+  $query->condition($group)
+    ->condition('type', 'contact_information');
+
+  $nodes = $node_storage->loadMultiple($query->execute());
+
+  foreach ($nodes as $node) {
+    foreach ($langs as $lang_code) {
+      if ($node->hasTranslation($lang_code)) {
+        $translation = $node->getTranslation($lang_code);
+        $translation->publish_on->value = NULL;
+        $translation->unpublish_on->value = NULL;
+        $translation->save();
+      }
+    }
+  }
+}
+
+/**
+ * Give default value to contacts weight.
+ */
+function kuntaliitto_contacts_update_8103() {
+  $langs = ['en', 'fi', 'sv'];
+  $nids = \Drupal::entityQuery('node')
+    ->condition('type', 'contact_information')
+    ->execute();
+
+  $nodes = \Drupal::entityTypeManager()
+    ->getStorage('node')
+    ->loadMultiple($nids);
+
+  foreach ($nodes as $node) {
+    foreach ($langs as $lang_code) {
+      if ($node->hasTranslation($lang_code)) {
+        $node = $node->getTranslation($lang_code);
+        $value = $node->get('field_weight')->value;
+        if (intval($value) < 100 && intval($value) > 0) {
+          $node->get('field_weight')->value = 100 + intval($value);
+        }
+        else {
+          $node->get('field_weight')->value = 200;
+        }
+      }
+    }
+    $node->save();
+  }
+}

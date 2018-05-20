@@ -1,0 +1,10 @@
+entity.feed_config_entity.add_form:
+  route_name: 'entity.feed_config_entity.add_form'
+  title: 'Add Feed configuration'
+  appears_on:
+    - entity.feed_config_entity.collection
+entity.feed_config_entity.import:
+  route_name: 'kuntaliitto_feeds.import'
+  title: 'Import feeds'
+  appears_on:
+    - entity.feed_config_entity.collection

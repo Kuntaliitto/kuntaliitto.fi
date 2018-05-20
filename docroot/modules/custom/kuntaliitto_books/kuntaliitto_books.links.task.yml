@@ -1,0 +1,5 @@
+entity.node.book.admin_edit:
+  route_name: entity.node.book.admin_edit
+  base_route: entity.node.canonical
+  title: Tree
+  weight: 3

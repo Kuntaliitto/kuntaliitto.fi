@@ -1,0 +1,11 @@
+route_callbacks:
+  - 'Drupal\kuntaliitto_views_manager\Routing\NewsroomRoutes::routes'
+kuntaliitto_views_manager.newsroom_config_form:
+  path: '/admin/config/kuntaliitto_views_manager/newsroomconfig'
+  defaults:
+    _form: '\Drupal\kuntaliitto_views_manager\Form\NewsroomConfigForm'
+    _title: 'Newsroom Configuration'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

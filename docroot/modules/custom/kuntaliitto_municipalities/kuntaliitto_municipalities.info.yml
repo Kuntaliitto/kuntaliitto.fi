@@ -1,0 +1,5 @@
+name: Kuntaliitto municipalities
+type: module
+description: Kuntaliitto module to help manage municipalities
+core: 8.x
+package: Kuntaliitto

@@ -1,0 +1,8 @@
+services:
+  kuntaliitto_feeds.xml_parser:
+    class: Drupal\kuntaliitto_feeds\XmlParser
+    arguments: ['@entity_type.manager', '@kuntaliitto_feeds.storage']
+
+  kuntaliitto_feeds.storage:
+    class: Drupal\kuntaliitto_feeds\FeedsStorageHandler
+    arguments: ["@entity_type.manager", "@entity.query"]

@@ -1,0 +1,10 @@
+services:
+  kuntaliitto_common.response_subscriber:
+    class: Drupal\kuntaliitto_common\EventSubscriber\KuntaliittoCommonResponseSubscriber
+    arguments: ['@config.factory', '@path.alias_manager', '@path.matcher', '@path.current', '@current_user']
+    tags:
+      - { name: event_subscriber }
+  kuntaliitto_common.route_subscriber:
+    class: Drupal\kuntaliitto_common\EventSubscriber\TermRouteSubscriber
+    tags:
+      - { name: event_subscriber }

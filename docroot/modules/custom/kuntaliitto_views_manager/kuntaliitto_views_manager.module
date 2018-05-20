@@ -1,0 +1,220 @@
+<?php
+
+/**
+ * @file
+ * Contains kuntaliitto_views_manager.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function kuntaliitto_views_manager_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kuntaliitto_views_manager module.
+    case 'help.page.kuntaliitto_views_manager':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Helper module to work with newsroom views, lessen amount.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function kuntaliitto_views_manager_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  $fields_info = get_form_setup($form);
+  if (!empty($fields_info)) {
+    $weight = 0;
+    foreach ($fields_info as $field_name => $properties) {
+      if (isset($form[$field_name]) || isset($form['actions'][$field_name])) {
+        if (isset($properties['button'])) {
+          $field_copy = $form['actions'][$field_name];
+          $field_copy['#weight'] = $weight;
+
+          $form['form_row_' . $properties['row']]['actions'][$field_name] = $field_copy;
+          unset($form['actions'][$field_name]);
+        }
+        else {
+          $field_copy = $form[$field_name];
+          $field_copy['#weight'] = $weight;
+          // If field has a label, copy it over as well.
+          if (isset($form['#info']['filter-' . $field_name]['label'])) {
+            $field_copy['#title'] = $form['#info']['filter-' . $field_name]['label'];
+          }
+          $form['form_row_' . $properties['row']][$field_name] = $field_copy;
+          unset($form[$field_name]);
+        }
+        $weight++;
+      }
+    }
+  }
+}
+
+/**
+ * Return appropriate form setup based on current form id.
+ */
+function get_form_setup(&$form) {
+
+  $setup = [];
+  $activeForm = $form['#id'];
+
+  // Defining all necessary form/wrapper setups.
+  // Higher defined forms in list will be checked and used first.
+  // Field weights are generated the same way.
+  $transFormList = [
+    'events' => [
+      'row_count' => 2,
+      'form_id' => 'views-exposed-form-events-events',
+      'form_setup' => [
+        'field_event_type_value' => [
+          'row' => 0,
+        ],
+        'event_location' => [
+          'row' => 0,
+        ],
+        'field_target_group_target_id' => [
+          'row' => 0,
+        ],
+        'field_start_date_value_1' => [
+          'row' => 1,
+        ],
+        'field_start_date_value_2' => [
+          'row' => 1,
+        ],
+        'field_has_attachment_value' => [
+          'row' => 1,
+        ],
+        'submit' => [
+          'button' => TRUE,
+          'row' => 1,
+        ],
+      ],
+    ],
+
+    'newsroom_blogs' => [
+      'row_count' => 2,
+      'form_id' => 'views-exposed-form-newsroom-newsroom-blog-page',
+      'form_setup' => [
+        'field_author_target_id' => [
+          'row' => 0,
+        ],
+        'field_blog_tags_target_id' => [
+          'row' => 0,
+        ],
+        'created' => [
+          'row' => 1,
+        ],
+        'created_1' => [
+          'row' => 1,
+        ],
+        'submit' => [
+          'button' => TRUE,
+          'row' => 1,
+        ],
+      ],
+    ],
+
+    'newsrooms_others' => [
+      'row_count' => 2,
+      'form_id' => 'views-exposed-form-newsroom-',
+      'form_setup' => [
+        'news_topics' => [
+          'row' => 0,
+        ],
+        'news_municipality' => [
+          'row' => 0,
+        ],
+        'news_keywords' => [
+          'row' => 0,
+        ],
+        'created' => [
+          'row' => 1,
+        ],
+        'created_1' => [
+          'row' => 1,
+        ],
+        'submit' => [
+          'button' => TRUE,
+          'row' => 1,
+        ],
+      ],
+    ],
+
+    'solr_search' => [
+      'no_details' => TRUE,
+      'row_count' => 2,
+      'form_id' => 'views-exposed-form-solr',
+      'form_setup' => [
+        's' => [
+          'row' => 0,
+        ],
+        'submit' => [
+          'button' => TRUE,
+          'row' => 0,
+        ],
+        'created' => [
+          'row' => 1,
+        ],
+        'created_1' => [
+          'row' => 1,
+        ],
+      ],
+    ],
+
+    'municipalities_overview' => [
+      'no_details' => TRUE,
+      'row_count' => 1,
+      'form_id' => 'views-exposed-form-municipalities-overview',
+      'form_setup' => [
+        'name' => [
+          'row' => 0,
+        ],
+        'submit' => [
+          'button' => TRUE,
+          'row' => 0,
+        ],
+      ],
+    ],
+  ];
+
+  // Return form setup if found in defined list.
+  foreach ($transFormList as $list_form => $element) {
+    if (strpos($activeForm, $element['form_id']) !== FALSE) {
+      // Found form in list, return fields to add pre/suf-fix'es to.
+      $setup = $element['form_setup'];
+      // Add appropriate amount of rows for each form.
+      for ($i = 0; $i < $element['row_count']; $i++) {
+        $form['form_row_' . $i] = [
+          '#type' => 'container',
+          '#weight' => $i,
+          '#attributes' => [
+            'class' => [
+              'views-ef-fieldset-container',
+            ],
+          ],
+        ];
+
+        if (!isset($element['no_details'])) {
+          $form['#theme_wrappers'] = [
+            'details' => [
+              '#description' => '',
+              '#attributes' => ['class' => ['views-ef-fieldset-container']],
+              '#value' => NULL,
+            ],
+          ];
+          $form['#theme_wrappers']['details']['#title'] = ($list_form == 'events') ? t('Filter events') : t('Filter listing');
+          $form['#theme_wrappers'][] = 'form';
+        }
+      }
+      return $setup;
+    }
+  }
+  return $setup;
+}

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains kuntaliitto_feeds.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function kuntaliitto_feeds_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kuntaliitto_feeds module.
+    case 'help.page.kuntaliitto_feeds':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Feeds imports for kuntaliitto site') . '</p>';
+      return $output;
+
+    default:
+  }
+}

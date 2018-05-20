@@ -1,0 +1,7 @@
+kuntaliitto_feeds.import:
+  path: '/admin/structure/feed_import'
+  defaults:
+    _form: '\Drupal\kuntaliitto_feeds\Form\FeedGetForm'
+    _title: 'Import feeds'
+  requirements:
+    _permission: 'administer feeds'

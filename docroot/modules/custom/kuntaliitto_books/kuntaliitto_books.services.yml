@@ -1,0 +1,4 @@
+services:
+  kuntaliitto_books.book.manager:
+    class: Drupal\kuntaliitto_books\KuntaliittoBooksBookManager
+    arguments: ['@entity.manager', '@string_translation', '@config.factory', '@book.outline_storage', '@renderer']

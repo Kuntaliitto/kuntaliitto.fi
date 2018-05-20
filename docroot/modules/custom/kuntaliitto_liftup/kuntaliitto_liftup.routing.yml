@@ -1,0 +1,8 @@
+
+kuntaliitto_liftup.hide_activities_form:
+  path: '/kuntaliitto_liftup/form/hide_activities'
+  defaults:
+    _form: '\Drupal\kuntaliitto_liftup\Form\HideActivitiesForm'
+    _title: 'HideActivitiesForm'
+  requirements:
+    _access: 'TRUE'

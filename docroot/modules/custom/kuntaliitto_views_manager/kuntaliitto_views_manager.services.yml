@@ -1,0 +1,5 @@
+services:
+  kuntaliitto_views_manager.route_subscriber:
+    class: Drupal\kuntaliitto_views_manager\EventSubscriber\NewsroomRouteSubscriber
+    tags:
+      - { name: event_subscriber }

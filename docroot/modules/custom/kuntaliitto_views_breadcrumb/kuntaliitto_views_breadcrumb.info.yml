@@ -1,0 +1,7 @@
+name: kuntaliitto_views_breadcrumb
+type: module
+description: Generates breadcrumbs from URL.
+core: 8.x
+package: Kuntaliitto
+dependencies:
+- block

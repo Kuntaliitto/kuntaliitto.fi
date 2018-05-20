@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Contains kuntaliitto_contacts.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function kuntaliitto_contacts_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kuntaliitto_contacts module.
+    case 'help.page.kuntaliitto_contacts':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Import drupal users and contact information.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_load().
+ */
+function kuntaliitto_contacts_node_load(array $entities) {
+  foreach ($entities as $entity) {
+    /** @var \Drupal\node\Entity\Node $entity */
+    if ($entity->bundle() == 'contact_information') {
+      if (strpos(\Drupal::service('path.current')->getPath(), '/edit') === FALSE &&
+        strpos(\Drupal::service('path.current')->getPath(), '/add/') === FALSE) {
+        $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+        if ($entity->hasTranslation($language)) {
+          $entity = $entity->getTranslation($language);
+        }
+        if ($entity->field_do_not_show_picture->value == '1') {
+          $entity->field_image->setValue([]);
+        }
+        if ($entity->field_do_not_show_responsibiliti->value == '1') {
+          $entity->field_responsibilities = [];
+        }
+        if ($entity->field_do_not_show_mobile->value == '1') {
+          $entity->field_mobile = [];
+        }
+      }
+    }
+  }
+}

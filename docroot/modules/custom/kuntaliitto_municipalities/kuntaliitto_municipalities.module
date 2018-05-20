@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains kuntaliitto_municipalities.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function kuntaliitto_municipalities_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kuntaliitto_municipalities module.
+    case 'help.page.kuntaliitto_municipalities':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Kuntaliitto module to help manage municipalities') . '</p>';
+      return $output;
+
+    default:
+  }
+}

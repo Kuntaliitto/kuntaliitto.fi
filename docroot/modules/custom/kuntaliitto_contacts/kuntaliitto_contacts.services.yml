@@ -1,0 +1,4 @@
+services:
+  kuntaliitto_contacts.process:
+    class: Drupal\kuntaliitto_contacts\ContactProcessor
+    arguments: ["@entity_type.manager"]

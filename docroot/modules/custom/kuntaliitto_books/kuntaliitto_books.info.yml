@@ -1,0 +1,7 @@
+name: Kuntaliitto books management
+type: module
+description: "Provides book managements for books"
+package: Kuntaliitto
+core: 8.x
+dependencies:
+  - book

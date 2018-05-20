@@ -1,0 +1,7 @@
+name: Kuntaliitto views manager
+type: module
+description: "Controls identical structure views and populates them appropriately"
+package: Kuntaliitto
+core: 8.x
+dependencies:
+  - views

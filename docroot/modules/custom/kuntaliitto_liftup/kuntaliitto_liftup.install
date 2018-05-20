@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Setup functions for liftup functionality.
+ */
+
+/**
+ * Removes field_thematic_view.
+ */
+function kuntaliitto_liftup_update_8001() {
+  /* @var $entityFieldManager Drupal\Core\Entity\EntityFieldManager */
+  $entityFieldManager = Drupal::service('entity_field.manager');
+
+  $fields = $entityFieldManager->getFieldDefinitions('paragraph', 'uplift_thematic_content');
+
+  if (isset($fields['field_thematic_view'])) {
+    $fields['field_thematic_view']->delete();
+  }
+}

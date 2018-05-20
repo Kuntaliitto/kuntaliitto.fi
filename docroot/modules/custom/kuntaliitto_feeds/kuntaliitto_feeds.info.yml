@@ -1,0 +1,10 @@
+name: Kuntaliitto feeds
+type: module
+description: Feeds imports for kuntaliitto site
+core: 8.x
+package: Kuntaliitto
+dependencies:
+  - file
+  - node
+  - scheduler
+  - taxonomy

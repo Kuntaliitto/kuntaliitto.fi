@@ -1,0 +1,8 @@
+
+# Feed configuration menu items definition
+entity.feed_config_entity.collection:
+  title: 'Feed configuration'
+  route_name: entity.feed_config_entity.collection
+  description: 'List Feed configurations'
+  parent: system.admin_structure
+  weight: 99

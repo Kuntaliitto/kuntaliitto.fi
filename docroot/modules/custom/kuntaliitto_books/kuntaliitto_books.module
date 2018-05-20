@@ -1,0 +1,405 @@
+<?php
+
+/**
+ * @file
+ * Provides helper and alterations for book functionality and content type.
+ */
+
+use Drupal\views\ViewExecutable;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for \Drupal\node\NodeForm.
+ *
+ * Removes book outline tab from content types that not allowed to use in books.
+ */
+function kuntaliitto_books_form_node_form_alter(&$form, $form_state, $form_id) {
+  $node = $form_state->getFormObject()->getEntity();
+
+  if (book_type_is_allowed($node->getType())) {
+    // Removes the Book outline vertical tab from the non-child book edit pages.
+    $account = \Drupal::currentUser();
+    $access = $account->hasPermission('administer book outlines');
+    if (!$access || \Drupal::config('book.settings')->get('child_type') != $node->getType()) {
+      hide($form['book']);
+    }
+    else {
+      // If passed an argument parent node, then disable the book selector.
+      $name = \Drupal::request()->query->get('parent');
+      if ($node->isNew()) {
+        if (!is_null($name)) {
+          $form['book']['bid']['#attributes'] = ['disabled' => TRUE];
+          // Adding redirect after a new node save.
+          $form['actions']['submit']['#submit'][] = '_kuntaliitto_books_redirect_after_submit';
+          $form['actions']['publish']['#submit'][] = '_kuntaliitto_books_redirect_after_submit';
+        }
+        else {
+          // When child added  without parent,
+          // e.g. by node/add URL or from add content page
+          // make the book selection required
+          // and remove options to add new book and none.
+          $form['book']['bid']['#required'] = TRUE;
+          $form['book']['bid']['#default_value'] = NULL;
+          $form['book']['#open'] = TRUE;
+          unset($form['book']['bid']['#options']['0']);
+          unset($form['book']['bid']['#options']['new']);
+        }
+      }
+    }
+  }
+  else {
+    hide($form['book']);
+  }
+}
+
+/**
+ * Implements hook_form_alter() for book_admin_edit form.
+ */
+function kuntaliitto_books_form_alter(&$form, $form_state, $form_id) {
+  // Adds to the book tree edit form link 'Add new page'.
+  if ($form_id == 'book_admin_edit') {
+    $allowed_child = \Drupal::config('book.settings')->get('child_type');
+    $form['add_new_page'] = [
+      '#type' => 'link',
+      '#title' => t('Add new page'),
+      '#url' => Url::fromRoute('node.add', ['node_type' => $allowed_child, 'parent' => $form['#node']->id()]),
+    ];
+  }
+}
+
+/**
+ * Implements hook_node_presave() for books.
+ */
+function kuntaliitto_books_node_presave($node) {
+  // Creates a new book if the node allowed to be the root book node.
+  if ($node->isNew() && (book_type_is_allowed($node->getType()) &&  \Drupal::config('book.settings')->get('child_type') != $node->getType())) {
+    $book = [
+      'bid' => 'new',
+    ];
+    $node->book = $book;
+  }
+}
+
+/**
+ * Implements hook_menu_local_tasks() for Book pages.
+ */
+function kuntaliitto_books_menu_local_tasks_alter(&$data, $route_name) {
+  // Adds the Tree edit tab 'Book pages' to the Book allowed content edit page.
+  $user = \Drupal::currentUser();
+  if (!$user || !$user->hasPermission('administer book outlines')) {
+    return;
+  }
+  if (isset($data['tabs'][0]['entity.node.book_outline_form'])) {
+    unset($data['tabs'][0]['entity.node.book_outline_form']);
+  }
+  if (isset($data['tabs'][0]['entity.node.book.admin_edit'])) {
+    unset($data['tabs'][0]['entity.node.book.admin_edit']);
+  }
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($node) {
+    if (gettype($node) != 'object') {
+      $node = Node::load($node);
+    }
+    if (book_type_is_allowed($node->getType())) {
+      unset($data['tabs'][0]['workspace.revisions:node']);
+      $fromroute = new Url('entity.node.book.admin_edit', ['node' => $node->id()]);
+
+      if (\Drupal::routeMatch()->getRouteName() == $fromroute->getRouteName()) {
+        $active = TRUE;
+      }
+      else {
+        $active = FALSE;
+      }
+
+      $tree_tab = [
+        '#theme' => 'menu_local_task',
+        '#link' => [
+          'title' => t('Book pages'),
+          'url'   => $fromroute,
+          'localized_options' => [],
+        ],
+        '#active' => $active,
+        '#weight' => 2,
+      ];
+
+      $data['tabs'][0]['entity.node.book.admin_edit'] = $tree_tab;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_block() for book_navigation.
+ */
+function kuntaliitto_books_preprocess_block(&$vars) {
+  if ($vars['elements']['#configuration']['id'] == 'book_navigation') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node && book_type_is_allowed($node->getType())) {
+      $book_id = $node->book['bid'];
+      $book_manager = \Drupal::service('kuntaliitto_books.book.manager');
+      $fulltree = $book_manager->bookTreeAllData($book_id);
+      $vars['content'] = $book_manager->bookTreeOutput($fulltree);
+      _kuntaliitto_book_process_tree($vars);
+    }
+  }
+}
+
+/**
+ * Implements hook_views_pre_render() for book_search.
+ */
+function kuntaliitto_books_views_pre_render(ViewExecutable $view) {
+  if ($view->id() == 'book_search' && $view->current_display == 'book_search_block') {
+    // Hide results if no combined filter added.
+    $input = $view->getExposedInput();
+    if (isset($input['combine']) && $input['combine'] == '') {
+      $view->result = [];
+      $view->total_rows = 0;
+    }
+  }
+}
+
+/**
+ * Callback function for redirect to the book tree page after a new node save.
+ *
+ * @param mixed $form
+ *   Form representation.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   State representation.
+ */
+function _kuntaliitto_books_redirect_after_submit($form, FormStateInterface $form_state) {
+  $url_arr = parse_url(\Drupal::request()->server->get('HTTP_REFERER'));
+  $num = str_replace('parent=', '', $url_arr['query']);
+  $form_state->setRedirect('entity.node.book.admin_edit', ['node' => $num]);
+}
+
+/**
+ * Recursive process book tree.
+ *
+ * @param mixed $tree
+ *   Items to process.
+ * @param mixed $subitem
+ *   Subitems to process.
+ */
+function _kuntaliitto_book_process_tree(&$tree, $subitem = NULL) {
+  if (is_null($subitem)) {
+    $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+    foreach ($tree['content']['#items'] as $key => $leaf) {
+      $node = $node_storage->load($leaf['original_link']['nid']);
+      if ($node->hasField('field_page_container')) {
+        $res = $node->get('field_page_container')->getValue();
+        _kuntaliitto_books_get_link_for_node($tree, $res, $key, $leaf);
+        _kuntaliitto_book_process_tree($tree, $tree['content']['#items'][$key]['below']);
+      }
+      else {
+        _kuntaliitto_book_process_tree($tree, $tree['content']['#items'][$key]['below']);
+      }
+    }
+  }
+  else {
+    $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+    foreach ($subitem as $key => $leaf) {
+      $node = $node_storage->load($leaf['original_link']['nid']);
+      if ($node->hasField('field_page_container')) {
+        $res = $node->get('field_page_container')->getValue();
+        _kuntaliitto_books_get_link_for_node($tree, $res, $key, $leaf);
+        _kuntaliitto_book_process_tree($tree, $subitem[$key]['below']);
+      }
+      else {
+        _kuntaliitto_book_process_tree($tree, $subitem[$key]['below']);
+      }
+    }
+  }
+}
+
+/**
+ * Checks the node is a container and replaces the URL with next valuable one.
+ *
+ * @param mixed $tree
+ *   Menu item tree.
+ * @param int $res
+ *   Page container value.
+ * @param mixed $key
+ *   Key of items.
+ * @param mixed $leaf
+ *   Leaf id.
+ */
+function _kuntaliitto_books_get_link_for_node(&$tree, $res, $key, $leaf) {
+  if (!empty($res) && $res[0]['value'] == 1) {
+    reset($leaf['below']);
+    $url = _kuntaliitto_book_retrieve_first_link($leaf['below']);
+    if (isset($tree['content']['#items'][$key]) && !is_null($url)) {
+      $tree['content']['#items'][$key]['url'] = $url;
+      $tree['elements']['content']['#items'][$key]['url'] = $url;
+    }
+  }
+}
+
+/**
+ * Recursive retrieve first valuable link (node is not a container)
+ *
+ * @param mixed $sublinks
+ *   List of sublinks.
+ *
+ * @return mixed
+ *   Url object or null.
+ */
+function _kuntaliitto_book_retrieve_first_link($sublinks) {
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  foreach ($sublinks as $key => $link) {
+    $node = $node_storage->load($link['original_link']['nid']);
+    $res = $node->get('field_page_container')->getValue();
+    if (empty($res) || $res[0]['value'] == 0) {
+      $options = ['absolute' => TRUE];
+      $url = Url::fromRoute('entity.node.canonical', ['node' => $link['original_link']['nid']], $options);
+      return $url;
+    }
+    else {
+      if (!empty($link['below'])) {
+        return _kuntaliitto_book_retrieve_first_link($link['below']);
+      }
+      else {
+        return NULL;
+      }
+    }
+  }
+}
+
+/**
+ * Filter menu tree.
+ *
+ * @param mixed $arr
+ *   Array of items.
+ * @param array $res
+ *   Res variable.
+ * @param mixed $current
+ *   Current item.
+ *
+ * @return array
+ *   Flattened tree.
+ */
+function _kuntaliitto_book_flattern_tree(&$arr, array $res = [], $current = NULL) {
+  static $res;
+  foreach ($arr as $key => $val) {
+    $node = \Drupal::entityTypeManager()->getStorage('node')->load($val['original_link']['nid']);
+    $val['container'] = $node->get('field_page_container')->getValue();
+    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+    if ($node->isTranslatable()) {
+      if ($node->hasTranslation($language)) {
+        $val['language'] = $language;
+        if (isset($val['below'])) {
+          $below = $val['below'];
+          unset($val['below']);
+          $val['below'] = key($below);
+          $res[$key] = $val;
+          $res[$key]['parent'] = $current;
+          if (isset($val['parent']) && (count($val['container'] > 0) || $val['container'][0]['value'] == 1)) {
+            _kuntaliitto_book_flattern_tree($below, $res, $val['parent']);
+          }
+          else {
+            _kuntaliitto_book_flattern_tree($below, $res, $key);
+          }
+        }
+        else {
+          $res[$key] = $val;
+          $res[$key]['parent'] = $current;
+        }
+      }
+      else {
+        $val['language'] = FALSE;
+      }
+    }
+
+  }
+  return $res;
+}
+
+/**
+ * Generate links.
+ *
+ * @param mixed $arr
+ *   Array of items.
+ */
+function _kuntaliitto_book_make_links(&$arr) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  foreach ($arr as $key => &$element) {
+    $element['next'] = _kuntaliitto_book_get_next_link_for($arr, $key);
+    if (!is_null($element['next'])) {
+      $element['next_title'] = $arr[$element['next']]['title'];
+    }
+    else {
+      $element['next_title'] = '';
+    }
+
+    $keys = array_keys($arr);
+    if (array_search($key, $keys) - 1 >= 0) {
+      $prev_key = $arr[$keys[array_search($key, $keys) - 1]]['original_link']['nid'];
+    }
+    else {
+      $prev_key = $key;
+    }
+
+    if (isset($arr[$prev_key]) && $language == $element['language']) {
+      if (count($arr[$prev_key]['container']) > 0 && $arr[$prev_key]['container'][0]['value'] == 1) {
+        if (!isset($arr[$prev_key]['prev']) || is_null($arr[$prev_key]['prev'])) {
+          if (isset($arr[$prev_key]['link'])) {
+            $element['prev'] = $arr[$prev_key]['link'];
+          }
+          else {
+            $element['prev'] = $arr[$prev_key]['original_link']['nid'];
+          }
+        }
+        else {
+          $element['prev'] = $arr[$prev_key]['prev'];
+        }
+        $element['prev_title'] = $arr[$prev_key]['title'];
+      }
+      else {
+        $element['prev'] = $arr[$prev_key]['original_link']['nid'];
+        $element['prev_title'] = $arr[$prev_key]['title'];
+      }
+    }
+
+    if ($element['container'] == 1) {
+      $element['link'] = $element['next'];
+    }
+    else {
+      $element['link'] = $element['original_link']['nid'];
+    }
+
+  }
+}
+
+/**
+ * Get next link.
+ *
+ * @param mixed $arr
+ *   Array of items.
+ * @param mixed $current
+ *   Current item.
+ *
+ * @return int|null|string
+ *   Indicator for links.
+ */
+function _kuntaliitto_book_get_next_link_for($arr, $current) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $matched = FALSE;
+  $result = NULL;
+  foreach ($arr as $key => $item) {
+
+    if ($key == $current && $language == $item['language']) {
+      $matched = TRUE;
+      continue;
+    }
+    if ($matched) {
+      if ($language == $item['language'] && (count($item['container']) == 0 || $item['container'][0]['value'] == 0)) {
+        $result = $key;
+        $matched = FALSE;
+        break;
+      }
+    }
+  }
+  return $result;
+}

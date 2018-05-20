@@ -1,0 +1,351 @@
+<?php
+
+/**
+ * @file
+ * Provides alterations that does not belong to any specific feature.
+ */
+
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\Core\Url;
+use Drupal\Core\Access\AccessResult;
+use Drupal\views\Views;
+
+/**
+ * Implements hook_preprocess_HOOK() for links--language-block templates.
+ */
+function kuntaliitto_common_preprocess_links__language_block(&$variables) {
+  // Client wants only the first two letters in language switcher.
+  $variables['links']['en']['link']['#title'] = 'EN';
+  $variables['links']['sv']['link']['#title'] = 'SV';
+  $variables['links']['fi']['link']['#title'] = 'FI';
+  $en = $variables['links']['en'];
+  unset($variables['links']['en']);
+  $variables['links']['en'] = $en;
+  $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  foreach ($variables['links'] as $language => $link) {
+    $variables['links'][$language]['link']['#url'] = new Url('<front>');
+    if ($variables['links'][$language]['link']['#options']['language']->id() == $lang) {
+      $variables['links'][$language]['link']['#options']['attributes']['class'] = ['language-link', 'is-active'];
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function kuntaliitto_common_entity_presave(EntityInterface $entity) {
+  // We don't display title field in contact information in form,
+  // so we generate title on the fly.
+  if ($entity->bundle() == 'contact_information') {
+    $entity_array = $entity->toArray();
+    if (isset($entity_array['field_first_name']) && isset($entity_array['field_first_name'])) {
+      /** @var Drupal\Node\Entity\Node $entity */
+      $title_value = $entity->get('field_first_name')->getString() . ' ';
+      $title_value .= $entity->get('field_last_name')->getString();
+      $entity->set('title', $title_value);
+    }
+  }
+  if ($entity->bundle() == 'menu_link_content') {
+    $entity->set('expanded', 1);
+  }
+
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function kuntaliitto_common_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  // If contacts are filtered by division then order by weight field()
+  if ($view->id() == 'contact_directory') {
+    $exposed = $view->exposed_raw_input;
+    /** @var \Drupal\views\Plugin\views\query\Sql $query */
+    if (isset($exposed)) {
+      if ($exposed['division'] != 'All') {
+        $name_filter = $query->orderby[0];
+        $query->orderby[0] = $query->orderby[1];
+        $query->orderby[1] = $name_filter;
+      }
+    }
+    else {
+      $name_filter = $query->orderby[1];
+      $query->orderby[1] = $query->orderby[0];
+      $query->orderby[0] = $name_filter;
+    }
+  }
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function kuntaliitto_common_views_data_alter(array &$data) {
+  $data['node__field_event_city']['event_location'] = [
+    'title' => t('Event location'),
+    'group' => t('Content'),
+    'filter' => [
+      'title' => t('Event location'),
+      'help' => t('List of locations'),
+      'field' => 'field_event_city_value',
+      'id' => 'd8views_event_location',
+    ],
+  ];
+
+  $data['node__field_municipalities']['news_municipality'] = [
+    'title' => t('News municipality'),
+    'group' => t('Content'),
+    'filter' => [
+      'title' => t('News municipality'),
+      'help' => t('List of municipalities'),
+      'field' => 'field_municipalities_target_id',
+      'id' => 'd8views_news_municipality',
+    ],
+  ];
+
+  $data['node__field_keywords']['news_keywords'] = [
+    'title' => t('News keywords'),
+    'group' => t('Content'),
+    'filter' => [
+      'title' => t('News keywords'),
+      'help' => t('List of keywords'),
+      'field' => 'field_keywords_target_id',
+      'id' => 'd8views_news_keywords',
+    ],
+  ];
+
+  $data['node__field_topics']['news_topics'] = [
+    'title' => t('News topics'),
+    'group' => t('Content'),
+    'filter' => [
+      'title' => t('News topics'),
+      'help' => t('List of topics'),
+      'field' => 'field_topics_target_id',
+      'id' => 'd8views_news_topics',
+    ],
+  ];
+  $data['media']['media_bundle'] = [
+    'title' => t('Media bundle name'),
+    'field' => [
+      'title' => t('Media bundle name'),
+      'help' => t('Provides media bundle name'),
+      'id' => 'media_bundle_provider',
+    ],
+  ];
+  $data['node']['node_outbound_title'] = [
+    'title' => t('Outbound title field'),
+    'field' => [
+      'title' => t('Outbound title field'),
+      'help' => t('Provides node title linked to external source'),
+      'id' => 'node_outbound_provider',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function kuntaliitto_common_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+  // Set value and hide select field for style if it is encapsulation paragraph.
+  if (array_key_exists('#title', $element)) {
+    if (isset($element['#options'])) {
+      if (array_key_exists('no-image', $element['#options'])) {
+        // @todo Figure out better way but do not use in_array it causes errors
+        if (isset($element['#field_parents'][3])) {
+          if ($element['#field_parents'][3] == 'field_lifted_blocks_four') {
+            $element['#value'] = 'no-image';
+            $element['#type'] = 'hidden';
+          }
+          elseif ($element['#field_parents'][3] == 'field_lifted_blocks') {
+            $element['#value'] = 'narrow';
+            $element['#type'] = 'hidden';
+          }
+        }
+        else {
+          unset($element['#options']['no-image']);
+          unset($element['#options']['narrow']);
+        }
+      }
+    }
+  }
+  // Client wants Image option to be displayed first in main media field.
+  if (isset($element['#type'])) {
+    if (isset($element['actions'])) {
+      if ($element['#type'] == 'fieldset' && $element['entities']['#entity_type'] == 'media') {
+        if (isset($element['actions']['bundle']['#options'])) {
+          $image_option = $element['actions']['bundle']['#options']['image'];
+          unset($element['actions']['bundle']['#options']['image']);
+          $element['actions']['bundle']['#options'] = array_merge(['image' => $image_option], $element['actions']['bundle']['#options']);
+        }
+      }
+    }
+  }
+
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function kuntaliitto_common_file_presave(EntityInterface $entity) {
+  // Extracting EXIF metadata from images before saving them.
+  if ($entity->bundle() == 'image') {
+    $meta = @exif_read_data($entity->getFileUri(), 0, TRUE);
+    if (isset($meta['IFD0'])) {
+      if (isset($meta['IFD0']['ImageDescription'])) {
+        $entity->set('field_image_description', $meta['IFD0']['ImageDescription']);
+      }
+      if (isset($meta['IFD0']['Subject'])) {
+        $entity->set('field_subject', htmlentities($meta['IFD0']['Subject']));
+      }
+      if (isset($meta['IFD0']['Artist'])) {
+        $entity->set('field_artist', $meta['IFD0']['Artist']);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function kuntaliitto_common_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Show date filters for search only if on search page.
+  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-solr-search-page-solr-search') {
+    if (\Drupal::routeMatch()->getRouteName() != 'view.solr_search.page_solr_search') {
+      unset($form['created']);
+      unset($form['created_1']);
+    }
+  }
+  // Do not auto-submit combined text field.
+  if ($form_id == "views_exposed_form") {
+    if (isset($form['combine'])) {
+      $form['combine']['#attributes'] = ['data-bef-auto-submit-exclude' => ''];
+    }
+  }
+  // Enable editor in views header and footer.
+  if ($form_id == 'views_ui_config_item_form' && !empty($form['options']['content'])) {
+    $form['options']['content']['#editor'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function kuntaliitto_common_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Restrict changing value to Content source,
+  // but still display it in forms (except for External article)
+  if (isset($form['field_content_source']) &&
+    $form_id != 'node_external_article_edit_form' &&
+    $form_id != 'node_external_article_form' &&
+    \Drupal::currentUser()->id() != '1') {
+    $form['field_content_source']['#disabled'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_node_access().
+ */
+function kuntaliitto_common_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  // Only kuntaliito_admin can edit front page.
+  if ($op == 'update' || $op == 'delete') {
+    $front_path = \Drupal::config('system.site')->get('page.front');
+    $url = Url::fromUri('internal:' . $front_path);
+    $parameters = $url->getRouteParameters();
+    if (isset($parameters['node'])) {
+      if ($parameters['node'] == $node->id()) {
+        if (!in_array('kuntaliitto_admin', $account->getRoles())) {
+          return AccessResult::forbidden();
+        }
+      }
+    }
+  }
+
+}
+
+/**
+ * Implements hook_views_pre_build().
+ */
+function kuntaliitto_common_views_pre_build(ViewExecutable $view) {
+  // Reset listings arguments to 'all' if they are supplied incorrectly.
+  if ($view->id() == 'events' || $view->id() == 'newsroom') {
+    if (isset($view->args[0])) {
+      if (!preg_match('#^(?:19|20)\d{2}$#', $view->args[0])) {
+        $view->args[0] = 'all';
+      }
+    }
+    else {
+      $view->args = ['all'];
+    }
+  }
+
+  // KUN-441 Widening contact search.
+  if ($view->id() == 'contact_directory') {
+    $handler = $view->display_handler;
+    $search_str = \Drupal::request()->request->get('combine');
+
+    if (!empty($search_str)) {
+      unset($view->filter['field_first_name_value']);
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_load().
+ */
+function kuntaliitto_common_taxonomy_term_load(array $entities) {
+  foreach ($entities as $entity) {
+    /** @var \Drupal\taxonomy\Entity\Term $entity */
+    if ($entity->bundle() == 'municipalities') {
+      $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+      if ($entity->hasTranslation($language)) {
+        $entity = $entity->getTranslation($language);
+      }
+      if ($entity->field_search_result_info->value === NULL) {
+        $entity->field_search_result_info->value = t('Here you can find information about municipalities.');
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for listing-item templates.
+ */
+function kuntaliitto_common_preprocess_listing_item(&$variables) {
+  if (isset($variables['content']['#bundle']) &&
+    $variables['content']['#bundle'] == 'blog_post' &&
+    $variables['content']['#view_mode'] == 'teaser') {
+
+    /** @var Drupal\node\Entity\Node $entity */
+    $entity = $variables['content']['#node'];
+    $authors = [];
+    foreach ($entity->get('field_author')->getValue() as $references => $record) {
+      $authors[] = $record['target_id'];
+    }
+
+    $view = Views::getView('taxonomy_image');
+    $view->args = [implode(',', $authors)];
+    $view->setDisplay('default');
+    $view->execute();
+    if ($view->total_rows > 1) {
+      $view->display_handler->options['css_class'] = 'blog-authors-multiple blog-authors-' . $view->total_rows;
+    }
+    if ($view->total_rows != 0) {
+      $render = $view->buildRenderable();
+      $variables['content']['field_author_images'] = $render;
+    }
+  }
+}
+
+/*
+ * Implements hook_preprocess_HOOK() for paragraph templates.
+ */
+function kuntaliitto_common_preprocess_paragraph(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->bundle() == 'publication') {
+    $view_mode = str_replace('-', '_', $variables['paragraph']->field_liftup_style->value);
+    $variables['content']['field_lifted_content']['#view_mode'] = $view_mode;
+    $variables['content']['field_lifted_content'][0]['#view_mode'] = $view_mode;
+  }
+}

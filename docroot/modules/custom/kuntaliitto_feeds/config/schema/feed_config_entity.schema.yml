@@ -1,0 +1,72 @@
+kuntaliitto_feeds.feed_config_entity.*:
+  type: config_entity
+  label: 'Feed configuration config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    url:
+      type: string
+    feed_language:
+      type: string
+    link_field:
+      type: string
+    link_xpath:
+      type: string
+    feed_status:
+      type: boolean
+    import_node:
+      type: string
+    content_source:
+      type: string
+    has_wrapper:
+      type: boolean
+    wrapper:
+      type: string
+    item_xpath:
+      type: string
+    title_xpath:
+      type: string
+    format:
+      type: string
+    content_field:
+      type: string
+    content_xpath:
+      type: string
+    has_terms:
+      type: boolean
+    vocabulary:
+      type: string
+    term_field:
+      type: string
+    term_xpath:
+      type: string
+    default_term:
+      type: string
+    remove_terms:
+      type: string
+    replace_terms:
+      type: string
+    has_image:
+      type: boolean
+    image_field:
+      type: sting
+    image_xpath:
+      type: string
+    image_is_attribute:
+      type: boolean
+    image_attribute:
+      type: string
+    published_xpath:
+      type: string
+    published_format:
+      type: string
+    published_status:
+      type: boolean
+    publish_for:
+      type: integer
