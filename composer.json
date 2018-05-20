@@ -8,6 +8,10 @@
         "googletag": {
             "type": "vcs",
             "url": "https://github.com/mikeyp/google_tag.git"
+        },
+        "kuntaliitto-theme": {
+            "type": "vcs",
+            "url": "https://github.com/Kuntaliitto/kuntaliitto-theme.git"
         }
     },
     "require": {
@@ -78,7 +82,8 @@
         "drupal/extlink": "^1.0",
         "drupal/eu_cookie_compliance": "^1.0@beta",
         "wunderio/drupal-ping": "^1.0",
-        "drupal/config_installer": "^1.8"
+        "drupal/config_installer": "^1.8",
+        "kuntaliitto/kuntaliitto-theme": "dev-master"
     },
     "require-dev": {},
     "extra": {

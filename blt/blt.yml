@@ -3,7 +3,7 @@ project:
   prefix: AvoinKL
   human_name: 'Avoin kuntaliitto'
   profile:
-    name: minimal
+    name: config_installer
   local:
     protocol: http
     hostname: '${project.machine_name}.kuntaliitto.fi'
@@ -18,7 +18,7 @@ git:
   commit-msg: false
   default_branch: master
   remotes: 
-    cloud: 'git@github.com:kuntaliitto/kuntaliitto-build.git'
+    cloud: 'git://e52o5fbbuoqug@git.eu.platform.sh:e52o5fbbuoqug.git'
 drush:
   aliases:
     remote: '${project.machine_name}.test'
