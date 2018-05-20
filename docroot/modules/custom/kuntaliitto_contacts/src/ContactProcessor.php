@@ -7,9 +7,7 @@ use Drupal\kuntaliitto_contacts\Exception\ContactImportException;
 use Drupal\media_entity\Entity\Media;
 use Drupal\node\NodeInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\image\Entity\ImageStyle;
 use Drupal\file\Entity\File;
-
 
 /**
  * Class ContactProcessor.
@@ -39,9 +37,11 @@ class ContactProcessor implements ContactProcessorInterface {
 
   /**
    * Processes import items.
+   *
    * @param array $user
    *
    * @return string
+   *
    * @throws \Drupal\kuntaliitto_contacts\Exception\ContactImportException
    */
   public function process(array $user) {
@@ -417,7 +417,7 @@ class ContactProcessor implements ContactProcessorInterface {
       ->execute();
 
     // If there is no profile_pictures directory then create it.
-    //$path = "public://media/profile_pictures/";
+    // $path = "public://media/profile_pictures/";.
     if (file_prepare_directory($path, FILE_CREATE_DIRECTORY)) {
 
     }
@@ -434,7 +434,6 @@ class ContactProcessor implements ContactProcessorInterface {
 
     // Temporary. Tosee on Drush line name of users are changed.
     var_dump($username);
-
 
     $file = file_save_data($data, 'public://media/profile_pictures/' . $username . '.jpeg', FILE_EXISTS_REPLACE);
     $file->setFilename($username . '.jpeg');

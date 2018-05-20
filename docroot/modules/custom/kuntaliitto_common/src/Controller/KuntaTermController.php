@@ -32,7 +32,7 @@ class KuntaTermController extends ControllerBase {
 
     if ($vocabulary == 'content_types') {
       switch ($taxonomy_term->id()) {
-        //TODO: Remove this hardcoded stuff: use taxonomy term name?
+        // TODO: Remove this hardcoded stuff: use taxonomy term name?
         case (571):
           $view = ['id' => 'newsroom', 'display' => 'newsroom_press_release_page'];
           break;

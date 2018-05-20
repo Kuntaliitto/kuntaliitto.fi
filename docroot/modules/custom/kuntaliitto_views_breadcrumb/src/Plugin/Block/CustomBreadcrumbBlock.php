@@ -2,7 +2,6 @@
 
 namespace Drupal\kuntaliitto_views_breadcrumb\Plugin\Block;
 
-
 use Drupal\Core\Block\BlockBase;
 use Drupal\taxonomy\Entity\Term;
 
@@ -15,15 +14,15 @@ use Drupal\taxonomy\Entity\Term;
  *   category = @Translation("Custom")
  * )
  */
-
 class CustomBreadcrumbBlock extends BlockBase {
+
   /**
    * {@inheritdoc}
    */
   public function build() {
     global $base_root, $base_path, $base_url;
     $path = '';
-    $custom_breadcrumb= '';
+    $custom_breadcrumb = '';
 
     // Load current taxonomy name and use it for breadcrumb output.
     // Need it for special characters.
@@ -35,21 +34,20 @@ class CustomBreadcrumbBlock extends BlockBase {
         unset($exploaded[$key]);
       }
     }
-    if (isset($exploaded[3]) && is_numeric($exploaded[3])){
+    if (isset($exploaded[3]) && is_numeric($exploaded[3])) {
       $term = Term::load($exploaded[3]);
       if ($term) {
         $taxonomy_name = $term->getName();
       }
     }
 
-
     // Home icon to first breadcrumb element.
     $home_icon = $base_root . $base_path . drupal_get_path('module', 'kuntaliitto_views_breadcrumb') . '/images/home.png';
     // Get URL to create breadcrumb.
     $current_uri = \Drupal::request()->getRequestUri();
-    // Get URL arguments
+    // Get URL arguments.
     $arguments = explode('/', $current_uri);
-    // Remove empty values
+    // Remove empty values.
     foreach ($arguments as $key => $value) {
       if (empty($value)) {
         unset($arguments[$key]);
@@ -61,7 +59,7 @@ class CustomBreadcrumbBlock extends BlockBase {
       foreach ($arguments as $key => $value) {
         $path .= "/$value";
         $value = ucfirst($value);
-        // Don't make last breadcrumb a link
+        // Don't make last breadcrumb a link.
         if ($key != (count($arguments) - 1)) {
           $custom_breadcrumb .= "<li><a href=\"$path\">$value</a></li>";
         }
@@ -85,10 +83,11 @@ class CustomBreadcrumbBlock extends BlockBase {
       </a>
       $custom_breadcrumb    
     </ol></nav>";
-    return array(
+    return [
       '#type' => 'markup',
       '#markup' => $breadcrumb_body,
-      '#cache' => ['max-age' => 0]
-    );
+      '#cache' => ['max-age' => 0],
+    ];
   }
+
 }

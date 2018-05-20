@@ -117,30 +117,30 @@ function kuntaliitto_liftup_preprocess_paragraph__uplift_thematic_content(&$vari
 /**
  * Implement hook_token_info()
  */
-function kuntaliitto_liftup_token_info(){
-  $types['translatable_text'] = array(
+function kuntaliitto_liftup_token_info() {
+  $types['translatable_text'] = [
     'name' => t('Translatable text'),
-    'description' => t('Provides translatable text tokens')
-  );
-  $tokens['download'] = array(
+    'description' => t('Provides translatable text tokens'),
+  ];
+  $tokens['download'] = [
     'name' => t('Download text name'),
-    'description' => t('Text: Download')
-  );
+    'description' => t('Text: Download'),
+  ];
 
-  return array(
+  return [
     'types' => $types,
-    'tokens' => array(
-      'translatable_text' => $tokens
-    )
-  );
+    'tokens' => [
+      'translatable_text' => $tokens,
+    ],
+  ];
 }
 
 /**
  * Implement hook_token()
  */
-function kuntaliitto_liftup_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata){
-  $replacements = array();
-  if($type == 'translatable_text') {
+function kuntaliitto_liftup_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+  if ($type == 'translatable_text') {
     foreach ($tokens as $name => $original) {
       switch ($name) {
         case 'download':

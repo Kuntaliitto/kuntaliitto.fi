@@ -21,9 +21,9 @@ class NewsroomRouteSubscriber extends RouteSubscriberBase {
     if ($route = $collection->get('entity.node.canonical')) {
       /** @var \Symfony\Component\Routing\Route $route */
       $route->setDefaults([
-          '_controller' => '\Drupal\kuntaliitto_views_manager\Controller\KuntaNodeController::view',
-          '_title_callback' => '\Drupal\node\Controller\NodeViewController::title',
-        ]
+        '_controller' => '\Drupal\kuntaliitto_views_manager\Controller\KuntaNodeController::view',
+        '_title_callback' => '\Drupal\node\Controller\NodeViewController::title',
+      ]
       );
     }
   }
