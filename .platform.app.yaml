@@ -34,7 +34,7 @@ mounts:
 
 # Configuration of the build of this application.
 build:
-    flavor: composer
+    flavor: none
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
