@@ -16,9 +16,9 @@ disable-targets:
 git:
   pre-commit: false
   commit-msg: false
-  default_branch: master
+  default_branch: develop
   remotes: 
-    cloud: 'git://e52o5fbbuoqug@git.eu.platform.sh:e52o5fbbuoqug.git'
+    cloud: 'e52o5fbbuoqug@git.eu.platform.sh:e52o5fbbuoqug.git'
 drush:
   aliases:
     remote: '${project.machine_name}.test'
