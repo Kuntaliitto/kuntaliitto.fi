@@ -1,11 +1,17 @@
-experts_contents_overview: '2325'
-newsroom_blog_page: '2327'
-newsroom_circular_experts_statements_main: '2324'
-newsroom_circular_page: '5378'
-newsroom_experts_statements_page: '2323'
-newsroom_kuntalehti_page: '2328'
-newsroom_kuntatekniikka_page: '2329'
-newsroom_main_page: '2321'
-newsroom_press_release_page: '2322'
-newsroom_recent_page: '6727'
-newsroom_kommuntorget_page: '2330'
+experts_contents_overview: null
+newsroom_blog_page: null
+newsroom_circular_experts_statements_main: null
+newsroom_circular_page: null
+newsroom_experts_statements_page: null
+newsroom_kuntalehti_page: null
+newsroom_kuntatekniikka_page: null
+newsroom_main_page: null
+newsroom_press_release_page: null
+newsroom_recent_page: '3'
+newsroom_kommuntorget_page: null
+page_2: null
+submit: 'Tallenna asetukset'
+form_build_id: form-Hnsha3EZxMDNhycKQkCPf1g3TI1953-zHNTxWGObMqg
+form_token: JJwpbFh7jyz5chkFWt7XGzSyjrOWR2lEnHC9MZzYj-0
+form_id: newsroom_config_form
+op: 'Tallenna asetukset'
