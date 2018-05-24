@@ -774,8 +774,17 @@ $settings['entity_update_batch_size'] = 50;
 // Set up a config sync directory.
 //
 // This is defined inside the read-only "config" directory, deployed via Git.
+//$config_directories = array(
+//  CONFIG_SYNC_DIRECTORY => '../config/sync',
+//  disabled => true
+//);
 $config_directories[CONFIG_SYNC_DIRECTORY] = '../config/sync';
 
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
+
+// Automatic Platform.sh settings.
+if (file_exists($app_root . '/' . $site_path . '/settings/platformsh.settings.php')) {
+  include $app_root . '/' . $site_path . '/settings/platformsh.settings.php';
+}
 
 $settings['install_profile'] = 'config_installer';
