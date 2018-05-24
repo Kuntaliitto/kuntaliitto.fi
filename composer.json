@@ -27,7 +27,8 @@
         "drupal/ctools": "^3.0",
         "drupal/pathauto": "1.2",
         "drupal/metatag": "^1",
-        "drupal/paragraphs": "dev-1.x#61b0de380e59b26b12099661d3650090fccfa571",
+        "drupal/paragraphs": "dev-1.x#c899469a460936339216093462442eb2e5a0f7c9",
+        "drupal/paragraphs_asymmetric_translation_widgets": "dev-1.x#e676e682fd30c123fff1e863716b6792516bb11a",
         "mikeyp/google_tag": "8.x-1.x-dev",
         "drupal/field_group": "^1",
         "drupal/media_entity": "^1.6",
@@ -82,7 +83,9 @@
         "drupal/eu_cookie_compliance": "^1.0@beta",
         "wunderio/drupal-ping": "^1.0",
         "drupal/config_installer": "^1.8",
-        "kuntaliitto/kuntaliitto-theme": "dev-master"
+        "kuntaliitto/kuntaliitto-theme": "dev-master",
+        "drupal/default_content": "^1.0@alpha",
+        "drupal/entity_usage": "2.0-alpha4"
     },
     "require-dev": {},
     "extra": {
@@ -114,9 +117,6 @@
             },
             "drupal/inline_entity_form": {
                 "Add entity reference in translation": "patches/2822764-adding-new-entities-4.patch"
-            },
-            "drupal/paragraphs": {
-                "Add entity reference translation": "https://www.drupal.org/files/issues/meta_support-2461695-224.patch"
             },
             "drupal/scheduler": {
                 "Moderation integration": "patches/scheduler-2798689-23.patch"

@@ -10,7 +10,7 @@ dependencies:
     - node.type.basic_page
   module:
     - content_moderation
-    - paragraphs
+    - paragraphs_asymmetric_translation_widgets
     - path
     - scheduler
     - search_api_exclude_entity
@@ -54,7 +54,7 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_paragraphs
+    type: paragraphs_classic_asymmetric
     region: content
   field_search_exclude:
     weight: 26
@@ -66,7 +66,8 @@ content:
   langcode:
     type: language_select
     weight: 1
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
     region: content
   moderation_state:
@@ -97,6 +98,8 @@ content:
   scheduler_settings:
     weight: 20
     region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -121,9 +124,9 @@ content:
     region: content
   translation:
     weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 2
@@ -142,4 +145,6 @@ content:
   url_redirects:
     weight: 50
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

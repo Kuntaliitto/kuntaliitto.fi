@@ -41,6 +41,7 @@ module:
   file_entity: 0
   filter: 0
   google_tag: 0
+  hal: 0
   honeypot: 0
   image: 0
   imagemagick: 0
@@ -71,6 +72,7 @@ module:
   override_node_options: 0
   page_cache: 0
   paragraphs: 0
+  paragraphs_asymmetric_translation_widgets: 0
   path: 0
   purge: 0
   purge_drush: 0
@@ -89,6 +91,7 @@ module:
   search_api_exclude_entity: 0
   search_api_solr: 0
   search_api_views_taxonomy: 0
+  serialization: 0
   shortcut: 0
   simple_sitemap: 0
   smart_trim: 0
