@@ -23,8 +23,8 @@ id: node.expert_content.field_liftup
 field_name: field_liftup
 entity_type: node
 bundle: expert_content
-label: Nostot
-description: 'Nostojen avulla voidaan nostaa "bannerimaisesti" erityisen tärkeää sisältöä. Niin ikään on mahdollista tehdä automaattisesti päivittyviä nostoja verkkopalvelun sisällöstä.'
+label: Liftup
+description: ''
 required: false
 translatable: true
 default_value: {  }
