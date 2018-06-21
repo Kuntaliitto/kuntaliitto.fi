@@ -22,7 +22,7 @@ id: node.circular.field_liftup
 field_name: field_liftup
 entity_type: node
 bundle: circular
-label: Nostot
+label: Liftup
 description: ''
 required: false
 translatable: true
