@@ -10,7 +10,6 @@ dependencies:
     - paragraphs.paragraphs_type.double_liftup
     - paragraphs.paragraphs_type.free_text
     - paragraphs.paragraphs_type.highchart
-    - paragraphs.paragraphs_type.organs
     - paragraphs.paragraphs_type.podcasts
     - paragraphs.paragraphs_type.publication
     - paragraphs.paragraphs_type.quadruple_liftup
@@ -44,7 +43,6 @@ settings:
       free_text: free_text
       uplift_thematic_content: uplift_thematic_content
       highchart: highchart
-      organs: organs
       publication: publication
       podcasts: podcasts
       some: some

@@ -9,7 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.double_liftup
     - paragraphs.paragraphs_type.free_text
     - paragraphs.paragraphs_type.highchart
-    - paragraphs.paragraphs_type.organs
     - paragraphs.paragraphs_type.publication
     - paragraphs.paragraphs_type.quadruple_liftup
     - paragraphs.paragraphs_type.uplift_centalised
@@ -36,7 +35,6 @@ settings:
       double_liftup: double_liftup
       free_text: free_text
       highchart: highchart
-      organs: organs
       quadruple_liftup: quadruple_liftup
       publication: publication
       uplift_centalised: uplift_centalised

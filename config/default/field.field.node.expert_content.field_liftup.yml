@@ -10,7 +10,6 @@ dependencies:
     - paragraphs.paragraphs_type.double_liftup
     - paragraphs.paragraphs_type.free_text
     - paragraphs.paragraphs_type.highchart
-    - paragraphs.paragraphs_type.organs
     - paragraphs.paragraphs_type.podcasts
     - paragraphs.paragraphs_type.publication
     - paragraphs.paragraphs_type.quadruple_liftup
@@ -24,8 +23,8 @@ id: node.expert_content.field_liftup
 field_name: field_liftup
 entity_type: node
 bundle: expert_content
-label: Liftup
-description: ''
+label: Nostot
+description: 'Nostojen avulla voidaan nostaa "bannerimaisesti" erityisen tärkeää sisältöä. Niin ikään on mahdollista tehdä automaattisesti päivittyviä nostoja verkkopalvelun sisällöstä.'
 required: false
 translatable: true
 default_value: {  }
@@ -37,15 +36,14 @@ settings:
     target_bundles:
       uplift_thematic_content: uplift_thematic_content
       contact_information: contact_information
-      quadruple_liftup: quadruple_liftup
       double_liftup: double_liftup
+      quadruple_liftup: quadruple_liftup
       uplift_centalised: uplift_centalised
       uplift_decentalised: uplift_decentalised
       some: some
       contact_form: contact_form
       free_text: free_text
       highchart: highchart
-      organs: organs
       publication: publication
       podcasts: podcasts
     target_bundles_drag_drop:
@@ -58,10 +56,10 @@ settings:
       contact_information:
         enabled: true
         weight: 7
-      quadruple_liftup:
+      double_liftup:
         enabled: true
         weight: 8
-      double_liftup:
+      quadruple_liftup:
         enabled: true
         weight: 8
       uplift_centalised:
@@ -76,12 +74,12 @@ settings:
       content_teaser:
         weight: 14
         enabled: false
-      manual_centralized_minimal:
-        weight: 16
-        enabled: false
       contact_form:
         enabled: true
         weight: 16
+      manual_centralized_minimal:
+        weight: 16
+        enabled: false
       free_text:
         enabled: true
         weight: 17
@@ -91,9 +89,6 @@ settings:
       highchart:
         enabled: true
         weight: 20
-      organs:
-        enabled: true
-        weight: 23
       publication:
         enabled: true
         weight: 26

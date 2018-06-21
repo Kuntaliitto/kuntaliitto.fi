@@ -9,7 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.double_liftup
     - paragraphs.paragraphs_type.free_text
     - paragraphs.paragraphs_type.highchart
-    - paragraphs.paragraphs_type.organs
     - paragraphs.paragraphs_type.podcasts
     - paragraphs.paragraphs_type.publication
     - paragraphs.paragraphs_type.quadruple_liftup
@@ -44,7 +43,6 @@ settings:
       contact_form: contact_form
       free_text: free_text
       publication: publication
-      organs: organs
       podcasts: podcasts
     target_bundles_drag_drop:
       contact_information:
