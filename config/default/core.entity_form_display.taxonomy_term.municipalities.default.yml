@@ -30,7 +30,7 @@ dependencies:
     - field_group
     - inline_entity_form
     - link
-    - paragraphs
+    - paragraphs_asymmetric_translation_widgets
     - path
     - telephone
     - text
@@ -170,6 +170,10 @@ content:
       match_operator: CONTAINS
       override_labels: false
       allow_existing: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+      allow_asymmetric_translation: false
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: image_browser_image_bank_upload_new_
@@ -215,7 +219,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_paragraph_a:
-    type: entity_reference_paragraphs
+    type: paragraphs_classic_asymmetric
     weight: 7
     settings:
       title: Paragraph
@@ -227,7 +231,7 @@ content:
     third_party_settings: {  }
     region: content
   field_paragraph_b:
-    type: entity_reference_paragraphs
+    type: paragraphs_classic_asymmetric
     weight: 8
     settings:
       title: Paragraph
@@ -239,7 +243,7 @@ content:
     third_party_settings: {  }
     region: content
   field_paragraph_c:
-    type: entity_reference_paragraphs
+    type: paragraphs_classic_asymmetric
     weight: 9
     settings:
       title: Paragraph
