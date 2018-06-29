@@ -26,7 +26,7 @@ dependencies:
     - entity_browser_entity_form
     - field_group
     - inline_entity_form
-    - paragraphs
+    - paragraphs_asymmetric_translation_widgets
     - path
     - scheduler
     - text
@@ -121,6 +121,10 @@ content:
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+      allow_asymmetric_translation: false
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: media_file_browser
@@ -142,7 +146,7 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_paragraphs
+    type: paragraphs_classic_asymmetric
     region: content
   field_content_source:
     type: entity_reference_autocomplete
@@ -181,7 +185,7 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_paragraphs
+    type: paragraphs_classic_asymmetric
     region: content
   field_liftup_title:
     weight: 14
@@ -201,6 +205,10 @@ content:
       allow_new: true
       match_operator: CONTAINS
       allow_existing: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+      allow_asymmetric_translation: false
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: all_media_browser_modal
@@ -235,7 +243,8 @@ content:
   langcode:
     type: language_select
     weight: 2
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
     region: content
   moderation_state:
@@ -266,6 +275,8 @@ content:
   scheduler_settings:
     weight: 20
     region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -290,9 +301,9 @@ content:
     region: content
   translation:
     weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 5
@@ -311,6 +322,8 @@ content:
   url_redirects:
     weight: 50
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_contact_information_title: true
   field_image: true
