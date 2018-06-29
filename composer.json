@@ -4,6 +4,9 @@
     "type": "project",
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
     "repositories": {
         "googletag": {
             "type": "vcs",
@@ -15,7 +18,7 @@
         }
     },
     "require": {
-        "acquia/blt": "^9.0.3",
+        "acquia/blt": "^9.1.0",
         "composer/installers": "^1",
         "drupal-composer/drupal-scaffold": "^2",
         "drupal/admin_toolbar": "^1",
@@ -40,7 +43,7 @@
         "drupal/file_entity": "^2",
         "drupal/media_entity_document": "^1",
         "drupal/media_entity_video": "^1@beta",
-        "drupal/inline_entity_form": "^1",
+        "drupal/inline_entity_form": "1.0-rc1",
         "drupal/url_embed": "1.x-dev",
         "drupal/video_embed_field": "^1",
         "drupal/entity_embed": "^1",
@@ -64,7 +67,7 @@
         "drupal/field_group_link": "^1",
         "drupal/ajax_comments": "1.0-beta1",
         "drupal/subpathauto": "1.0-beta1",
-        "drupal/r4032login": "1.x-dev",
+        "drupal/r4032login": "1.0-beta2",
         "drupal/entity_reference_revisions": "^1",
         "drupal/redirect": "^1.0",
         "drupal/realname": "1.x-dev",
@@ -116,7 +119,7 @@
                 "Two validation callbacks fired": "https://www.drupal.org/files/issues/inline_responsive_images-validator-fix-2830261-2.patch"
             },
             "drupal/inline_entity_form": {
-                "Add entity reference in translation": "patches/2822764-adding-new-entities-4.patch"
+                "Add entity reference in translation": "https://www.drupal.org/files/issues/2018-06-21/inline_entity_form-support_adding_new_entities_when_translating-2822764-32.patch"
             },
             "drupal/scheduler": {
                 "Moderation integration": "patches/scheduler-2798689-23.patch"

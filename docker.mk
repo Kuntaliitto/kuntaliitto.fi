@@ -8,13 +8,19 @@ DRUPAL_ROOT ?= /var/www/html/web
 
 up:
 	@echo "Starting up containers for $(PROJECT_NAME)..."
-	docker-compose pull --parallel
+	docker-compose pull
 	docker-compose up -d --remove-orphans
 
 down: stop
 
 status: ps
 start: up
+
+clean: rm-clean
+
+nuke:
+	rm-containers
+	rm-vendor-dir
 
 stop:
 	@echo "Stopping containers for $(PROJECT_NAME)..."
@@ -35,6 +41,15 @@ drush:
 
 logs:
 	@docker-compose logs -f $(filter-out $@,$(MAKECMDGOALS))
+
+
+rm-vendor-dir:
+	@echo "Removing vendor directory for $(PROJECT_NAME)..."
+	rm -rf vendor
+
+rm-clean:
+	@echo "Removing vendor directory, docroot/core and stuff for $(PROJECT_NAME)..."
+	rm -rf vendor composer.lock docroot/core docroot/modules/contrib docroot/profiles/contrib docroot/themes/contrib
 
 # https://stackoverflow.com/a/6273809/1826109
 %:
