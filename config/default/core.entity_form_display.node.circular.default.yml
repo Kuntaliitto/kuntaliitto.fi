@@ -23,7 +23,6 @@ dependencies:
     - entity_browser_entity_form
     - field_group
     - inline_entity_form
-    - paragraphs
     - paragraphs_asymmetric_translation_widgets
     - path
     - scheduler
@@ -177,7 +176,7 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_paragraphs
+    type: paragraphs_classic_asymmetric
     region: content
   field_liftup_title:
     weight: 14
