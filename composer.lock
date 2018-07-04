@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a4b52209218f7d04eef322b80affd1c",
+    "content-hash": "9fcc897d433663f0f7e4845b1cbcc4df",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3198,17 +3198,17 @@
         },
         {
             "name": "drupal/facets",
-            "version": "1.0.0-beta2",
+            "version": "1.0.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/facets",
-                "reference": "8.x-1.0-beta2"
+                "reference": "8.x-1.0-beta3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/facets-8.x-1.0-beta2.zip",
-                "reference": "8.x-1.0-beta2",
-                "shasum": "3dfeb0a353039ee8a6554bad9f6d02ec7cadee24"
+                "url": "https://ftp.drupal.org/files/projects/facets-8.x-1.0-beta3.zip",
+                "reference": "8.x-1.0-beta3",
+                "shasum": "2c9b72b025a2984b9f869f045c671243d223482a"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -3222,8 +3222,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta2",
-                    "datestamp": "1516352268",
+                    "version": "8.x-1.0-beta3",
+                    "datestamp": "1530623921",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -5750,17 +5750,17 @@
         },
         {
             "name": "drupal/varnish_purge",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/varnish_purge",
-                "reference": "8.x-1.10"
+                "reference": "8.x-1.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.10.zip",
-                "reference": "8.x-1.10",
-                "shasum": "ab7ea1bd933856fc759dc0e1d53018cc5dee2718"
+                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.11.zip",
+                "reference": "8.x-1.11",
+                "shasum": "fbfa2eeb52e402775185f9069d0c8c34c7d4f1d8"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -5776,8 +5776,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.10",
-                    "datestamp": "1516954984",
+                    "version": "8.x-1.11",
+                    "datestamp": "1530614920",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
