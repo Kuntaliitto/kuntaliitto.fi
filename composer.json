@@ -55,7 +55,7 @@
         "drupal/content_language_access": "^1",
         "drupal/search_api_autocomplete": "^1",
         "drupal/search_api_solr_multilingual": "^1",
-        "drupal/facets":"1.0-beta3",
+        "drupal/facets": "1.0-beta3",
         "drupal/views_autocomplete_filters": "^1",
         "drupal/anchor_link": "^1",
         "drupal/inline_responsive_images": "^2.1",
@@ -130,7 +130,6 @@
             "npm-asset"
         ],
         "installer-paths": {
-            
             "docroot/core": [
                 "type:drupal-core"
             ],
