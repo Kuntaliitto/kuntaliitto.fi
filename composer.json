@@ -1,5 +1,5 @@
 {
-    "name": "acquia/blt-project",
+    "name": "kuntaliitto/kuntaliitto.fi",
     "description": "Kuntafi template for Drupal 8 sites managed with BLT.",
     "type": "project",
     "minimum-stability": "dev",
